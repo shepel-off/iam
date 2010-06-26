@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ object }} - user details{% endblock %}
+
+{% block content %}
+<h2>{{ object  }}</h2>
+Публикации:<br />
+<ul>
+{% for pub in object.publications.all %}
+    <li>{{ pub }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

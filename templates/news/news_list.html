@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}News list{% endblock %}
+
+{% block content %}
+<ul>
+{% for news_entry in object_list %}
+    <li><h2><a href="/news/{{news_entry.id}}">{{ news_entry.title }}</a></h2>
+    {{ news_entry.body|safe }}</li>
+{% endfor %}
+</ul>
+{% endblock content %}

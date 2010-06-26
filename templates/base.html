@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+    <link rel="stylesheet" href="/base.css" type="text/css" media="all" /> 
+    <title>{% block title %}User list{% endblock %}</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    {% block script %}{% endblock %}
+</head> 
+ 
+<body> 
+    <p id="welcome">Institute of Applied Mathematics</a>
+    <div id="authorize"> 
+    {% if user.is_authenticated %}
+    Welcome, {{ user.username }}(<a href="/logout/?next={{ request.path }}">sign out</a>)
+    {% else %}
+    <a href="/login/?next={{ request.path }}">sign in</a> 
+    {% endif %}
+    </div> 
+    <div id="sidebar"> 
+    {% block sidebar %}
+        <ul> 
+            <li><a href="/">Home</a></li> 
+            <li><a href="/news/">News</a></li> 
+            <li><a href="/users/">Users</a></li> 
+        </ul> 
+    {% endblock %}    
+    </div> 
+    <div id="content"> 
+    {% block content %}    
+    {% endblock %} 
+    </div> 
+    <div id="footer"> 
+    {% block footer %}    
+        © 2010 Институт прикладной математики<br /> 
+        Дальневосточное отделение Российской академии наук
+    {% endblock %}    
+    </div> 
+</body> 
+</html> 
