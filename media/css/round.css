@@ -1,0 +1,38 @@
+.rounded{padding: 20px;}
+.rounded_10{padding: 10px;}
+
+.rounded_10:before
+{
+    content: url('img/tl_10.png');
+    background: url('img/tr_10.png') no-repeat 100% 0;
+    height: 10px;
+    display: block;
+    margin: -10px -10px 0px -10px;
+}
+
+.rounded:before
+{
+    content: url('img/tl.png');
+    background: url('img/tr.png') no-repeat 100% 0;
+    height: 20px;
+    display: block;
+    margin: -20px -20px 0px -20px;
+}
+
+.rounded_10:after 
+{  
+    content:url('/img/bl_10.png');
+    background: url('/img/br_10.png') no-repeat 100% 0;
+    height: 10px;
+    display: block;
+    margin:0px -10px -10px -10px;
+}
+
+.rounded:after 
+{  
+    content:url('/img/bl.png');
+    background: url('/img/br.png') no-repeat 100% 0;
+    height: 20px;
+    display: block;
+    margin:0px -20px -20px -20px;
+}

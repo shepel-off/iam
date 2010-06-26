@@ -1,12 +1,13 @@
+@import url(/round.css);
+
 body {
     font-family: Georgia, Verdana, Arial;
     font-size: 12px;
-    margin-top: 3em;
 }
 a { text-decoration: none; }
 
 #content {
-    font-size: 20px;
+    font-size: 20pt;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -19,7 +20,7 @@ a { text-decoration: none; }
     margin-right: auto;
     clear: both;
     font-size: 20pt;
-    color: maroon; 
+    color: maroon;
 }
 
 #sidebar { float: left }
@@ -28,13 +29,27 @@ a { text-decoration: none; }
     padding: 0px;
     margin: 0px;
     font-size: 15pt;
-} 
+}
 
 #content, #sidebar { background: #E6E6E6; }
 
-#authorize { float: right; }
+#authorize {
+    float: right;
+    font-weight: bold;
+    background: #2D2D2D;
+    color: #DCDC38;
+    margin: 10px 10px 10px 10px;
+}
 
-#footer { 
+#authorize a:link, #authorize a:visited { color: white; margin: 5px 5px 5px 5px; }
+#authorize a:before { content: '['; font-size: 150%; }
+#authorize a:after { content: ']'; font-size: 150%; }
+
+#content .rndc {
+    padding: 10px 10px 10px 10px;
+}
+
+#footer {
     margin: 0 auto;
     width: 400px;
     clear: both;
