@@ -1,18 +1,17 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin
-from iam.users.models import Profile, Publication, Laboratory
-from iam.users.common import safe_get_profile
+from iam.users.models import Profile, Publication
 
 admin.site.unregister(User)
 
 def middle_name(self):
-    profile = safe_get_profile(self)
+    profile = self.safe_get_profile()
     return profile.mid_name if profile else None
 User.middle_name = middle_name
 
 def academic_degree(self):
-    profile = safe_get_profile(self)
+    profile = self.safe_get_profile()
     return profile.academic_degree if profile else None
 User.academic_degree = academic_degree
 
@@ -26,5 +25,4 @@ class ProfileAdmin(UserAdmin):
 
 admin.site.register(User, ProfileAdmin)
 admin.site.register(Publication)
-admin.site.register(Laboratory)
 admin.site.register(Profile)

@@ -7,5 +7,7 @@ info_dict = {
 
 urlpatterns = patterns('',
     url(r'^$', 'django.views.generic.list_detail.object_list', info_dict, name='iam-users'),
-    (r'^(?P<object_id>\d+)/$', 'django.views.generic.list_detail.object_detail', info_dict),
+    url(r'^(?P<object_id>\d+)/$', 'django.views.generic.list_detail.object_detail', info_dict, name='profile-detail'),
+    url(r'^(?P<user_id>\d+)/edit/$', 'iam.users.views.editprofile', name='profile-edit'),
+
 )
