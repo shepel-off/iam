@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{{ object }}{% endblock %}
+
+{% block content %}
+<h2>{{ object }}</h2>
+{% trans 'Публикации:' %}<br />
+<ul>
+{% for pub in object.publications.all %}
+    <li>{{ pub }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

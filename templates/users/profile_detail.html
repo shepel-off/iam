@@ -1,14 +1,25 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}{{ object }} - user details{% endblock %}
+{% block title %}{{ object }}{% endblock %}
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="/css/profile_detail.css" media="all" />
+{% endblock stylesheet %}
 
 {% block content %}
-<h2>{{ object  }}</h2>
-Публикации:<br />
-<ul>
-{% for pub in object.publications.all %}
-    <li>{{ pub }}</li>
-{% endfor %}
-</ul>
-
+{% ifequal user.username object.user.username %}
+<a href="./edit">{% trans 'Изменить данные' %}</a><br />
+{% endifequal %}
+<h3>{{ object }}</h3>
+{{ object.academic_degree }} <br />
+{{ object.user.email }}<br />
+<a href="{% url iam-labs %}/{{ object.laboratory.id }}">{{ object.laboratory }}</a><br />
+{% ifnotequal object.publications.all|length 0 %}
+    {% trans 'Публикации:' %}
+    <ul>
+    {% for pub in object.publications.all %}
+        <li>{{ pub }}</li>
+    {% endfor %}
+    </ul>
+{% endifnotequal %}
 {% endblock %}

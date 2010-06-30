@@ -1,56 +1,27 @@
-@import url(/round.css);
-
-body {
-    font-family: Georgia, Verdana, Arial;
-    font-size: 12px;
-}
+html, body { height: 100%; }
+body { font-family: Georgia, Verdana, Arial; font-size: 10pt; }
 a { text-decoration: none; }
 
-#content {
-    font-size: 20pt;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-}
-#content ul {list-style: none;}
+#container { min-height: 100%; margin-bottom: -31px; position: relative; }
+.clearfooter { height: 31px; clear: both; }
+#footer { height: 31px; position: relative; text-align: center; padding-top: 10px; }
+#footer #w3c { float: right; margin-top: -31px;}
 
-#welcome {
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-    font-size: 20pt;
-    color: maroon;
-}
+#content { width: 70%; }
+#sidebar { width: 15%; }
 
-#sidebar { float: left }
-#sidebar ul {
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
-    font-size: 15pt;
-}
+#content { font-size: 12pt; float: left; }
+#content ul { list-style: none; }
 
-#content, #sidebar { background: #E6E6E6; }
+#sidebar { float: left; font-size: 12pt; padding-right: 10px; }
+#sidebar a, #sidebar .category { color: blue; }
+#sidebar a.out { color: maroon; }
+#sidebar ul { list-style: none; padding-left: 0; }
+#menu { margin-top: 0px; margin-bottom: 0px; }
+#menu .collapsed { display: none; }
+#menu ul li { padding-left: 20px; font-size: 10pt; }
+#menu ul li a { display: block; padding: 2px; }
 
-#authorize {
-    float: right;
-    font-weight: bold;
-    background: #2D2D2D;
-    color: #DCDC38;
-    margin: 10px 10px 10px 10px;
-}
+#authorize { float: right; margin-bottom: 20px; }
 
-#authorize a:link, #authorize a:visited { color: white; margin: 5px 5px 5px 5px; }
-#authorize a:before { content: '['; font-size: 150%; }
-#authorize a:after { content: ']'; font-size: 150%; }
-
-#content .rndc {
-    padding: 10px 10px 10px 10px;
-}
-
-#footer {
-    margin: 0 auto;
-    width: 400px;
-    clear: both;
-}
+#welcome { width: 100%; margin-top: 0px; text-align: center; clear: both; font-size: 20pt; }

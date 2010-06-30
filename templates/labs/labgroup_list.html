@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title%}{% trans 'Лаборатории и сектора' %}{% endblock %}
+
+{% block content %}
+<ul>
+    {% for group in object_list %}
+    <li>{{ group }}
+        <ul>
+            {% for lab in group.laboratory_set.all %}
+            <li><a href="/labs/{{ lab.id }}/">{{ lab }}</a></li>
+            {% endfor %}
+        </ul>
+    </li><br />
+    {% endfor %}
+</ul>
+{% endblock %}

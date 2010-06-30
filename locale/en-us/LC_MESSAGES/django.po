@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-06-30 13:13+1100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: settings.py:39
+msgid "Russian"
+msgstr ""
+
+#: settings.py:40
+msgid "English"
+msgstr ""
+
+#: templates/base.html:6
+msgid "ИПМ ДВО РАН"
+msgstr ""
+
+#: templates/base.html:23 templates/base.html.py:25
+msgid "Институт прикладной математики ДВО РАН"
+msgstr ""
+
+#: templates/base.html:30
+#, python-format
+msgid ""
+"\n"
+"            Добро пожаловать, %(first_name)s %(middle_name)s\n"
+"        "
+msgstr ""
+
+#: templates/base.html:33
+msgid "выйти"
+msgstr ""
+
+#: templates/base.html:35 templates/registration/login.html:4
+msgid "Вход для сотрудников"
+msgstr ""
+
+#: templates/base.html:40
+msgid "Структура"
+msgstr ""
+
+#: templates/base.html:42 templates/labs/labgroup_list.html:4
+msgid "Лаборатории и сектора"
+msgstr ""
+
+#: templates/base.html:43
+msgid "Сотрудники"
+msgstr ""
+
+#: templates/base.html:44
+msgid "Хабаровское отделение"
+msgstr ""
+
+#: templates/base.html:47
+msgid "Исследования"
+msgstr ""
+
+#: templates/base.html:49
+msgid "Основные направления"
+msgstr ""
+
+#: templates/base.html:61
+msgid "Институт прикладной математики"
+msgstr ""
+
+#: templates/base.html:62
+msgid "Дальневосточное отделение Российской академии наук"
+msgstr ""
+
+#: templates/start.html:3 templates/news/news_list.html:4
+msgid "Новости"
+msgstr ""
+
+#: templates/labs/laboratory_detail.html:8
+#: templates/users/profile_detail.html:18
+msgid "Публикации:"
+msgstr ""
+
+#: templates/registration/login.html:18
+msgid "Войти"
+msgstr ""
+
+#: templates/users/profile_detail.html:11
+msgid "Изменить данные"
+msgstr ""
+
+#: templates/users/profile_list.html:4
+msgid "Список пользователей"
+msgstr ""

@@ -1,4 +1,3 @@
-# Create your views here.
 from django import forms
 from iam.news.models import News
 from tinymce.widgets import TinyMCE
@@ -11,8 +10,8 @@ import datetime
 class NewsForm(forms.ModelForm):
     body = forms.CharField(widget=TinyMCE(
         attrs={'cols': 80, 'rows': 30},
-        mce_attrs = {'theme': "advanced"}
         ))
+
     class Meta:
         model = News
         fields = ('title', 'body')
@@ -29,6 +28,3 @@ def add(request):
             return redirect('/news/')
     f = NewsForm()
     return render_to_response('news/add.html', {'form': f}, context_instance=RequestContext(request))
-    
-    
-        

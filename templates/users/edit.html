@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Редактирование личных данных{% endblock %}
+
+{% block content %}
+<form action='{% url profile-edit user.get_profile.id %}' method='POST'>{% csrf_token %}
+    {{ form.as_p }}
+    {{ formset.management_form }}
+    <table>
+        {% for form in formset.forms %}
+        {{ form }}
+        {% endfor %}
+    </table>
+<input type='submit' value='Сохранить' />
+</form>
+{% endblock content %}
+

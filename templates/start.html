@@ -1,8 +1,12 @@
 {% extends "base.html" %}
-
-{% block title %}The Institute of Applied Mathematics{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'Новости' %}{% endblock %}
 
 {% block content %}
-Добро пожаловать,
-я случайно стёр всё
+<ul>
+{% for news_entry in object_list %}
+    <li><h2><a href="/news/{{news_entry.id}}">{{ news_entry.title }}</a></h2>
+    {{ news_entry.body|safe }}</li>
+{% endfor %}
+</ul>
 {% endblock %}

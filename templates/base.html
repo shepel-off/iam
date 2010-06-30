@@ -1,52 +1,87 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<head> 
-    <link rel="stylesheet" href="/base.css" type="text/css" media="all" /> 
-    <title>{% block title %}User list{% endblock %}</title> 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load i18n %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>{% trans 'ИПМ ДВО РАН' %} — {% block title %}{% endblock %}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     {% block script %}{% endblock %}
-</head> 
- 
-<body> 
-    <div id="authorize" class="rounded_10"> 
+	<link rel="stylesheet" type="text/css" href="/js/treeview/jquery.treeview.css" />
+    {% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="/css/base.css" media="all" />
+    {% endblock %}
+	<script src="/js/jquery-1.2.6.min.js" type="text/javascript"></script>
+	<script src="/js/treeview/jquery.cookie.js" type="text/javascript"></script>
+	<script src="/js/treeview/jquery.treeview.pack.js" type="text/javascript"></script>
+	<script src="/js/navigation.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="container">
+
+    {% ifequal request.path '/' %}
+    <p id="welcome">{% trans 'Институт прикладной математики ДВО РАН' %}</p>
+    {% else %}
+    <p id="welcome"><a href="{% url iam-root %}">{% trans 'Институт прикладной математики ДВО РАН' %}</a></p>
+    {% endifequal %}
+
+    <div id="authorize">
     {% if user.is_authenticated %}
-    Welcome, {{ user.username }} <a href="/logout/?next={{ request.path }}">sign out</a>
+        {% blocktrans with user.first_name as first_name and user.get_profile.mid_name as middle_name and user.get_profile.id as id %}
+            Добро пожаловать, <a href="/users/{{ id }}">{{ first_name }} {{ middle_name }}</a>
+        {% endblocktrans %}
+        (<strong><a href="/logout/?next={{ request.path }}">{% trans 'выйти' %}</a></strong>)
     {% else %}
-    <a href="/login/?next={{ request.path }}">sign in</a> 
+        <strong><a href="/login/?next={{ request.path }}">{% trans 'Вход для сотрудников' %}</a></strong>
     {% endif %}
-    </div> 
-    {% if request.path != '/' %}
-    <p id="welcome"><a href="{% url iam-root %}">Institute of Applied Mathematics</a></p>
-    {% else %}
-    <p id="welcome">Institute of Applied Mathematics</p>
-    {% endif %}
-    <div id="sidebar" class="rounded_10">
-    {% block sidebar %}
-        <ul> 
-            <li><a href="{% url iam-news %}">News</a></li> 
-            <li><a href="{% url iam-users %}">Users</a></li> 
-        </ul> 
-    {% endblock %}    
-    </div> 
-    <div id="content" class="rounded"> 
-    {% block content %}    
-    {% endblock %} 
-    </div> 
-    <div id="footer"> 
-    {% block footer %}    
-        © 2010 Институт прикладной математики<br /> 
-        Дальневосточное отделение Российской академии наук
-        <a href="http://jigsaw.w3.org/css-validator/check/referer">
-            <img style="border:0;width:88px;height:31px;display:inline;"
-                 src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-                 alt="Valid CSS!" /></a>
+    </div>
+    
+    <div id="sidebar"><ul id="menu">
+        <li><span class="category">{% trans 'Посетителям' %}</span>
+            <ul>
+                <li><a href="/about/">{% trans 'Об институте' %}</a></li>
+                <li><span class="category">{% trans 'Студентам' %}</span>
+                    <ul>
+                        <li><a href="/basic-chairs/">{% trans 'Базовые кафедры' %}</a></li>
+                        <li><a href="/grad/">{% trans 'Аспирантура' %}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="category">{% trans 'Структура' %}</span>
+            <ul>
+                <li><a href="{% url iam-labs %}">{% trans 'Лаборатории и сектора' %}</a></li>
+                <li><a href="{% url iam-users %}">{% trans 'Сотрудники' %}</a></li>
+                <li><a href="/head/">{% trans 'Директор' %}</a></li>
+                <li><a class="out" href="http://www.iam.khv.ru/">{% trans 'Хабаровское отделение' %}</a></li>
+            </ul>
+        </li>
+        <li><span class="category">{% trans 'Исследования' %}</span>
+            <ul>
+                <li><a href="/research/">{% trans 'Основные направления' %}</a></li>
+            </ul>
+        </li>
+        <li>Какая-то ссылка</li>
+    </ul></div>
+
+    <div id="content">
+    {% block content %}
+    {% endblock %}
+    </div>
+    <div class="clearfooter"></div></div>
+    <div id="footer"><hr />
+        © 2010 {% trans 'Институт прикладной математики' %}<br />
+        {% trans 'Дальневосточное отделение Российской академии наук' %}<br />
+        <div id="w3c">
             <a href="http://validator.w3.org/check?uri=referer"><img
                src="http://www.w3.org/Icons/valid-xhtml10"
-               style="border:0;width:88px;height:31px;display:inline"  
+               style="border:0;width:88px;height:31px;display:inline"
                alt="Valid XHTML 1.0 Transitional" /></a>
-                              
-    {% endblock %}    
-    </div> 
-</body> 
-</html> 
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px;display:inline"
+                     src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                     alt="Valid CSS!" /></a>
+        </div>
+    </div>
+</body>
+</html>

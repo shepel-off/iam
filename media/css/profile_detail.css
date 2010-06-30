@@ -1,0 +1,6 @@
+@import url(/css/base.css);
+
+#content h3 {
+    margin-bottom: 0;
+    color: green;
+}
