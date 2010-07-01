@@ -32,7 +32,7 @@ TIME_ZONE = 'Asia/Vladivostok'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 gettext = lambda s: s
 LANGUAGES = (
@@ -103,9 +103,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 AUTH_PROFILE_MODULE = 'users.Profile'
 LOGIN_URL = '/login/'
-TINYMCE_DEFAULT_CONFIG = {
-    'theme': "advanced",
-}
+#TINYMCE_DEFAULT_CONFIG = {
+#    'theme': "advanced",
+#}
 
 INSTALLED_APPS = (
     'django.contrib.auth',

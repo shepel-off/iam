@@ -2,12 +2,27 @@
 {% load i18n %}
 
 {% block title %}{% trans 'Новости' %}{% endblock %}
-
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="/css/news.css" media="all" />
+{% endblock stylesheet %}
 {% block content %}
 <ul>
 {% for news_entry in object_list %}
-    <li><h2><a href="/news/{{news_entry.id}}">{{ news_entry.title }}</a></h2>
-    {{ news_entry.body|safe }}</li>
+    <li class="entry">
+    <h3>{{ news_entry.title }}</h3>
+    <ul class="meta">
+        <li class="date">{{ news_entry.date|date:"d.m.Y" }}</li>
+        <li class="author">{{ news_entry.author.short_name }}</li>
+    </ul>
+    {% ifequal news_entry.author.user.id user.id %}
+    <ul class="toolbox">
+            <li>
+            <a href="/news/{{ news_entry.id }}/edit/"><img src="/img/icons/pencil.png" /></a>
+            <a href="/news/{{ news_entry.id }}/delete/"><img src="/img/icons/cross.png" /></a>
+            </li>
+    </ul>
+    {% endifequal %}
+    <span class="body">{{ news_entry.body|safe }}</span></li>
 {% endfor %}
 </ul>
 {% endblock content %}

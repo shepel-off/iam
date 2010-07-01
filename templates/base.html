@@ -37,6 +37,12 @@
     </div>
     
     <div id="sidebar"><ul id="menu">
+        <li><a href="{% url iam-news %}">{% trans 'Новости' %}</a>
+        {% if user.is_authenticated %}
+            <ul><li><a href="{% url news-add %}">{% trans 'Добавить' %}</a></li></ul>
+        {% endif %}
+        </li>
+
         <li><span class="category">{% trans 'Посетителям' %}</span>
             <ul>
                 <li><a href="/about/">{% trans 'Об институте' %}</a></li>

@@ -1,17 +1,15 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Редактирование личных данных{% endblock %}
+{% block title %}{% trans 'Редактирование личных данных' %}{% endblock %}
 
 {% block content %}
-<form action='{% url profile-edit user.get_profile.id %}' method='POST'>{% csrf_token %}
-    {{ form.as_p }}
-    {{ formset.management_form }}
-    <table>
-        {% for form in formset.forms %}
-        {{ form }}
-        {% endfor %}
-    </table>
-<input type='submit' value='Сохранить' />
+<form action="{% url profile-edit user.get_profile.id %}" method="POST">{% csrf_token %}
+    <div class="fieldwrapper">
+        <label>{% trans 'Электронная почта' %}</label>
+        {{ userform.email }}
+    </div>
+    <p><input type="submit" value="{% trans 'Сохранить' %}" /></p>
 </form>
 {% endblock content %}
 
