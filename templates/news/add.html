@@ -1,12 +1,16 @@
+{% load i18n %}
+{% comment %} 
 {% extends "base.html" %}
 
 {% block title %}Add news entry{% endblock %}
+{% endcomment %}
 {% block script %}{{ form.media }}{% endblock %}
 
 {% block content %}
-<form action='{% url news-add %}' method='POST'>{% csrf_token %}
-{{ form.as_p }}
+<div style="display:inline-block;">
+<form action='{% url news-add %}' method='POST' style="margin:0;">{% csrf_token %}
+{{ form.as_table }}
 <input type='submit' value='send' />
 </form>
+</div>
 {% endblock content %}
-

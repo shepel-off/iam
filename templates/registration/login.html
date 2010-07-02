@@ -1,21 +1,24 @@
-{% extends "base.html" %}
 {% load i18n %}
+{% comment %} 
+{% extends "base.html" %}
 
 {% block title %}{% trans 'Вход для сотрудников' %}{% endblock %}
-
+{% endcomment %}
 {% block content %}
-<form method="post" action="{% url django.contrib.auth.views.login %}">{% csrf_token %}
-<table>
-<tr>
-    <td>{{ form.username.label_tag }}</td>
-    <td>{{ form.username }}</td>
-</tr>
-<tr>
-    <td>{{ form.password.label_tag }}</td>
-    <td>{{ form.password }}</td>
-</tr>
-</table>
-<input type="submit" value="{% trans 'Войти' %}" />
-<input type="hidden" name="next" value="{{ next }}" />
+<div style="display:inline-block;">
+<form method="post" action="{% url django.contrib.auth.views.login %}" style="margin-bottom:0">{% csrf_token %}
+    {% for field in form %}
+        <div style="overflow:auto;width:100%;margin-bottom:.5em;"> 
+            <div style="float:right;">
+                {{ field }}
+            </div>
+            <div style="float:right;margin-right:.5em;">
+                {{ field.label_tag }}
+            </div>
+        </div>
+    {% endfor %}
+<input type="submit" value="{% trans 'Войти' %}" style="display:block;clear:both;margin: 0 auto 0 auto;" />
+{% comment %} <input type="hidden" name="next" value="{{ next }}" />{% endcomment %}
 </form>
+</div>
 {% endblock %}

@@ -1,11 +1,6 @@
 @import url(/css/base.css);
-.entry {
-    clear:both;
-}
-
-.entry h3 {
-    margin-bottom: 0;
-}
+.entry { clear: both; }
+.entry h3 { margin-bottom: 0; }
 
 span.body * {
     margin-top: 0;
@@ -49,4 +44,12 @@ span.body * {
 .meta .author {
     font-size: .85em;
     color: #777;
+}
+
+#add_form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index:100;
+    background: white;
 }

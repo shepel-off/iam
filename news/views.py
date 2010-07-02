@@ -11,7 +11,7 @@ import datetime
 
 class NewsForm(forms.ModelForm):
     body = forms.CharField(widget=TinyMCE(
-        attrs={'cols': 80, 'rows': 30, 'theme': 'advanced'},
+        attrs={'cols': 80, 'rows': 20, 'theme': 'advanced'},
         ))
 
     class Meta:
