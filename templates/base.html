@@ -21,25 +21,21 @@
 
         $(document).ready(function(){
           $("a.popup").fancybox({
-			//	'width'				: '75%',
-			//	'height'			: '75%',
-			//	'autoScale'			: true,
                 'centerOnScroll'    : true,
                 'showCloseButton'   : false,
-				//'transitionIn'		: 'none',
-				//'transitionOut'		: 'none',
-				'type'				: 'iframe',
+				//'type'				: 'iframe',
 				'scrolling'         : 'no',
                 'onComplete'        : function() {
                                         var w, h;
-                                        w = $('#fancybox-frame').contents().find('body > div').width() + 20;
-                                        h = $('#fancybox-frame').contents().find('body > div').height() + 20;
+                                        //w = $('#fancybox-frame').contents().find('body > div').width() + 20;
+                                        //h = $('#fancybox-frame').contents().find('body > div').height() + 20;
                                         $('#fancybox-frame').contents().find('body').css('margin', '0');
                                         $('#fancybox-frame').contents().find(':submit').click(function() { $.fancybox.close(); });
-                                        $('#fancybox-inner').height(h);
-                                        $('#fancybox-wrap').height(h); 
-                                        $('#fancybox-inner').width(w);
-                                        $('#fancybox-wrap').width(w); 
+                                        //$('#fancybox-inner').height(h);
+                                        //$('#fancybox-wrap').height(h); 
+                                        //$('#fancybox-inner').width(w);
+                                        //$('#fancybox-wrap').width(w);
+                                        $.fancybox.resize();
                                         $.fancybox.center();
                                     }              
           });
