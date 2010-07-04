@@ -6,7 +6,7 @@
 {% block title %}{% trans 'Вход для сотрудников' %}{% endblock %}
 {% endcomment %}
 {% block content %}
-<div style="display:inline-block;">
+<div>
 <form method="post" action="{% url django.contrib.auth.views.login %}" style="margin-bottom:0">{% csrf_token %}
     {% for field in form %}
         <div style="overflow:auto;width:100%;margin-bottom:.5em;"> 

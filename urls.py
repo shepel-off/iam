@@ -21,10 +21,6 @@ urlpatterns = patterns('',
      (r'^logout/', 'django.contrib.auth.views.logout'),
      (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     # For tinymce package
-     (r'^tinymce/', include('tinymce.urls')),
-
-
-
 )
 
 from django.conf import settings

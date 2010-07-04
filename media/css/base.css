@@ -5,7 +5,7 @@ a { text-decoration: none; }
 #container { min-height: 100%; margin-bottom: -31px; position: relative; }
 .clearfooter { height: 31px; clear: both; }
 #footer { height: 31px; position: relative; text-align: center; padding-top: 10px; }
-#footer #w3c { float: right; margin-top: -31px;}
+#footer #w3c { float: right; margin-top: -31px; }
 
 #content { width: 70%; }
 #sidebar { width: 15%; }

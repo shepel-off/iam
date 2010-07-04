@@ -118,7 +118,6 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'django.contrib.humanize',
     'django.utils.simplejson', # serialization for json (ajax transfer format)
-    'tinymce',
     'rosetta',
     'iam.users',
     'iam.news',
