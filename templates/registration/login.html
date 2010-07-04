@@ -1,4 +1,5 @@
 {% load i18n %}
+
 {% comment %} 
 {% extends "base.html" %}
 
@@ -18,7 +19,7 @@
         </div>
     {% endfor %}
 <input type="submit" value="{% trans 'Войти' %}" style="display:block;clear:both;margin: 0 auto 0 auto;" />
-{% comment %} <input type="hidden" name="next" value="{{ next }}" />{% endcomment %}
+<input type="hidden" name="next" value="{{ next }}" />
 </form>
 </div>
 {% endblock %}
