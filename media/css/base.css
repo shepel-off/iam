@@ -7,8 +7,8 @@ a { text-decoration: none; }
 #footer { height: 31px; position: relative; text-align: center; padding-top: 10px; }
 #footer #w3c { float: right; margin-top: -31px; }
 
-#content { width: 70%; }
-#sidebar { width: 15%; }
+#content { width: 60%; }
+#sidebar { width: 20%; height: 100%; }
 
 #content { font-size: 12pt; float: left; }
 #content ul { list-style: none; }

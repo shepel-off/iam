@@ -1,11 +1,12 @@
+# -*- coding: utf-8 -*-
 # Django settings for iam project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-     ('Dmitry S. Kravtsov', 'idkravitz@gmail.com'),
-     ('Roman Kharitonov', 'refaim.vl@gmail.com'),
+     (u'Дмитрий Кравцов', 'idkravitz@gmail.com'),
+     (u'Роман Харитонов', 'refaim.vl@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -36,8 +37,8 @@ LANGUAGE_CODE = 'ru'
 
 gettext = lambda s: s
 LANGUAGES = (
-    ('ru', gettext('Russian')),
-    ('en-us', gettext('English')),
+    ('ru', gettext(u'Русский')),
+    ('en-us', gettext(u'Английский')),
 )
 
 SITE_ID = 1
@@ -52,17 +53,16 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = '/home/kravitz/iam/media/'
 
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/media/'
+MEDIA_URL = '/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+#ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '#0135b1%!@82v!$%e(@eb+=vr4q*phkdxekgw1%1cdazr2u4ag'
@@ -81,6 +81,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+#    'iam.middleware.PrettyHtml',
 )
 
 ROOT_URLCONF = 'iam.urls'

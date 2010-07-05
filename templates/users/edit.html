@@ -3,13 +3,58 @@
 
 {% block title %}{% trans 'Редактирование личных данных' %}{% endblock %}
 
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="/css/form.css" media="all" />
+{% endblock %}
+
 {% block content %}
 <form action="{% url profile-edit user.get_profile.id %}" method="POST">{% csrf_token %}
-    <div class="fieldwrapper">
-        <label>{% trans 'Электронная почта' %}</label>
-        {{ userform.email }}
-    </div>
-    <p><input type="submit" value="{% trans 'Сохранить' %}" /></p>
+{{ userformset.management_form }}
+{% for profileform in userformset.forms %}
+
+<div id="password">
+{% for field in passwordform %}
+<div class="wrapper">
+    <div>{{ field }}</div>
+    <div class="label">{{ field.label_tag }}</div>
+</div>
+{% endfor %}
+</div>
+
+<div id="personal">
+<div class="wrapper">
+    <div>{{ userform.last_name }}</div>
+    <div class="label">{{ userform.last_name.label_tag }}</div>
+</div>
+<div class="wrapper">
+    <div>{{ userform.first_name }}</div>
+    <div class="label">{{ userform.first_name.label_tag }}</div>
+</div>
+<div class="wrapper">
+    <div>{{ profileform.mid_name }}</div>
+    <div class="label">{{ profileform.mid_name.label_tag }}</div>
+</div>
+<div class="wrapper">
+    <div>{{ userform.email }}</div>
+    <div class="label">{{ userform.email.label_tag }}</div>
+</div>
+</div>
+
+<div id="science">
+<div class="wrapper">
+    <div>{{ profileform.academic_degree }}</div>
+    <div class="label">{{ profileform.academic_degree.label_tag }}</div>
+</div>
+<div class="wrapper">
+    <div>{{ profileform.laboratory }}</div>
+    <div class="label">{{ profileform.laboratory.label_tag }}</div>
+</div>
+</div>
+
+{{ profileform.id }}
+
+<input type="submit" value="{% trans 'Сохранить' %}" />
 </form>
+{% endfor %}
 {% endblock content %}
 
