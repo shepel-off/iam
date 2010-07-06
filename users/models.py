@@ -28,7 +28,7 @@ class Profile(models.Model):
 def safe_get_profile(self):
     try:
         return self.get_profile()
-    except Profile.DoesNotExists:
+    except Profile.DoesNotExist:
         return None
 
 User.safe_get_profile = safe_get_profile

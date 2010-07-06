@@ -52,7 +52,7 @@
         {% trans 'Добро пожаловать' %}, <a href="/users/{{ user.get_profile.id }}">{{ user.first_name }} {{ user.get_profile.mid_name }}</a>
         (<strong><a href="/logout/?next={{ request.path }}">{% trans 'выйти' %}</a></strong>)
     {% else %}
-        <strong><a class="popup" href="/login/?next={{ request.path }}">{% trans 'Вход для сотрудников' %}</a></strong>
+        <strong><a class="popup" href="/login/?next={{ request.path }}" name="login">{% trans 'Вход для сотрудников' %}</a></strong>
     {% endif %}
     </div>
     
