@@ -7,9 +7,7 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<div style="float: left">
 <img id="photo" src="/{{ object.photo }}" />
-</div>
 <div style="float: left; margin-left: 2em;">
 <h3 id="name">{{ object }}</h3>
 <span id="degree">{{ object.academic_degree }}</span>
@@ -18,16 +16,18 @@
 {% ifequal user.username object.user.username %}
 <form id="edit" action="./edit/"><input type="submit" value="{% trans 'Изменить данные' %}" /></form>
 {% endifequal %}
-<!-- ВСЁ ПОРТИТЬ НАХУЙ -->
 <!--
+<span id="lab"><a href="{% url iam-labs %}{{ object.laboratory.id }}">{{ object.laboratory.title }}</a></span>
+-->
 
-<a href="{% url iam-labs %}/{{ object.laboratory.id }}">{{ object.laboratory }}</a><br />
-{% ifnotequal object.publication_set.all|length 0 %}s
-    {% trans 'Публикации:' %}
-    <ul>
+{% ifnotequal object.publication_set.all|length 0 %}
+<div id="publications">
+    <h3 id="name">{% trans 'Публикации:' %}</h3>
+    <ol>
     {% for pub in object.publication_set.all %}
         <li>{{ pub }}</li>
     {% endfor %}
-    </ul>
-{% endifnotequal %}-->
+    </ol>
+</div>
+{% endifnotequal %}
 {% endblock %}

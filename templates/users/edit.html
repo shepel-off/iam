@@ -12,15 +12,6 @@
 {{ userformset.management_form }}
 {% for profileform in userformset.forms %}
 
-<div id="password">
-{% for field in passwordform %}
-<div class="wrapper">
-    <div>{{ field }}</div>
-    <div class="label">{{ field.label_tag }}</div>
-</div>
-{% endfor %}
-</div>
-
 <div id="personal">
 <div class="wrapper">
     <div>{{ userform.last_name }}</div>
@@ -38,9 +29,22 @@
     <div>{{ userform.email }}</div>
     <div class="label">{{ userform.email.label_tag }}</div>
 </div>
+{% comment %}
+<div class="wrapper">
+    <div>{{ profileform.photo }}</div>
+    <div class="label">{{ profileform.photo.label_tag }}</div>
 </div>
+{% endcomment %}
+<hr />
 
-<div id="science">
+{% for field in passwordform %}
+<div class="wrapper">
+    <div>{{ field }}</div>
+    <div class="label">{{ field.label_tag }}</div>
+</div>
+{% endfor %}
+<hr />
+
 <div class="wrapper">
     <div>{{ profileform.academic_degree }}</div>
     <div class="label">{{ profileform.academic_degree.label_tag }}</div>
@@ -50,7 +54,6 @@
     <div class="label">{{ profileform.laboratory.label_tag }}</div>
 </div>
 </div>
-
 {{ profileform.id }}
 
 <input type="submit" value="{% trans 'Сохранить' %}" />

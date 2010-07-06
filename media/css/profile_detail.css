@@ -2,6 +2,8 @@
 
 #name { margin-bottom: 0; margin-top: 0; text-align: center; }
 #degree { display: block; font-size: 70%; text-align: right; }
-#photo { }
 #email { display: block; float: left; }
+#photo { float: left; }
 #edit { display: block; float: right; font-size: 70%; }
+#lab { }
+#publications { clear: both; }

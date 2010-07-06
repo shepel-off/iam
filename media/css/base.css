@@ -1,5 +1,5 @@
 html, body { height: 100%; }
-body { font-family: Georgia, Verdana, Arial; font-size: 10pt; }
+body { font-family: Georgia, Verdana, Arial; font-size: 10pt; min-width: 1000px;}
 a { text-decoration: none; }
 
 #container { min-height: 100%; margin-bottom: -31px; position: relative; }
@@ -10,10 +10,10 @@ a { text-decoration: none; }
 #content { width: 60%; }
 #sidebar { width: 20%; height: 100%; }
 
-#content { font-size: 12pt; float: left; }
+#content { font-size: 10pt; float: left; }
 #content ul { list-style: none; }
 
-#sidebar { float: left; font-size: 12pt; padding-right: 10px; }
+#sidebar { float: left; font-size: 10pt; padding-right: 10px; }
 #sidebar a, #sidebar .category { color: blue; }
 #sidebar a.out { color: maroon; }
 #sidebar ul { list-style: none; padding-left: 0; }
