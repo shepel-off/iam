@@ -120,8 +120,8 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'django.utils.simplejson', # serialization for json (ajax transfer format)
     'rosetta',
-    'south',
     'iam.users',
     'iam.news',
     'iam.labs',
+    'iam.publications',
 )

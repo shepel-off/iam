@@ -12,7 +12,8 @@ from django.forms.util import ErrorDict
 from django.utils.translation import ugettext_lazy as _
 
 from iam.users.validators import not_empty_factory
-from iam.users.models import Profile, Publication
+from iam.users.models import Profile
+from iam.publications.models import Publication
 
 class UserForm(forms.ModelForm):
     first_name = forms.CharField(required=True, label=_(u'Имя'))

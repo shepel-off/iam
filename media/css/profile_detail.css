@@ -1,9 +1,9 @@
 @import url(/css/base.css);
 
 #name { margin-bottom: 0; margin-top: 0; text-align: center; }
-#degree { display: block; font-size: 70%; text-align: right; }
+#degree { display: block; font-size: 80%; text-align: left; }
 #email { display: block; float: left; }
 #photo { float: left; }
-#edit { display: block; float: right; font-size: 70%; }
+#edit { display: block; float: right; }
 #lab { }
 #publications { clear: both; }

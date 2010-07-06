@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin
-from iam.users.models import Profile,Publication
+from iam.users.models import Profile
+from iam.publications.models import Publication
 
 admin.site.unregister(User)
 
