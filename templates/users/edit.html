@@ -8,6 +8,16 @@
 {% endblock %}
 
 {% block content %}
+{% if errors|length %}
+<div id="errors">
+<ul>
+{% for key, value in errors.items %}
+    <li>{{ key }}: {{ value }}</li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
 <form action="{% url profile-edit user.get_profile.id %}" method="POST">{% csrf_token %}
 {{ userformset.management_form }}
 {% for profileform in userformset.forms %}
