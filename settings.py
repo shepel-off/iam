@@ -124,4 +124,5 @@ INSTALLED_APPS = (
     'iam.news',
     'iam.labs',
     'iam.publications',
+    'south',
 )
