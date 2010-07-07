@@ -21,8 +21,8 @@
 <div id="edit">
 {% ifequal user.id object.user.id %}
 <form style="margin-bottom: 0.1em;" action="./edit/"><input type="submit" value="{% trans 'Изменить данные' %}" /></form>
+<form action="{% url publication-add %}"><input type="submit" value="{% trans 'Добавить публикацию' %}" /></form>
 {% endifequal %}
-<form action="./edit/"><input type="submit" value="{% trans 'Добавить публикацию' %}" /></form>
 </div>
 <!--
 <span id="lab"><a href="{% url iam-labs %}{{ object.laboratory.id }}">{{ object.laboratory.title }}</a></span>

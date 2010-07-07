@@ -8,11 +8,11 @@ from iam.labs.models import Laboratory
 
 class Profile(models.Model):
     user = models.OneToOneField(User)
-    laboratory = models.ForeignKey(Laboratory, verbose_name=_(u'Лаборатория'))
+    laboratory = models.ForeignKey(Laboratory, verbose_name=_(u'Лаборатория'), null=False)
     mid_name = models.CharField(max_length=30, verbose_name=_(u'Отчество'))
     academic_degree = models.CharField(max_length=100, blank=True, verbose_name=_(u'Учёная степень'))
-    academic_rank = models.CharField(max_length=100, verbose_name=_(u'Учёное звание'))
-    post = models.CharField(max_length=100, verbose_name=_(u'Должность'))
+    academic_rank = models.CharField(max_length=100, blank=True, verbose_name=_(u'Учёное звание'))
+    post = models.CharField(max_length=100, blank=True, verbose_name=_(u'Должность'))
     photo = models.ImageField(upload_to='img/', blank=True, verbose_name=_(u'Фотография'))
     
     def __unicode__(self):

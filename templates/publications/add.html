@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans 'Добавление публикации' %}{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="/css/form.css" media="all" />
+{% endblock %}
+
+{% block content %}
+<form action={% url publication-add %} method="POST">{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="{% trans 'Сохранить' %}" />
+</form>
+{% endblock content %}
+

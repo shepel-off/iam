@@ -4,12 +4,28 @@
 {% block title %}{{ object }}{% endblock %}
 
 {% block content %}
-<h2>{{ object }}</h2>
+<h2 style="text-align: center;">{{ object }}</h2>
+<br />
+{% with object.head.get_profile as head %}
+{% trans 'Заведующий' %}: <a href="{% url iam-users %}{{ head.id }}">{{ head }}</a>
+<br />
+{% trans 'Состав' %}:
+<ul>
+    {% for user in object.profile_set.all %}
+    {% if user.id != head.id %}
+        <li><a href="{% url iam-users %}{{ user.id }}">{{ user }}</a></li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endwith %}
+
+{% comment %}
 {% trans 'Публикации:' %}<br />
 <ul>
 {% for pub in object.publications.all %}
     <li>{{ pub }}</li>
 {% endfor %}
 </ul>
+{% endcomment %}
 
 {% endblock %}

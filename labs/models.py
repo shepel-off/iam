@@ -24,4 +24,5 @@ class Laboratory(models.Model):
         return u'{0} (№ {1})'.format(self.title, self.number)
 
     class Meta:
+        verbose_name = _(u'Лаборатория')
         verbose_name_plural = _(u'Лаборатории')

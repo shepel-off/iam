@@ -7,22 +7,21 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
-from django.http import HttpResponseForbidden, HttpResponse
-from django.forms.util import ErrorDict
+from django.http import HttpResponse
 from django.utils.translation import ugettext_lazy as _
 
-from iam.users.validators import not_empty_factory
 from iam.users.models import Profile
 from iam.publications.models import Publication
 from iam.utils.decorators import user_passes_test
 
 class UserForm(forms.ModelForm):
+    username = forms.CharField(required=True, label=_(u'Имя пользователя'))
     first_name = forms.CharField(required=True, label=_(u'Имя'))
     last_name = forms.CharField(required=True, label=_(u'Фамилия'))
     email = forms.EmailField(required=True, label=_(u'Электронная почта'))
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'email',)
+        fields = ('username', 'first_name', 'last_name', 'email',)
 
 def same_user(user, profile_id):
     try:
@@ -44,11 +43,9 @@ def editprofile(request, profile_id):
         userform = UserForm(request.POST, instance=user)
         passwordform = PasswordChangeForm(user, request.POST)
         userformset = UserFormSet(request.POST, instance=user)
-        #errors = ErrorDict()
         forms = [userform, userformset.forms[0], passwordform]
         for form in forms:
             if form.has_changed():
-         #       errors.update(form.errors)
          # ZOMFG coding at 01:00 is pure evil :D shit below is scary like a Hitler in pink legins
                 readableErrors.update((unicode(form.base_fields[key].label), form.errors[key].as_text()) for key in form.errors.keys())
         if len(readableErrors) == 0:
@@ -56,9 +53,7 @@ def editprofile(request, profile_id):
                 if form.has_changed():
                     form.save()
             return redirect('/users/{0}'.format(profile_id))
-        #return HttpResponse(u"<br \>".join((u"{0}: {1}".format(*pair) for pair in readableErrors.items())))
-    #else:
     return render_to_response('users/edit.html',
         {'userform': userform, 'passwordform': passwordform,
-         'userformset': userformset,'errors':readableErrors},
+         'userformset': userformset, 'errors': readableErrors},
          context_instance=RequestContext(request))

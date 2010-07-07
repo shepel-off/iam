@@ -22,7 +22,7 @@ class ProfileInline(admin.StackedInline):
 class ProfileAdmin(UserAdmin):
     inlines = [ProfileInline]
     list_display = ('username', 'email', 'last_name', \
-        'first_name', 'middle_name', 'academic_degree', 'is_staff')
+        'first_name', 'middle_name',  'is_staff')
 
 admin.site.register(User, ProfileAdmin)
 admin.site.register(Publication)

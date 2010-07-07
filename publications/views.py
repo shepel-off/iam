@@ -22,9 +22,20 @@ def is_author(user,pub_id):
 
 @login_required
 @user_passes_test(is_author)
-def editpublication(request,pub_id):
+def editpublication(request, pub_id):
     pub_id = int(pub_id)
     p = Publication.objects.get(pk=pub_id)
     form = PublicationForm(instance=p)
+    if request.method == 'POST':
+        form = PublicationForm(request.POST, instance=p)
+        if form.has_changed
     return render_to_response('publications/edit.html', {'form': form, 'pub_id': pub_id},
                 context_instance=RequestContext(request))
+
+@login_required
+def addpublication(request):
+    p = Publication()
+    form = PublicationForm(instance=p)
+    return render_to_response('publications/add.html', {'form': form},
+                context_instance=RequestContext(request))
+
