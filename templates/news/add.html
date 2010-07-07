@@ -1,22 +1,32 @@
 {% load i18n %}
-<html>
-<head>
-</head>
-{% comment %} 
-{% extends "base.html" %}
 
-{% block title %}Add news entry{% endblock %}
-{% endcomment %}
-{{ form.media }}
+<style type="text/css">
+    #id_title { width: 99%; }	
+</style>
 
-<body>
 {% block content %}
-<div style="display:inline-block;">
-<form action='{% url news-add %}' method='POST' style="margin:0;">{% csrf_token %}
-{{ form.as_table }}
-<input type='submit' value='send' />
-</form>
+<div><form action='{% url news-add %}' method='POST' style="margin-bottom: 0;">{% csrf_token %}
+    
+<div style="overflow:auto; width:100%; margin-bottom:.5em;">
+    <div>{{ form.title.label_tag }}</div>
+    <div style="float:right; width: 100%;">{{ form.title }}</div>
 </div>
+<div style="overflow:auto; width:100%; margin-bottom:.5em;">
+    <div>{{ form.body.label_tag }}</div>
+    <div style="float:right;">{{ form.body }}</div>
+</div>
+{% comment %}
+	{% for field in form %}
+        <div style="overflow:auto;width:100%;margin-bottom:.5em;"> 
+            <div style="float:right;">
+                {{ field }}
+            </div>
+            <div style="float:right;margin-right:.5em;">
+                {{ field.label_tag }}
+            </div>
+        </div>
+	{% endfor %}
+{% endcomment %}
+<input type="submit" value="{% trans 'Добавить' %}" style="display:block;clear:both;float:right;" />
+</form></div>
 {% endblock content %}
-</body>
-</html>

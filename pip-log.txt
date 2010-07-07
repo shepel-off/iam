@@ -1,0 +1,1507 @@
+Downloading/unpacking pil
+  Getting page http://pypi.python.org/simple/pil
+  URLs to search for versions for pil:
+  * http://pypi.python.org/simple/pil/
+  Getting page http://pypi.python.org/simple/pil/
+  Getting page http://www.pythonware.com/products/pil
+  Getting page http://effbot.org/zone/pil-changes-115.htm
+  Skipping page http://www.pythonware.com/downloads/Imaging-1.1.3.tar.gz (from http://pypi.python.org/simple/PIL/) because of Content-Type: 
+  Getting page http://effbot.org/downloads/
+  Analyzing links from page http://pypi.python.org/simple/PIL/
+    Skipping link http://www.pythonware.com/products/pil (from http://pypi.python.org/simple/PIL/); not a file
+    Skipping link http://effbot.org/zone/pil-changes-115.htm (from http://pypi.python.org/simple/PIL/); unknown archive format: .htm
+    Skipping link http://www.pythonware.com/products/pil/ (from http://pypi.python.org/simple/PIL/); not a file
+    Skipping link http://www.pythonware.com/downloads/Imaging-1.1.3.tar.gz (from http://pypi.python.org/simple/PIL/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/#Imaging (from http://pypi.python.org/simple/PIL/); not a file
+  Analyzing links from page http://www.pythonware.com/products/pil/
+    Skipping link http://www.pythonware.com/media/css/pythonware.css (from http://www.pythonware.com/products/pil/); unknown archive format: .css
+    Skipping link http://www.pythonware.com/index.htm (from http://www.pythonware.com/products/pil/); unknown archive format: .htm
+    Skipping link http://www.pythonware.com/products/index.htm (from http://www.pythonware.com/products/pil/); unknown archive format: .htm
+    Skipping link http://www.pythonware.com/library/index.htm (from http://www.pythonware.com/products/pil/); unknown archive format: .htm
+    Skipping link http://www.pythonware.com/search.htm (from http://www.pythonware.com/products/pil/); unknown archive format: .htm
+    Skipping link http://www.pythonware.com/daily/index.htm (from http://www.pythonware.com/products/pil/); unknown archive format: .htm
+    Skipping link http://www.pythonware.com/products/ (from http://www.pythonware.com/products/pil/); not a file
+    Skipping link http://www.pythonware.com/products/pil/support.htm (from http://www.pythonware.com/products/pil/); unknown archive format: .htm
+    Skipping link http://www.pythonware.com/products/pil/old.htm (from http://www.pythonware.com/products/pil/); unknown archive format: .htm
+    Skipping link http://www.pythonware.com/products/pil/license.htm (from http://www.pythonware.com/products/pil/); unknown archive format: .htm
+    Skipping link http://www.pythonware.com/products/pil/faq.htm (from http://www.pythonware.com/products/pil/); unknown archive format: .htm
+    Skipping link http://www.djangoproject.com/ (from http://www.pythonware.com/products/pil/); not a file
+    Skipping link http://www.pythonware.com/products/pil/#pil117 (from http://www.pythonware.com/products/pil/); not a file
+    Skipping link mailto:image-sig@python.org (from http://www.pythonware.com/products/pil/); unknown archive format: .org
+    Skipping link http://mail.python.org/mailman/listinfo/image-sig (from http://www.pythonware.com/products/pil/); not a file
+    Skipping link mailto:image-sig-request@python.org (from http://www.pythonware.com/products/pil/); unknown archive format: .org
+    Skipping link mailto:info@pythonware.com (from http://www.pythonware.com/products/pil/); unknown archive format: .com
+    Skipping link http://effbot.org/downloads/Imaging-1.1.7.tar.gz (from http://www.pythonware.com/products/pil/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/PIL-1.1.7.win32-py2.4.exe (from http://www.pythonware.com/products/pil/); unknown archive format: .exe
+    Skipping link http://effbot.org/downloads/PIL-1.1.7.win32-py2.5.exe (from http://www.pythonware.com/products/pil/); unknown archive format: .exe
+    Skipping link http://effbot.org/downloads/PIL-1.1.7.win32-py2.6.exe (from http://www.pythonware.com/products/pil/); unknown archive format: .exe
+    Skipping link http://effbot.org/downloads#pil (from http://www.pythonware.com/products/pil/); not a file
+    Skipping link http://effbot.org/downloads/Imaging-1.1.6.tar.gz (from http://www.pythonware.com/products/pil/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/PIL-1.1.6.win32-py2.2.exe (from http://www.pythonware.com/products/pil/); unknown archive format: .exe
+    Skipping link http://effbot.org/downloads/PIL-1.1.6.win32-py2.3.exe (from http://www.pythonware.com/products/pil/); unknown archive format: .exe
+    Skipping link http://effbot.org/downloads/PIL-1.1.6.win32-py2.4.exe (from http://www.pythonware.com/products/pil/); unknown archive format: .exe
+    Skipping link http://effbot.org/downloads/PIL-1.1.6.win32-py2.5.exe (from http://www.pythonware.com/products/pil/); unknown archive format: .exe
+    Skipping link http://effbot.org/downloads/PIL-1.1.6.win32-py2.6.exe (from http://www.pythonware.com/products/pil/); unknown archive format: .exe
+    Skipping link http://effbot.org/zone/pil-changes-116.htm (from http://www.pythonware.com/products/pil/); unknown archive format: .htm
+    Skipping link http://effbot.org/zone/python-register.htm (from http://www.pythonware.com/products/pil/); unknown archive format: .htm
+    Skipping link http://effbot.org/downloads/Imaging-1.1.5.tar.gz (from http://www.pythonware.com/products/pil/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/PIL-1.1.5.win32-py2.1.exe (from http://www.pythonware.com/products/pil/); unknown archive format: .exe
+    Skipping link http://effbot.org/downloads/PIL-1.1.5.win32-py2.2.exe (from http://www.pythonware.com/products/pil/); unknown archive format: .exe
+    Skipping link http://effbot.org/downloads/PIL-1.1.5.win32-py2.3.exe (from http://www.pythonware.com/products/pil/); unknown archive format: .exe
+    Skipping link http://effbot.org/downloads/PIL-1.1.5.win32-py2.4.exe (from http://www.pythonware.com/products/pil/); unknown archive format: .exe
+    Skipping link http://effbot.org/downloads/PIL-1.1.5.win32-py2.5.exe (from http://www.pythonware.com/products/pil/); unknown archive format: .exe
+    Skipping link http://www.pythonware.com/library/pil/handbook/index.htm (from http://www.pythonware.com/products/pil/); unknown archive format: .htm
+    Skipping link http://www.pythonware.com/media/data/pil-handbook.pdf (from http://www.pythonware.com/products/pil/); unknown archive format: .pdf
+  Analyzing links from page http://effbot.org/zone/pil-changes-115.htm
+    Skipping link http://effbot.org/zone/rss.xml (from http://effbot.org/zone/pil-changes-115.htm); unknown archive format: .xml
+    Skipping link http://effbot.org/media/img/effbot.ico (from http://effbot.org/zone/pil-changes-115.htm); unknown archive format: .ico
+    Skipping link http://effbot.org/media/css/effbot-min.css (from http://effbot.org/zone/pil-changes-115.htm); unknown archive format: .css
+    Skipping link http://effbot.org/media/css/effbotprint-min.css (from http://effbot.org/zone/pil-changes-115.htm); unknown archive format: .css
+    Skipping link http://effbot.org/downloads#imaging (from http://effbot.org/zone/pil-changes-115.htm); not a file
+    Skipping link http://effbot.org/ (from http://effbot.org/zone/pil-changes-115.htm); not a file
+    Skipping link http://effbot.org/zone/pil-errata-114.htm (from http://effbot.org/zone/pil-changes-115.htm); unknown archive format: .htm
+    Skipping link http://effbot.org/zone/pythondoc.htm (from http://effbot.org/zone/pil-changes-115.htm); unknown archive format: .htm
+    Skipping link http://effbot.org/downloads#pilwmf (from http://effbot.org/zone/pil-changes-115.htm); not a file
+    Skipping link http://effbot.org/zone/ (from http://effbot.org/zone/pil-changes-115.htm); not a file
+    Skipping link http://www.webfaction.com/shared_hosting?affiliate=slab (from http://effbot.org/zone/pil-changes-115.htm); not a file
+  Analyzing links from page http://www.pythonware.com/products/pil/
+    Skipping link http://effbot.org/downloads/Imaging-1.1.7.tar.gz (from http://www.pythonware.com/products/pil/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/Imaging-1.1.6.tar.gz (from http://www.pythonware.com/products/pil/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/Imaging-1.1.5.tar.gz (from http://www.pythonware.com/products/pil/); wrong project name (not pil)
+  Analyzing links from page http://effbot.org/downloads/
+    Skipping link http://effbot.org/downloads/rss.xml (from http://effbot.org/downloads/); unknown archive format: .xml
+    Skipping link http://effbot.org/zone/copyright.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://www.amazon.co.uk/gp/registry/2QZDLLDVBENMC (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/downloads/#aggdraw (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/downloads/#pil (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/zone/draw-agg.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/media/downloads/aggdraw-1.2a3-20060212.win32-py2.6.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/aggdraw-1.2a3-20060212.win32-py2.5.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/aggdraw-1.2a3-20060212.win32-py2.4.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/aggdraw-1.2a3-20060212.win32-py2.3.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/aggdraw-1.1-20051010.win32-py2.4.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/aggdraw-1.1-20051010.win32-py2.3.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/aggdraw-1.1-20051010.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://svn.effbot.org/public/tags/aggdraw-1.2a3-20060212 (from http://effbot.org/downloads/); unknown archive format: .2a3-20060212
+    Skipping link http://effbot.org/downloads/#celementtree (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/downloads/#elementtree (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/zone/element-index.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/zone/celementtree.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/media/downloads/cElementTree-1.0.5-20051216.tar.gz (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/cElementTree-1.0.5-20051216.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/cElementTree-1.0.5-20051215.win32-py2.4.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/cElementTree-1.0.5-20051215.win32-py2.3.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/cElementTree-1.0.2-20050302.win32-py2.2.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/cElementTree-1.0.2-20050302.win32-py2.1.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/cElementTree-1.0.2-20050302.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/cElementTree-1.0.1-20050130.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/cElementTree-1.0-20050126.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://svn.effbot.org/public/tags/celementtree-1.0.6-20090110-preview (from http://effbot.org/downloads/); unknown archive format: .6-20090110-preview
+    Skipping link http://svn.effbot.org/public/tags/celementtree-1.0.6-20070831-preview (from http://effbot.org/downloads/); unknown archive format: .6-20070831-preview
+    Skipping link http://svn.effbot.org/public/tags/celementtree-1.0.5-20051216 (from http://effbot.org/downloads/); unknown archive format: .5-20051216
+    Skipping link http://svn.effbot.org/public/tags/celementtree-1.0.4-20051213 (from http://effbot.org/downloads/); unknown archive format: .4-20051213
+    Skipping link http://svn.effbot.org/public/tags/celementtree-1.0.2-20050302 (from http://effbot.org/downloads/); unknown archive format: .2-20050302
+    Skipping link http://svn.effbot.org/public/tags/celementtree-1.0.1-20050130 (from http://effbot.org/downloads/); unknown archive format: .1-20050130
+    Skipping link http://svn.effbot.org/public/tags/celementtree-1.0-20050126 (from http://effbot.org/downloads/); unknown archive format: .0-20050126
+    Skipping link http://effbot.org/downloads/#console (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/zone/console-index.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/media/downloads/console-1.1a2-20100425.win32-py2.6.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/console-1.1a2-20100425.win32-py2.5.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/console-1.1a1-20011229.win32-py2.6.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/console-1.1a1-20011229.win32-py2.5.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/console-1.1a1-20011229.win32-py2.4.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/console-1.1a1-20011229.win32-py2.3.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/console-1.1a1-20011229.win32-py2.2.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/console-1.1a1-20011229.win32-py2.1.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/console-1.1a1-20011229.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/#effbot (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/zone/effbot-exe-index.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/zone/effnews-exe.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/downloads/effbot-1.0.19-20040517.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/effbot-1.0.19-20040517.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/effbot-1.0.15-20030711.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/blogping-1.0.effbot (from http://effbot.org/downloads/); unknown archive format: .effbot
+    Skipping link http://effbot.org/media/downloads/comhem-1.2.effbot (from http://effbot.org/downloads/); unknown archive format: .effbot
+    Skipping link http://effbot.org/media/downloads/effnews-1.0.17.effbot (from http://effbot.org/downloads/); unknown archive format: .effbot
+    Skipping link http://effbot.org/media/downloads/effnews-1.0.20.effbot (from http://effbot.org/downloads/); unknown archive format: .effbot
+    Skipping link http://effbot.org/media/downloads/effnews-1.0.21.effbot (from http://effbot.org/downloads/); unknown archive format: .effbot
+    Skipping link http://effbot.org/media/downloads/imageview-0.0.3.effbot (from http://effbot.org/downloads/); unknown archive format: .effbot
+    Skipping link http://effbot.org/media/downloads/pil114-1.1.4b1.effbot (from http://effbot.org/downloads/); unknown archive format: .effbot
+    Skipping link http://effbot.org/downloads/#effbot.org (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/media/downloads/effbot.org-0.1-20041009.win32.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/effbot.org-0.1-20041009.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://svn.effbot.org/public/tags/effbot.org-0.2-20050530 (from http://effbot.org/downloads/); unknown archive format: .2-20050530
+    Skipping link http://svn.effbot.org/public/tags/effbot.org-0.1-20041009 (from http://effbot.org/downloads/); unknown archive format: .1-20041009
+    Skipping link http://effbot.org/downloads/#effnews (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/zone/effnews.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/media/downloads/effnews-4.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/#elementsoap (from http://effbot.org/downloads/); not a file
+    Skipping link http://www.w3.org/TR/SOAP/ (from http://effbot.org/downloads/); not a file
+    Skipping link http://www.google.com/apis (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/zone/element-soap.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/media/downloads/elementsoap-0.6-20071224.win32.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/elementsoap-0.6-20071224.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/elementsoap-0.5-20061119.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/elementsoap-0.3-20031123.win32.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/elementsoap-0.3-20031123.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://svn.effbot.org/public/tags/elementsoap-0.6-20071224 (from http://effbot.org/downloads/); unknown archive format: .6-20071224
+    Skipping link http://effbot.org/downloads/#elementtidy (from http://effbot.org/downloads/); not a file
+    Skipping link http://tidy.sourceforge.net/ (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/zone/element-tidylib.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/media/downloads/elementtidy-1.0-20050212.win32-py2.6.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/elementtidy-1.0-20050212.win32-py2.5.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/elementtidy-1.0-20050212.win32-py2.4.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/elementtidy-1.0-20050212.win32-py2.3.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/elementtidy-1.0-20050212.win32-py2.2.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/elementtidy-1.0-20050212.win32-py2.1.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/elementtidy-1.0-20050212.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/elementtree-1.2.7-20070827-preview.win32.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/elementtree-1.2.7-20070827-preview.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/elementtree-1.2.6-20050316.win32.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/elementtree-1.2.6-20050316.tar.gz (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/elementtree-1.2.6-20050316.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/elementtree-1.2-20040618.tar.gz (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/elementtree-1.2-20040618.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/elementtree-1.1-20030511.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/elementtree-1.0-20020728.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://svn.effbot.org/public/tags/elementtree-1.3a3-20070912 (from http://effbot.org/downloads/); unknown archive format: .3a3-20070912
+    Skipping link http://svn.effbot.org/public/tags/elementtree-1.2.7-20070827-preview (from http://effbot.org/downloads/); unknown archive format: .7-20070827-preview
+    Skipping link http://svn.effbot.org/public/tags/elementtree-1.2.6-20050316 (from http://effbot.org/downloads/); unknown archive format: .6-20050316
+    Skipping link http://svn.effbot.org/public/tags/elementtree-1.2.5-20050302 (from http://effbot.org/downloads/); unknown archive format: .5-20050302
+    Skipping link http://svn.effbot.org/public/tags/elementtree-1.2.4-20041228 (from http://effbot.org/downloads/); unknown archive format: .4-20041228
+    Skipping link http://svn.effbot.org/public/tags/elementtree-1.2-20040618 (from http://effbot.org/downloads/); unknown archive format: .2-20040618
+    Skipping link http://effbot.org/downloads/#exemaker (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/zone/exemaker.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/media/downloads/exemaker-1.2-20041012.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/#ftpparse (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/media/downloads/ftpparse-1.1-20021124.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/#grabscreen (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/media/downloads/grabscreen-1.0-20010426.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/#imaging (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/zone/pil-index.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/media/downloads/Imaging-1.1.7.tar.gz (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/Imaging-1.1.6.tar.gz (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/Imaging-1.1.5.tar.gz (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/Imaging-1.1.4.tar.gz (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/Imaging-1.1.3.tar.gz (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/Imaging-1.1.2.tar.gz (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/Imaging-1.1.1.tar.gz (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://svn.effbot.org/public/tags/pil-1.1.7b1-20090412 (from http://effbot.org/downloads/); unknown archive format: .7b1-20090412
+    Skipping link http://svn.effbot.org/public/tags/pil-1.1.7a2-20090328 (from http://effbot.org/downloads/); unknown archive format: .7a2-20090328
+    Skipping link http://svn.effbot.org/public/tags/pil-1.1.7a1-20090317 (from http://effbot.org/downloads/); unknown archive format: .7a1-20090317
+    Skipping link http://svn.effbot.org/public/tags/pil-1.1.7 (from http://effbot.org/downloads/); unknown archive format: .7
+    Skipping link http://svn.effbot.org/public/tags/pil-1.1.6 (from http://effbot.org/downloads/); unknown archive format: .6
+    Skipping link http://svn.effbot.org/public/tags/pil-1.1.5 (from http://effbot.org/downloads/); unknown archive format: .5
+    Skipping link http://svn.effbot.org/public/tags/pil-1.1.4 (from http://effbot.org/downloads/); unknown archive format: .4
+    Skipping link http://svn.effbot.org/public/tags/pil-1.1.3 (from http://effbot.org/downloads/); unknown archive format: .3
+    Skipping link http://svn.effbot.org/public/tags/pil-1.1.2 (from http://effbot.org/downloads/); unknown archive format: .2
+    Skipping link http://svn.effbot.org/public/tags/pil-1.1.1 (from http://effbot.org/downloads/); unknown archive format: .1
+    Found link http://effbot.org/media/downloads/PIL-1.1.7a2-py2.5-macosx10.5.mpkg.zip (from http://effbot.org/downloads/), version: 1.1.7a2-py2.5-macosx10.5.mpkg
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.7.win32-py2.7.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.7.win32-py2.6.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.7.win32-py2.5.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.7.win32-py2.4.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.7.win32-py2.3.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Found link http://effbot.org/media/downloads/PIL-1.1.7.tar.gz (from http://effbot.org/downloads/), version: 1.1.7
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.6.win32-py2.6.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.6.win32-py2.5.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.6.win32-py2.4.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.6.win32-py2.3.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.6.win32-py2.2.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.5.win32-py2.5.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.5.win32-py2.4.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.5.win32-py2.3.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.5.win32-py2.2.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.5.win32-py2.1.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.4.win32-py2.3.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.4.win32-py2.2.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/PIL-1.1.4.win32-py2.1.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/downloads/#pilfonts (from http://effbot.org/downloads/); not a file
+    Could not parse version from link: http://effbot.org/media/downloads/pilfonts.zip (from http://effbot.org/downloads/)
+    Skipping link http://effbot.org/media/downloads/pilfonts.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/#pilwmf (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/media/downloads/pilwmf-1.0b2-20040224.win32-py2.3.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/pilwmf-1.0b2-20040224.win32-py2.1.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Found link http://effbot.org/media/downloads/pilwmf-1.0b2-20040224.zip (from http://effbot.org/downloads/), version: wmf-1.0b2-20040224
+    Skipping link http://effbot.org/downloads/#pythondoc (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/media/downloads/pythondoc-2.1b7-20070909.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/pythondoc-2.0-20031103.win32.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/pythondoc-2.0-20031103.tar.gz (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/pythondoc-2.0-20031103.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://svn.effbot.org/public/tags/pythondoc-2.1b4-20050618 (from http://effbot.org/downloads/); unknown archive format: .1b4-20050618
+    Skipping link http://svn.effbot.org/public/tags/pythondoc-2.1b3-20050325 (from http://effbot.org/downloads/); unknown archive format: .1b3-20050325
+    Skipping link http://svn.effbot.org/public/tags/pythondoc-2.1b2-20040905 (from http://effbot.org/downloads/); unknown archive format: .1b2-20040905
+    Skipping link http://svn.effbot.org/public/tags/pythondoc-2.1b1-20040901 (from http://effbot.org/downloads/); unknown archive format: .1b1-20040901
+    Skipping link http://svn.effbot.org/public/tags/pythondoc-2.0-20031103 (from http://effbot.org/downloads/); unknown archive format: .0-20031103
+    Skipping link http://effbot.org/downloads/#sgmlop (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/zone/sgmlop-index.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/media/downloads/sgmlop-1.1.1-20040207.win32-py2.5.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/sgmlop-1.1.1-20040207.win32-py2.4.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/sgmlop-1.1.1-20040207.win32-py2.3.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/sgmlop-1.1.1-20040207.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/sgmlop-1.1-20030913.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/#squeeze (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/zone/squeeze.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/media/downloads/squeeze-1.6-19980504.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/#sre (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/media/downloads/sre-2.2.1.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/#subprocess (from http://effbot.org/downloads/); not a file
+    Skipping link http://www.lysator.liu.se/%7eastrand/popen5/ (from http://effbot.org/downloads/); not a file
+    Skipping link http://www.python.org/peps/pep-0324.html (from http://effbot.org/downloads/); unknown archive format: .html
+    Skipping link http://effbot.org/media/downloads/subprocess-0.1-20041012.win32-py2.3.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/subprocess-0.1-20041012.win32-py2.2.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/downloads/#tkicon (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/media/downloads/tkicon-0.9-19980218.win32-py2.1.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/tkicon-0.9-19980218.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/#tkinter3000 (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/zone/wck.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/zone/tkinter-index.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/media/downloads/tkinter3000-1.1.1-20061204.win32-py2.6.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/tkinter3000-1.1.1-20061204.win32-py2.5.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/tkinter3000-1.1.1-20061204.win32-py2.4.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/tkinter3000-1.1.1-20061204.win32-py2.3.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/tkinter3000-1.1.1-20061204.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/tkinter3000-1.1-20051211.win32-py2.4.exe (from http://effbot.org/downloads/); unknown archive format: .exe
+    Skipping link http://effbot.org/media/downloads/tkinter3000-1.0-20031212.tar.gz (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/media/downloads/tkinter3000-1.0-20031212.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://svn.effbot.org/public/tags/wck-tkinter3000-1.1b1-20051015 (from http://effbot.org/downloads/); unknown archive format: .1b1-20051015
+    Skipping link http://svn.effbot.org/public/tags/wck-tkinter3000-1.1a1-20040905 (from http://effbot.org/downloads/); unknown archive format: .1a1-20040905
+    Skipping link http://svn.effbot.org/public/tags/wck-tkinter3000-1.1-20051211 (from http://effbot.org/downloads/); unknown archive format: .1-20051211
+    Skipping link http://svn.effbot.org/public/tags/wck-tkinter3000-1.0-20031212 (from http://effbot.org/downloads/); unknown archive format: .0-20031212
+    Skipping link http://effbot.org/downloads/#wckgraph (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/zone/wckgraph.htm (from http://effbot.org/downloads/); unknown archive format: .htm
+    Skipping link http://effbot.org/media/downloads/wckgraph-0.5-20040421.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/#xmlrpclib (from http://effbot.org/downloads/); not a file
+    Skipping link http://effbot.org/media/downloads/xmlrpclib-1.0.1.zip (from http://effbot.org/downloads/); wrong project name (not pil)
+    Skipping link http://effbot.org/downloads/ (from http://effbot.org/downloads/); not a file
+  Using version 1.1.7 (newest of versions: 1.1.7, 1.1.7a2-py2.5-macosx10.5.mpkg, wmf-1.0b2-20040224)
+  Downloading from URL http://effbot.org/media/downloads/PIL-1.1.7.tar.gz (from http://effbot.org/downloads/)
+  Running setup.py egg_info for package pil
+    running egg_info
+    creating pip-egg-info/PIL.egg-info
+    writing pip-egg-info/PIL.egg-info/PKG-INFO
+    writing top-level names to pip-egg-info/PIL.egg-info/top_level.txt
+    writing dependency_links to pip-egg-info/PIL.egg-info/dependency_links.txt
+    writing manifest file 'pip-egg-info/PIL.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'pip-egg-info/PIL.egg-info/SOURCES.txt'
+    writing manifest file 'pip-egg-info/PIL.egg-info/SOURCES.txt'
+Installing collected packages: pil
+  Running setup.py install for pil
+    Running command /usr/bin/python -c "import setuptools; __file__='/srv/www/vhosts/iam/build/pil/setup.py'; execfile('/srv/www/vhosts/iam/build/pil/setup.py')" install --single-version-externally-managed --record /tmp/pip-w4oFLR-record/install-record.txt --install-headers /srv/www/vhosts/iam/lib/include
+    running install
+    running build
+    running build_py
+    creating build
+    creating build/lib.linux-i686-2.6
+    copying PIL/ImageFont.py -> build/lib.linux-i686-2.6
+    copying PIL/Hdf5StubImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/IcoImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/WmfImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/PpmImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/PcdImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageColor.py -> build/lib.linux-i686-2.6
+    copying PIL/PcxImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageFileIO.py -> build/lib.linux-i686-2.6
+    copying PIL/MicImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/ImtImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageDraw2.py -> build/lib.linux-i686-2.6
+    copying PIL/ExifTags.py -> build/lib.linux-i686-2.6
+    copying PIL/ImagePath.py -> build/lib.linux-i686-2.6
+    copying PIL/PcfFontFile.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageMath.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageDraw.py -> build/lib.linux-i686-2.6
+    copying PIL/GbrImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/PaletteFile.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageGL.py -> build/lib.linux-i686-2.6
+    copying PIL/GimpPaletteFile.py -> build/lib.linux-i686-2.6
+    copying PIL/IcnsImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/FitsStubImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageQt.py -> build/lib.linux-i686-2.6
+    copying PIL/ArgImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/ImagePalette.py -> build/lib.linux-i686-2.6
+    copying PIL/Image.py -> build/lib.linux-i686-2.6
+    copying PIL/ImImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/GifImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/PdfImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/CurImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/SunImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/BmpImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/__init__.py -> build/lib.linux-i686-2.6
+    copying PIL/MspImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/XVThumbImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/FontFile.py -> build/lib.linux-i686-2.6
+    copying PIL/GdImageFile.py -> build/lib.linux-i686-2.6
+    copying PIL/TgaImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/FpxImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/XpmImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageStat.py -> build/lib.linux-i686-2.6
+    copying PIL/WalImageFile.py -> build/lib.linux-i686-2.6
+    copying PIL/OleFileIO.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageOps.py -> build/lib.linux-i686-2.6
+    copying PIL/MpegImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/BufrStubImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/TarIO.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageChops.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageTk.py -> build/lib.linux-i686-2.6
+    copying PIL/JpegImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageFilter.py -> build/lib.linux-i686-2.6
+    copying PIL/PalmImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/PSDraw.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageCms.py -> build/lib.linux-i686-2.6
+    copying PIL/ContainerIO.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageTransform.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageWin.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageEnhance.py -> build/lib.linux-i686-2.6
+    copying PIL/TiffImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/FliImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/GimpGradientFile.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageGrab.py -> build/lib.linux-i686-2.6
+    copying PIL/SpiderImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/GribStubImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/SgiImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/EpsImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/McIdasImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageMode.py -> build/lib.linux-i686-2.6
+    copying PIL/XbmImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageSequence.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageShow.py -> build/lib.linux-i686-2.6
+    copying PIL/PngImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/TiffTags.py -> build/lib.linux-i686-2.6
+    copying PIL/PixarImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/ImageFile.py -> build/lib.linux-i686-2.6
+    copying PIL/DcxImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/IptcImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/PsdImagePlugin.py -> build/lib.linux-i686-2.6
+    copying PIL/BdfFontFile.py -> build/lib.linux-i686-2.6
+    running build_ext
+    building '_imaging' extension
+    creating build/temp.linux-i686-2.6
+    creating build/temp.linux-i686-2.6/libImaging
+    gcc -pthread -fno-strict-aliasing -DNDEBUG -fomit-frame-pointer -fmessage-length=0 -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fwrapv -fPIC -IlibImaging -I/usr/include -I/usr/local/include -I/usr/include/python2.6 -c _imaging.c -o build/temp.linux-i686-2.6/_imaging.o
+    unable to execute gcc: No such file or directory
+    error: command 'gcc' failed with exit status 1
+    Complete output from command /usr/bin/python -c "import setuptools; __file__='/srv/www/vhosts/iam/build/pil/setup.py'; execfile('/srv/www/vhosts/iam/build/pil/setup.py')" install --single-version-externally-managed --record /tmp/pip-w4oFLR-record/install-record.txt --install-headers /srv/www/vhosts/iam/lib/include:
+    running install
+
+running build
+
+running build_py
+
+creating build
+
+creating build/lib.linux-i686-2.6
+
+copying PIL/ImageFont.py -> build/lib.linux-i686-2.6
+
+copying PIL/Hdf5StubImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/IcoImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/WmfImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/PpmImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/PcdImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageColor.py -> build/lib.linux-i686-2.6
+
+copying PIL/PcxImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageFileIO.py -> build/lib.linux-i686-2.6
+
+copying PIL/MicImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImtImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageDraw2.py -> build/lib.linux-i686-2.6
+
+copying PIL/ExifTags.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImagePath.py -> build/lib.linux-i686-2.6
+
+copying PIL/PcfFontFile.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageMath.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageDraw.py -> build/lib.linux-i686-2.6
+
+copying PIL/GbrImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/PaletteFile.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageGL.py -> build/lib.linux-i686-2.6
+
+copying PIL/GimpPaletteFile.py -> build/lib.linux-i686-2.6
+
+copying PIL/IcnsImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/FitsStubImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageQt.py -> build/lib.linux-i686-2.6
+
+copying PIL/ArgImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImagePalette.py -> build/lib.linux-i686-2.6
+
+copying PIL/Image.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/GifImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/PdfImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/CurImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/SunImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/BmpImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/__init__.py -> build/lib.linux-i686-2.6
+
+copying PIL/MspImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/XVThumbImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/FontFile.py -> build/lib.linux-i686-2.6
+
+copying PIL/GdImageFile.py -> build/lib.linux-i686-2.6
+
+copying PIL/TgaImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/FpxImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/XpmImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageStat.py -> build/lib.linux-i686-2.6
+
+copying PIL/WalImageFile.py -> build/lib.linux-i686-2.6
+
+copying PIL/OleFileIO.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageOps.py -> build/lib.linux-i686-2.6
+
+copying PIL/MpegImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/BufrStubImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/TarIO.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageChops.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageTk.py -> build/lib.linux-i686-2.6
+
+copying PIL/JpegImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageFilter.py -> build/lib.linux-i686-2.6
+
+copying PIL/PalmImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/PSDraw.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageCms.py -> build/lib.linux-i686-2.6
+
+copying PIL/ContainerIO.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageTransform.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageWin.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageEnhance.py -> build/lib.linux-i686-2.6
+
+copying PIL/TiffImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/FliImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/GimpGradientFile.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageGrab.py -> build/lib.linux-i686-2.6
+
+copying PIL/SpiderImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/GribStubImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/SgiImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/EpsImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/McIdasImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageMode.py -> build/lib.linux-i686-2.6
+
+copying PIL/XbmImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageSequence.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageShow.py -> build/lib.linux-i686-2.6
+
+copying PIL/PngImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/TiffTags.py -> build/lib.linux-i686-2.6
+
+copying PIL/PixarImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/ImageFile.py -> build/lib.linux-i686-2.6
+
+copying PIL/DcxImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/IptcImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/PsdImagePlugin.py -> build/lib.linux-i686-2.6
+
+copying PIL/BdfFontFile.py -> build/lib.linux-i686-2.6
+
+running build_ext
+
+building '_imaging' extension
+
+creating build/temp.linux-i686-2.6
+
+creating build/temp.linux-i686-2.6/libImaging
+
+gcc -pthread -fno-strict-aliasing -DNDEBUG -fomit-frame-pointer -fmessage-length=0 -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fwrapv -fPIC -IlibImaging -I/usr/include -I/usr/local/include -I/usr/include/python2.6 -c _imaging.c -o build/temp.linux-i686-2.6/_imaging.o
+
+unable to execute gcc: No such file or directory
+
+error: command 'gcc' failed with exit status 1
+
+----------------------------------------
+Command /usr/bin/python -c "import setuptools; __file__='/srv/www/vhosts/iam/build/pil/setup.py'; execfile('/srv/www/vhosts/iam/build/pil/setup.py')" install --single-version-externally-managed --record /tmp/pip-w4oFLR-record/install-record.txt --install-headers /srv/www/vhosts/iam/lib/include failed with error code 1
+Exception information:
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/pip.py", line 482, in main
+    self.run(options, args)
+  File "/usr/lib/python2.6/site-packages/pip.py", line 677, in run
+    requirement_set.install(install_options)
+  File "/usr/lib/python2.6/site-packages/pip.py", line 2749, in install
+    requirement.install(install_options)
+  File "/usr/lib/python2.6/site-packages/pip.py", line 2140, in install
+    cwd=self.source_dir, filter_stdout=self._filter_install, show_stdout=False)
+  File "/usr/lib/python2.6/site-packages/pip.py", line 4354, in call_subprocess
+    % (command_desc, proc.returncode))
+InstallationError: Command /usr/bin/python -c "import setuptools; __file__='/srv/www/vhosts/iam/build/pil/setup.py'; execfile('/srv/www/vhosts/iam/build/pil/setup.py')" install --single-version-externally-managed --record /tmp/pip-w4oFLR-record/install-record.txt --install-headers /srv/www/vhosts/iam/lib/include failed with error code 1
+------------------------------------------------------------
+/usr/bin/pip run on Wed Jul  7 11:45:57 2010
+Downloading/unpacking pil
+  Running setup.py egg_info for package pil
+    running egg_info
+    writing pip-egg-info/PIL.egg-info/PKG-INFO
+    writing top-level names to pip-egg-info/PIL.egg-info/top_level.txt
+    writing dependency_links to pip-egg-info/PIL.egg-info/dependency_links.txt
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'pip-egg-info/PIL.egg-info/SOURCES.txt'
+    writing manifest file 'pip-egg-info/PIL.egg-info/SOURCES.txt'
+Installing collected packages: pil
+  Running setup.py install for pil
+    Running command /usr/bin/python -c "import setuptools; __file__='/srv/www/vhosts/iam/build/pil/setup.py'; execfile('/srv/www/vhosts/iam/build/pil/setup.py')" install --single-version-externally-managed --record /tmp/pip-XStixh-record/install-record.txt --install-headers /srv/www/vhosts/iam/lib/include
+    running install
+    running build
+    running build_py
+    running build_ext
+    building '_imaging' extension
+    gcc -pthread -fno-strict-aliasing -DNDEBUG -fomit-frame-pointer -fmessage-length=0 -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fwrapv -fPIC -IlibImaging -I/usr/include -I/usr/local/include -I/usr/include/python2.6 -c _imaging.c -o build/temp.linux-i686-2.6/_imaging.o
+    _imaging.c:75:20: error: Python.h: No such file or directory
+    In file included from libImaging/Imaging.h:14,
+                     from _imaging.c:77:
+    libImaging/ImPlatform.h:14:2: error: #error Sorry, this library requires support for ANSI prototypes.
+    libImaging/ImPlatform.h:17:2: error: #error Sorry, this library requires ANSI header files.
+    libImaging/ImPlatform.h:55:2: error: #error Cannot find required 32-bit integer type
+    In file included from _imaging.c:77:
+    libImaging/Imaging.h:90: error: expected specifier-qualifier-list before ‘INT32’
+    libImaging/Imaging.h:264: error: expected specifier-qualifier-list before ‘INT32’
+    libImaging/Imaging.h:395: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ImagingCRC32’
+    _imaging.c:124: error: expected specifier-qualifier-list before ‘PyObject_HEAD’
+    _imaging.c:129: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+    _imaging.c:143: error: expected specifier-qualifier-list before ‘PyObject_HEAD’
+    _imaging.c:151: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+    _imaging.c:154: error: expected specifier-qualifier-list before ‘PyObject_HEAD’
+    _imaging.c:160: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+    _imaging.c:165: error: expected specifier-qualifier-list before ‘PyObject_HEAD’
+    _imaging.c:170: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+    _imaging.c:172: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c: In function ‘_dealloc’:
+    _imaging.c:204: error: ‘ImagingObject’ has no member named ‘access’
+    _imaging.c:206: error: ‘ImagingObject’ has no member named ‘image’
+    _imaging.c:207: warning: implicit declaration of function ‘PyMem_DEL’
+    _imaging.c: At top level:
+    _imaging.c:212: error: expected ‘)’ before ‘*’ token
+    _imaging.c: In function ‘ImagingSectionEnter’:
+    _imaging.c:230: error: ‘PyThreadState’ undeclared (first use in this function)
+    _imaging.c:230: error: (Each undeclared identifier is reported only once
+    _imaging.c:230: error: for each function it appears in.)
+    _imaging.c:230: error: expected expression before ‘)’ token
+    _imaging.c: In function ‘ImagingSectionLeave’:
+    _imaging.c:237: warning: implicit declaration of function ‘PyEval_RestoreThread’
+    _imaging.c:237: error: ‘PyThreadState’ undeclared (first use in this function)
+    _imaging.c:237: error: expected expression before ‘)’ token
+    _imaging.c: At top level:
+    _imaging.c:248: error: expected ‘)’ before ‘*’ token
+    _imaging.c:257: error: expected ‘)’ before ‘*’ token
+    _imaging.c: In function ‘ImagingError_IOError’:
+    _imaging.c:301: warning: implicit declaration of function ‘PyErr_SetString’
+    _imaging.c:301: error: ‘PyExc_IOError’ undeclared (first use in this function)
+    _imaging.c:302: error: ‘NULL’ undeclared (first use in this function)
+    _imaging.c: In function ‘ImagingError_MemoryError’:
+    _imaging.c:308: warning: implicit declaration of function ‘PyErr_NoMemory’
+    _imaging.c:308: warning: return makes pointer from integer without a cast
+    _imaging.c: In function ‘ImagingError_Mismatch’:
+    _imaging.c:314: error: ‘PyExc_ValueError’ undeclared (first use in this function)
+    _imaging.c:315: error: ‘NULL’ undeclared (first use in this function)
+    _imaging.c: In function ‘ImagingError_ModeError’:
+    _imaging.c:321: error: ‘PyExc_ValueError’ undeclared (first use in this function)
+    _imaging.c:322: error: ‘NULL’ undeclared (first use in this function)
+    _imaging.c: In function ‘ImagingError_ValueError’:
+    _imaging.c:329: error: ‘PyExc_ValueError’ undeclared (first use in this function)
+    _imaging.c:332: error: ‘NULL’ undeclared (first use in this function)
+    _imaging.c: In function ‘ImagingError_Clear’:
+    _imaging.c:338: warning: implicit declaration of function ‘PyErr_Clear’
+    _imaging.c: At top level:
+    _imaging.c:369: error: expected ‘)’ before ‘*’ token
+    _imaging.c:464: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:510: error: expected ‘)’ before ‘*’ token
+    _imaging.c:587: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:619: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:631: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:643: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:655: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:664: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:675: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:686: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:697: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:719: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:743: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:760: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:777: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:786: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:803: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:813: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:824: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:857: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:879: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:914: error: expected ‘)’ before ‘*’ token
+    _imaging.c:954: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:981: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1054: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1065: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1075: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1114: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1191: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1202: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1339: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1359: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1394: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1419: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1448: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1459: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1479: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1530: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1568: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1614: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1689: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1739: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1765: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1771: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1783: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1817: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1845: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1874: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1885: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1901: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1922: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1928: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1939: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1950: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1961: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1972: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:1983: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2001: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2019: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2030: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2041: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2052: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2063: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2081: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c: In function ‘_font_dealloc’:
+    _imaging.c:2142: warning: implicit declaration of function ‘Py_XDECREF’
+    _imaging.c:2142: error: ‘ImagingFontObject’ has no member named ‘ref’
+    _imaging.c: In function ‘textwidth’:
+    _imaging.c:2152: error: ‘ImagingFontObject’ has no member named ‘glyphs’
+    _imaging.c: At top level:
+    _imaging.c:2157: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2205: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2215: error: array type has incomplete element type
+    _imaging.c:2216: error: ‘PyCFunction’ undeclared here (not in a function)
+    _imaging.c:2216: error: expected ‘}’ before ‘_font_getmask’
+    _imaging.c:2217: error: expected ‘}’ before ‘_font_getsize’
+    _imaging.c:2218: error: ‘NULL’ undeclared here (not in a function)
+    _imaging.c:2221: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2229: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c: In function ‘_draw_dealloc’:
+    _imaging.c:2257: error: ‘ImagingDrawObject’ has no member named ‘image’
+    _imaging.c: At top level:
+    _imaging.c:2261: error: expected ‘)’ before ‘*’ token
+    _imaging.c:2263: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2278: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2298: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2335: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2353: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2390: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2406: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2459: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2474: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2507: error: expected ‘)’ before ‘*’ token
+    _imaging.c:2509: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2536: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2554: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2600: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2637: error: array type has incomplete element type
+    _imaging.c:2640: error: expected ‘}’ before ‘_draw_line’
+    _imaging.c:2641: error: expected ‘}’ before ‘_draw_lines’
+    _imaging.c:2643: error: expected ‘}’ before ‘_draw_outline’
+    _imaging.c:2645: error: expected ‘}’ before ‘_draw_polygon’
+    _imaging.c:2646: error: expected ‘}’ before ‘_draw_rectangle’
+    _imaging.c:2647: error: expected ‘}’ before ‘_draw_point’
+    _imaging.c:2648: error: expected ‘}’ before ‘_draw_points’
+    _imaging.c:2649: error: expected ‘}’ before ‘_draw_arc’
+    _imaging.c:2650: error: expected ‘}’ before ‘_draw_bitmap’
+    _imaging.c:2651: error: expected ‘}’ before ‘_draw_chord’
+    _imaging.c:2652: error: expected ‘}’ before ‘_draw_ellipse’
+    _imaging.c:2653: error: expected ‘}’ before ‘_draw_pieslice’
+    _imaging.c:2654: error: expected ‘}’ before ‘_draw_ink’
+    _imaging.c:2659: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2668: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c: In function ‘pixel_access_dealloc’:
+    _imaging.c:2693: error: ‘PixelAccessObject’ has no member named ‘image’
+    _imaging.c: At top level:
+    _imaging.c:2697: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2708: error: expected declaration specifiers or ‘...’ before ‘PyObject’
+    _imaging.c:2708: error: expected declaration specifiers or ‘...’ before ‘PyObject’
+    _imaging.c: In function ‘pixel_access_setitem’:
+    _imaging.c:2710: error: ‘PixelAccessObject’ has no member named ‘image’
+    _imaging.c:2714: error: ‘PixelAccessObject’ has no member named ‘readonly’
+    _imaging.c:2719: warning: implicit declaration of function ‘_getxy’
+    _imaging.c:2719: error: ‘xy’ undeclared (first use in this function)
+    _imaging.c:2723: error: ‘PyExc_IndexError’ undeclared (first use in this function)
+    _imaging.c:2727: error: ‘color’ undeclared (first use in this function)
+    _imaging.c:2730: warning: implicit declaration of function ‘getink’
+    _imaging.c:2733: error: ‘PixelAccessObject’ has no member named ‘image’
+    _imaging.c: At top level:
+    _imaging.c:2744: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2763: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2774: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2791: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2811: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2846: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:2867: error: array type has incomplete element type
+    _imaging.c:2870: error: expected ‘}’ before ‘_getpixel’
+    _imaging.c:2871: error: expected ‘}’ before ‘_putpixel’
+    _imaging.c:2873: error: expected ‘}’ before ‘pixel_access_new’
+    _imaging.c:2876: error: expected ‘}’ before ‘_convert’
+    _imaging.c:2877: error: expected ‘}’ before ‘_convert2’
+    _imaging.c:2878: error: expected ‘}’ before ‘_convert_matrix’
+    _imaging.c:2879: error: expected ‘}’ before ‘_copy’
+    _imaging.c:2880: error: expected ‘}’ before ‘_copy2’
+    _imaging.c:2884: error: expected ‘}’ before ‘_crop’
+    _imaging.c:2885: error: expected ‘}’ before ‘_expand’
+    _imaging.c:2886: error: expected ‘}’ before ‘_filter’
+    _imaging.c:2887: error: expected ‘}’ before ‘_histogram’
+    _imaging.c:2889: error: expected ‘}’ before ‘_modefilter’
+    _imaging.c:2891: error: expected ‘}’ before ‘_offset’
+    _imaging.c:2892: error: expected ‘}’ before ‘_paste’
+    _imaging.c:2893: error: expected ‘}’ before ‘_point’
+    _imaging.c:2894: error: expected ‘}’ before ‘_point_transform’
+    _imaging.c:2895: error: expected ‘}’ before ‘_putdata’
+    _imaging.c:2897: error: expected ‘}’ before ‘_quantize’
+    _imaging.c:2900: error: expected ‘}’ before ‘_rankfilter’
+    _imaging.c:2902: error: expected ‘}’ before ‘_resize’
+    _imaging.c:2903: error: expected ‘}’ before ‘_rotate’
+    _imaging.c:2904: error: expected ‘}’ before ‘_stretch’
+    _imaging.c:2905: error: expected ‘}’ before ‘_transpose’
+    _imaging.c:2906: error: expected ‘}’ before ‘_transform2’
+    _imaging.c:2908: error: expected ‘}’ before ‘_isblock’
+    _imaging.c:2910: error: expected ‘}’ before ‘_getbbox’
+    _imaging.c:2911: error: expected ‘}’ before ‘_getcolors’
+    _imaging.c:2912: error: expected ‘}’ before ‘_getextrema’
+    _imaging.c:2913: error: expected ‘}’ before ‘_getprojection’
+    _imaging.c:2915: error: expected ‘}’ before ‘_getband’
+    _imaging.c:2916: error: expected ‘}’ before ‘_putband’
+    _imaging.c:2917: error: expected ‘}’ before ‘_fillband’
+    _imaging.c:2919: error: expected ‘}’ before ‘im_setmode’
+    _imaging.c:2921: error: expected ‘}’ before ‘_getpalette’
+    _imaging.c:2922: error: expected ‘}’ before ‘_putpalette’
+    _imaging.c:2923: error: expected ‘}’ before ‘_putpalettealpha’
+    _imaging.c:2927: error: expected ‘}’ before ‘_chop_invert’
+    _imaging.c:2928: error: expected ‘}’ before ‘_chop_lighter’
+    _imaging.c:2929: error: expected ‘}’ before ‘_chop_darker’
+    _imaging.c:2930: error: expected ‘}’ before ‘_chop_difference’
+    _imaging.c:2931: error: expected ‘}’ before ‘_chop_multiply’
+    _imaging.c:2932: error: expected ‘}’ before ‘_chop_screen’
+    _imaging.c:2933: error: expected ‘}’ before ‘_chop_add’
+    _imaging.c:2934: error: expected ‘}’ before ‘_chop_subtract’
+    _imaging.c:2935: error: expected ‘}’ before ‘_chop_add_modulo’
+    _imaging.c:2936: error: expected ‘}’ before ‘_chop_subtract_modulo’
+    _imaging.c:2937: error: expected ‘}’ before ‘_chop_and’
+    _imaging.c:2938: error: expected ‘}’ before ‘_chop_or’
+    _imaging.c:2939: error: expected ‘}’ before ‘_chop_xor’
+    _imaging.c:2944: error: expected ‘}’ before ‘_gaussian_blur’
+    _imaging.c:2945: error: expected ‘}’ before ‘_unsharp_mask’
+    _imaging.c:2950: error: expected ‘}’ before ‘_effect_spread’
+    _imaging.c:2954: error: expected ‘}’ before ‘_new_array’
+    _imaging.c:2955: error: expected ‘}’ before ‘_new_block’
+    _imaging.c:2958: error: expected ‘}’ before ‘_save_ppm’
+    _imaging.c:2967: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c: In function ‘image_length’:
+    _imaging.c:2996: error: ‘ImagingObject’ has no member named ‘image’
+    _imaging.c: At top level:
+    _imaging.c:3001: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3016: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘image_as_sequence’
+    _imaging.c:3029: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+    _imaging.c:3050: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+    _imaging.c:3062: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+    _imaging.c:3076: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘pixel_access_as_mapping’
+    _imaging.c:3084: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+    _imaging.c:3106: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3107: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3108: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3109: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3110: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3111: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3112: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3113: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3114: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3115: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3116: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3117: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3118: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3119: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3120: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3123: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3124: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3125: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3126: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3127: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3128: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3129: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3144: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3147: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3149: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3150: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+    _imaging.c:3152: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘functions’
+    _imaging.c:3250: warning: return type defaults to ‘int’
+    _imaging.c: In function ‘DL_EXPORT’:
+    _imaging.c:3250: error: expected declaration specifiers before ‘init_imaging’
+    _imaging.c:3281: error: expected ‘{’ at end of input
+    error: command 'gcc' failed with exit status 1
+    Complete output from command /usr/bin/python -c "import setuptools; __file__='/srv/www/vhosts/iam/build/pil/setup.py'; execfile('/srv/www/vhosts/iam/build/pil/setup.py')" install --single-version-externally-managed --record /tmp/pip-XStixh-record/install-record.txt --install-headers /srv/www/vhosts/iam/lib/include:
+    running install
+
+running build
+
+running build_py
+
+running build_ext
+
+building '_imaging' extension
+
+gcc -pthread -fno-strict-aliasing -DNDEBUG -fomit-frame-pointer -fmessage-length=0 -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g -fwrapv -fPIC -IlibImaging -I/usr/include -I/usr/local/include -I/usr/include/python2.6 -c _imaging.c -o build/temp.linux-i686-2.6/_imaging.o
+
+_imaging.c:75:20: error: Python.h: No such file or directory
+
+In file included from libImaging/Imaging.h:14,
+
+                 from _imaging.c:77:
+
+libImaging/ImPlatform.h:14:2: error: #error Sorry, this library requires support for ANSI prototypes.
+
+libImaging/ImPlatform.h:17:2: error: #error Sorry, this library requires ANSI header files.
+
+libImaging/ImPlatform.h:55:2: error: #error Cannot find required 32-bit integer type
+
+In file included from _imaging.c:77:
+
+libImaging/Imaging.h:90: error: expected specifier-qualifier-list before ‘INT32’
+
+libImaging/Imaging.h:264: error: expected specifier-qualifier-list before ‘INT32’
+
+libImaging/Imaging.h:395: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ImagingCRC32’
+
+_imaging.c:124: error: expected specifier-qualifier-list before ‘PyObject_HEAD’
+
+_imaging.c:129: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+
+_imaging.c:143: error: expected specifier-qualifier-list before ‘PyObject_HEAD’
+
+_imaging.c:151: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+
+_imaging.c:154: error: expected specifier-qualifier-list before ‘PyObject_HEAD’
+
+_imaging.c:160: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+
+_imaging.c:165: error: expected specifier-qualifier-list before ‘PyObject_HEAD’
+
+_imaging.c:170: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+
+_imaging.c:172: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c: In function ‘_dealloc’:
+
+_imaging.c:204: error: ‘ImagingObject’ has no member named ‘access’
+
+_imaging.c:206: error: ‘ImagingObject’ has no member named ‘image’
+
+_imaging.c:207: warning: implicit declaration of function ‘PyMem_DEL’
+
+_imaging.c: At top level:
+
+_imaging.c:212: error: expected ‘)’ before ‘*’ token
+
+_imaging.c: In function ‘ImagingSectionEnter’:
+
+_imaging.c:230: error: ‘PyThreadState’ undeclared (first use in this function)
+
+_imaging.c:230: error: (Each undeclared identifier is reported only once
+
+_imaging.c:230: error: for each function it appears in.)
+
+_imaging.c:230: error: expected expression before ‘)’ token
+
+_imaging.c: In function ‘ImagingSectionLeave’:
+
+_imaging.c:237: warning: implicit declaration of function ‘PyEval_RestoreThread’
+
+_imaging.c:237: error: ‘PyThreadState’ undeclared (first use in this function)
+
+_imaging.c:237: error: expected expression before ‘)’ token
+
+_imaging.c: At top level:
+
+_imaging.c:248: error: expected ‘)’ before ‘*’ token
+
+_imaging.c:257: error: expected ‘)’ before ‘*’ token
+
+_imaging.c: In function ‘ImagingError_IOError’:
+
+_imaging.c:301: warning: implicit declaration of function ‘PyErr_SetString’
+
+_imaging.c:301: error: ‘PyExc_IOError’ undeclared (first use in this function)
+
+_imaging.c:302: error: ‘NULL’ undeclared (first use in this function)
+
+_imaging.c: In function ‘ImagingError_MemoryError’:
+
+_imaging.c:308: warning: implicit declaration of function ‘PyErr_NoMemory’
+
+_imaging.c:308: warning: return makes pointer from integer without a cast
+
+_imaging.c: In function ‘ImagingError_Mismatch’:
+
+_imaging.c:314: error: ‘PyExc_ValueError’ undeclared (first use in this function)
+
+_imaging.c:315: error: ‘NULL’ undeclared (first use in this function)
+
+_imaging.c: In function ‘ImagingError_ModeError’:
+
+_imaging.c:321: error: ‘PyExc_ValueError’ undeclared (first use in this function)
+
+_imaging.c:322: error: ‘NULL’ undeclared (first use in this function)
+
+_imaging.c: In function ‘ImagingError_ValueError’:
+
+_imaging.c:329: error: ‘PyExc_ValueError’ undeclared (first use in this function)
+
+_imaging.c:332: error: ‘NULL’ undeclared (first use in this function)
+
+_imaging.c: In function ‘ImagingError_Clear’:
+
+_imaging.c:338: warning: implicit declaration of function ‘PyErr_Clear’
+
+_imaging.c: At top level:
+
+_imaging.c:369: error: expected ‘)’ before ‘*’ token
+
+_imaging.c:464: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:510: error: expected ‘)’ before ‘*’ token
+
+_imaging.c:587: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:619: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:631: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:643: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:655: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:664: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:675: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:686: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:697: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:719: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:743: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:760: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:777: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:786: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:803: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:813: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:824: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:857: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:879: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:914: error: expected ‘)’ before ‘*’ token
+
+_imaging.c:954: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:981: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1054: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1065: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1075: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1114: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1191: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1202: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1339: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1359: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1394: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1419: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1448: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1459: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1479: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1530: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1568: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1614: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1689: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1739: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1765: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1771: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1783: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1817: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1845: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1874: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1885: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1901: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1922: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1928: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1939: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1950: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1961: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1972: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:1983: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2001: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2019: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2030: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2041: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2052: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2063: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2081: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c: In function ‘_font_dealloc’:
+
+_imaging.c:2142: warning: implicit declaration of function ‘Py_XDECREF’
+
+_imaging.c:2142: error: ‘ImagingFontObject’ has no member named ‘ref’
+
+_imaging.c: In function ‘textwidth’:
+
+_imaging.c:2152: error: ‘ImagingFontObject’ has no member named ‘glyphs’
+
+_imaging.c: At top level:
+
+_imaging.c:2157: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2205: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2215: error: array type has incomplete element type
+
+_imaging.c:2216: error: ‘PyCFunction’ undeclared here (not in a function)
+
+_imaging.c:2216: error: expected ‘}’ before ‘_font_getmask’
+
+_imaging.c:2217: error: expected ‘}’ before ‘_font_getsize’
+
+_imaging.c:2218: error: ‘NULL’ undeclared here (not in a function)
+
+_imaging.c:2221: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2229: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c: In function ‘_draw_dealloc’:
+
+_imaging.c:2257: error: ‘ImagingDrawObject’ has no member named ‘image’
+
+_imaging.c: At top level:
+
+_imaging.c:2261: error: expected ‘)’ before ‘*’ token
+
+_imaging.c:2263: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2278: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2298: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2335: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2353: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2390: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2406: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2459: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2474: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2507: error: expected ‘)’ before ‘*’ token
+
+_imaging.c:2509: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2536: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2554: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2600: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2637: error: array type has incomplete element type
+
+_imaging.c:2640: error: expected ‘}’ before ‘_draw_line’
+
+_imaging.c:2641: error: expected ‘}’ before ‘_draw_lines’
+
+_imaging.c:2643: error: expected ‘}’ before ‘_draw_outline’
+
+_imaging.c:2645: error: expected ‘}’ before ‘_draw_polygon’
+
+_imaging.c:2646: error: expected ‘}’ before ‘_draw_rectangle’
+
+_imaging.c:2647: error: expected ‘}’ before ‘_draw_point’
+
+_imaging.c:2648: error: expected ‘}’ before ‘_draw_points’
+
+_imaging.c:2649: error: expected ‘}’ before ‘_draw_arc’
+
+_imaging.c:2650: error: expected ‘}’ before ‘_draw_bitmap’
+
+_imaging.c:2651: error: expected ‘}’ before ‘_draw_chord’
+
+_imaging.c:2652: error: expected ‘}’ before ‘_draw_ellipse’
+
+_imaging.c:2653: error: expected ‘}’ before ‘_draw_pieslice’
+
+_imaging.c:2654: error: expected ‘}’ before ‘_draw_ink’
+
+_imaging.c:2659: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2668: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c: In function ‘pixel_access_dealloc’:
+
+_imaging.c:2693: error: ‘PixelAccessObject’ has no member named ‘image’
+
+_imaging.c: At top level:
+
+_imaging.c:2697: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2708: error: expected declaration specifiers or ‘...’ before ‘PyObject’
+
+_imaging.c:2708: error: expected declaration specifiers or ‘...’ before ‘PyObject’
+
+_imaging.c: In function ‘pixel_access_setitem’:
+
+_imaging.c:2710: error: ‘PixelAccessObject’ has no member named ‘image’
+
+_imaging.c:2714: error: ‘PixelAccessObject’ has no member named ‘readonly’
+
+_imaging.c:2719: warning: implicit declaration of function ‘_getxy’
+
+_imaging.c:2719: error: ‘xy’ undeclared (first use in this function)
+
+_imaging.c:2723: error: ‘PyExc_IndexError’ undeclared (first use in this function)
+
+_imaging.c:2727: error: ‘color’ undeclared (first use in this function)
+
+_imaging.c:2730: warning: implicit declaration of function ‘getink’
+
+_imaging.c:2733: error: ‘PixelAccessObject’ has no member named ‘image’
+
+_imaging.c: At top level:
+
+_imaging.c:2744: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2763: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2774: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2791: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2811: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2846: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:2867: error: array type has incomplete element type
+
+_imaging.c:2870: error: expected ‘}’ before ‘_getpixel’
+
+_imaging.c:2871: error: expected ‘}’ before ‘_putpixel’
+
+_imaging.c:2873: error: expected ‘}’ before ‘pixel_access_new’
+
+_imaging.c:2876: error: expected ‘}’ before ‘_convert’
+
+_imaging.c:2877: error: expected ‘}’ before ‘_convert2’
+
+_imaging.c:2878: error: expected ‘}’ before ‘_convert_matrix’
+
+_imaging.c:2879: error: expected ‘}’ before ‘_copy’
+
+_imaging.c:2880: error: expected ‘}’ before ‘_copy2’
+
+_imaging.c:2884: error: expected ‘}’ before ‘_crop’
+
+_imaging.c:2885: error: expected ‘}’ before ‘_expand’
+
+_imaging.c:2886: error: expected ‘}’ before ‘_filter’
+
+_imaging.c:2887: error: expected ‘}’ before ‘_histogram’
+
+_imaging.c:2889: error: expected ‘}’ before ‘_modefilter’
+
+_imaging.c:2891: error: expected ‘}’ before ‘_offset’
+
+_imaging.c:2892: error: expected ‘}’ before ‘_paste’
+
+_imaging.c:2893: error: expected ‘}’ before ‘_point’
+
+_imaging.c:2894: error: expected ‘}’ before ‘_point_transform’
+
+_imaging.c:2895: error: expected ‘}’ before ‘_putdata’
+
+_imaging.c:2897: error: expected ‘}’ before ‘_quantize’
+
+_imaging.c:2900: error: expected ‘}’ before ‘_rankfilter’
+
+_imaging.c:2902: error: expected ‘}’ before ‘_resize’
+
+_imaging.c:2903: error: expected ‘}’ before ‘_rotate’
+
+_imaging.c:2904: error: expected ‘}’ before ‘_stretch’
+
+_imaging.c:2905: error: expected ‘}’ before ‘_transpose’
+
+_imaging.c:2906: error: expected ‘}’ before ‘_transform2’
+
+_imaging.c:2908: error: expected ‘}’ before ‘_isblock’
+
+_imaging.c:2910: error: expected ‘}’ before ‘_getbbox’
+
+_imaging.c:2911: error: expected ‘}’ before ‘_getcolors’
+
+_imaging.c:2912: error: expected ‘}’ before ‘_getextrema’
+
+_imaging.c:2913: error: expected ‘}’ before ‘_getprojection’
+
+_imaging.c:2915: error: expected ‘}’ before ‘_getband’
+
+_imaging.c:2916: error: expected ‘}’ before ‘_putband’
+
+_imaging.c:2917: error: expected ‘}’ before ‘_fillband’
+
+_imaging.c:2919: error: expected ‘}’ before ‘im_setmode’
+
+_imaging.c:2921: error: expected ‘}’ before ‘_getpalette’
+
+_imaging.c:2922: error: expected ‘}’ before ‘_putpalette’
+
+_imaging.c:2923: error: expected ‘}’ before ‘_putpalettealpha’
+
+_imaging.c:2927: error: expected ‘}’ before ‘_chop_invert’
+
+_imaging.c:2928: error: expected ‘}’ before ‘_chop_lighter’
+
+_imaging.c:2929: error: expected ‘}’ before ‘_chop_darker’
+
+_imaging.c:2930: error: expected ‘}’ before ‘_chop_difference’
+
+_imaging.c:2931: error: expected ‘}’ before ‘_chop_multiply’
+
+_imaging.c:2932: error: expected ‘}’ before ‘_chop_screen’
+
+_imaging.c:2933: error: expected ‘}’ before ‘_chop_add’
+
+_imaging.c:2934: error: expected ‘}’ before ‘_chop_subtract’
+
+_imaging.c:2935: error: expected ‘}’ before ‘_chop_add_modulo’
+
+_imaging.c:2936: error: expected ‘}’ before ‘_chop_subtract_modulo’
+
+_imaging.c:2937: error: expected ‘}’ before ‘_chop_and’
+
+_imaging.c:2938: error: expected ‘}’ before ‘_chop_or’
+
+_imaging.c:2939: error: expected ‘}’ before ‘_chop_xor’
+
+_imaging.c:2944: error: expected ‘}’ before ‘_gaussian_blur’
+
+_imaging.c:2945: error: expected ‘}’ before ‘_unsharp_mask’
+
+_imaging.c:2950: error: expected ‘}’ before ‘_effect_spread’
+
+_imaging.c:2954: error: expected ‘}’ before ‘_new_array’
+
+_imaging.c:2955: error: expected ‘}’ before ‘_new_block’
+
+_imaging.c:2958: error: expected ‘}’ before ‘_save_ppm’
+
+_imaging.c:2967: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c: In function ‘image_length’:
+
+_imaging.c:2996: error: ‘ImagingObject’ has no member named ‘image’
+
+_imaging.c: At top level:
+
+_imaging.c:3001: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3016: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘image_as_sequence’
+
+_imaging.c:3029: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+
+_imaging.c:3050: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+
+_imaging.c:3062: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+
+_imaging.c:3076: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘pixel_access_as_mapping’
+
+_imaging.c:3084: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘PyTypeObject’
+
+_imaging.c:3106: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3107: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3108: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3109: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3110: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3111: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3112: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3113: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3114: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3115: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3116: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3117: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3118: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3119: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3120: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3123: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3124: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3125: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3126: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3127: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3128: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3129: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3144: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3147: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3149: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3150: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+
+_imaging.c:3152: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘functions’
+
+_imaging.c:3250: warning: return type defaults to ‘int’
+
+_imaging.c: In function ‘DL_EXPORT’:
+
+_imaging.c:3250: error: expected declaration specifiers before ‘init_imaging’
+
+_imaging.c:3281: error: expected ‘{’ at end of input
+
+error: command 'gcc' failed with exit status 1
+
+----------------------------------------
+Command /usr/bin/python -c "import setuptools; __file__='/srv/www/vhosts/iam/build/pil/setup.py'; execfile('/srv/www/vhosts/iam/build/pil/setup.py')" install --single-version-externally-managed --record /tmp/pip-XStixh-record/install-record.txt --install-headers /srv/www/vhosts/iam/lib/include failed with error code 1
+Exception information:
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/pip.py", line 482, in main
+    self.run(options, args)
+  File "/usr/lib/python2.6/site-packages/pip.py", line 677, in run
+    requirement_set.install(install_options)
+  File "/usr/lib/python2.6/site-packages/pip.py", line 2749, in install
+    requirement.install(install_options)
+  File "/usr/lib/python2.6/site-packages/pip.py", line 2140, in install
+    cwd=self.source_dir, filter_stdout=self._filter_install, show_stdout=False)
+  File "/usr/lib/python2.6/site-packages/pip.py", line 4354, in call_subprocess
+    % (command_desc, proc.returncode))
+InstallationError: Command /usr/bin/python -c "import setuptools; __file__='/srv/www/vhosts/iam/build/pil/setup.py'; execfile('/srv/www/vhosts/iam/build/pil/setup.py')" install --single-version-externally-managed --record /tmp/pip-XStixh-record/install-record.txt --install-headers /srv/www/vhosts/iam/lib/include failed with error code 1

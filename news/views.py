@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from iam.news.models import News
-from markitup.widgets import MarkItUpWidget
 from django.shortcuts import render_to_response, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.template import RequestContext

@@ -14,7 +14,10 @@
 {% if object.academic_degree %}
 {{ object.academic_degree }},
 {% endif %}
-{{ object.academic_rank }}, {{ object.post }}
+{% if object.academic_rank %}
+{{ object.academic_rank }}, 
+{% endif %}
+{{ object.post }}
 </span>
 <span id="email"><a href="mailto:{{ object.user.email }}">{{ object.user.email }}</a></span>
 </div>

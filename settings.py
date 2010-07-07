@@ -53,7 +53,7 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/home/kravitz/iam/media/'
+MEDIA_ROOT = '/srv/www/vhosts/iam/media/'
 
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
@@ -90,7 +90,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/var/www/localhost/htdocs/iam/templates'
+    '/srv/www/vhosts/iam/templates'
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

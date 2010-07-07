@@ -9,7 +9,7 @@
 #application = WSGIHandler()
 
 import os, sys
-sys.path.append('/var/www/localhost/htdocs')
+sys.path.append('/srv/www/vhosts')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'iam.settings'
 
 import django.core.handlers.wsgi

@@ -8,7 +8,18 @@
 {% endblock %}
 
 {% block content %}
-<form action={% url publication-edit pub_id %} method="POST">{% csrf_token %}
+
+{% if errors|length %}
+<div id="errors">
+<ul>
+{% for key, value in errors.items %}
+    <li>{{ key }}: {{ value|slice:"2:" }}</li> {# First two characters are: '* ', tricky way (: #}
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+<form action={% if pub_id %}{% url publication-edit pub_id %}{% else %}{% url publication-add %}{% endif %} method="POST">{% csrf_token %}
 {{ form.as_p }}
 <input type="submit" value="{% trans 'Сохранить' %}" />
 </form>
