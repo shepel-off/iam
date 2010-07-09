@@ -7,7 +7,9 @@
 {% endblock stylesheet %}
 
 {% block content %}
+{% if object.photo %}
 <img id="photo" src="/{{ object.photo }}" />
+{% endif %}
 <div style="float: left; margin-left: 2em;">
 <h3 id="name">{{ object }}</h3>
 <span id="degree">
@@ -23,8 +25,8 @@
 </div>
 <div id="edit">
 {% ifequal user.id object.user.id %}
-<form style="margin-bottom: 0.1em;" action="./edit/"><input type="submit" value="{% trans 'Изменить данные' %}" /></form>
-<form action="{% url publication-add %}"><input type="submit" value="{% trans 'Добавить публикацию' %}" /></form>
+<form style="margin-bottom: 0.1em;" action="./edit/"><input type="submit" value="{% trans 'Изменить данные' %}" style="width: 100%;"/></form>
+<form action="{% url publication-add %}"><input type="submit" value="{% trans 'Добавить публикацию' %}" style="width: 100%;"/></form>
 {% endifequal %}
 </div>
 <!--

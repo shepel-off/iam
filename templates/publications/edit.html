@@ -23,5 +23,10 @@
 {{ form.as_p }}
 <input type="submit" value="{% trans 'Сохранить' %}" />
 </form>
+{% if pub_id %}
+<form action={% url publication-delete pub_id %} method="POST">{% csrf_token %}
+<input type="submit" value="{% trans 'Удалить' %}" />
+</form>
+{% endif %}
 {% endblock content %}
 
