@@ -43,3 +43,11 @@ def editpublication(request, pub_id):
 @login_required
 def addpublication(request):
     return edit_or_add(request, 0)
+
+@login_required
+@user_passes_test(is_author)
+def delete(request, pub_id):
+    pub_id = int(pub_id)
+    entry = Publication.objects.get(pk=pub_id)
+    entry.delete()
+    return redirect('/users/{0}'.format(request.user.get_profile().id))

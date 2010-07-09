@@ -9,7 +9,9 @@
     <li>{{ group }}
         <ul>
             {% for lab in group.laboratory_set.all %}
+            {% if lab.title != 'Группа ИТО' %}
             <li><a href="/labs/{{ lab.id }}/">{{ lab }}</a></li>
+            {% endif %}
             {% endfor %}
         </ul>
     </li><br />

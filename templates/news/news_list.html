@@ -4,38 +4,29 @@
 
 {% block title %}{% trans 'Новости' %}{% endblock %}
 {% block stylesheet %}
-    <link rel="stylesheet" type="text/css" href="/css/news.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/news.css" media="all" />
 {% endblock stylesheet %}
-
-{% block script %}
-
-<script type="text/javascript" language="javascript">
-$(document).ready(function(){
-       // $("#data").load('{% url news-add %}');
-        $(".iframe").fancybox();
-});
-</script>
-
-{% endblock script %}
 
 {% block content %}
 <ul>
 {% for news_entry in object_list %}
     <li class="entry">
-    <h3>{{ news_entry.title }}</h3>
-    <ul class="meta">
+    <h3 class="entry-title">{{ news_entry.title }}</h3>
+    <div class="rel">
+    <ul class="meta rounded">
         <li class="date">{{ news_entry.date|naturalday:"d.m.Y" }}</li>
         <li class="author">{{ news_entry.author.short_name }}</li>
     </ul>
+    </div>
     {% ifequal news_entry.author.user.id user.id %}
-    <ul class="toolbox">
+    <ul class="toolbox rounded">
             <li>
             <a href="/news/{{ news_entry.id }}/edit/"><img src="/img/icons/pencil.png" /></a>
             <a href="/news/{{ news_entry.id }}/delete/"><img src="/img/icons/cross.png" /></a>
             </li>
     </ul>
     {% endifequal %}
-    <span class="body">{{ news_entry.body|safe }}</span></li>
+    <span class="entry-body">{{ news_entry.body|safe }}</span></li>
 {% endfor %}
 </ul>
 {% endblock content %}

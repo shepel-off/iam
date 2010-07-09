@@ -1,27 +1,38 @@
 html, body { height: 100%; }
-body { font-family: Georgia, Verdana, Arial; font-size: 10pt; min-width: 1000px;}
+body { font-family: Georgia, Verdana, Arial; font-size: 10pt; min-width: 950px;}
 a { text-decoration: none; }
+h1 { font-size: 220%; }
+h3 { font-size: 150%; }
 
 #container { min-height: 100%; margin-bottom: -31px; position: relative; }
-.clearfooter { height: 31px; clear: both; }
-#footer { height: 31px; position: relative; text-align: center; padding-top: 10px; }
-#footer #w3c { float: right; margin-top: -31px; }
+#welcome { clear: both; margin: 15px 0; text-align: center; width: 100%; }
+#content-wrap { float: left; width: 80% }
+#authorize { float: right; margin: 10px 10px; }
+#content { clear: both; font-size: 10pt; margin-left: 46px; width: 70%; }
 
-#content { width: 60%; }
-#sidebar { width: 20%; height: 100%; }
-
-#content { font-size: 10pt; float: left; }
-#content ul { list-style: none; }
-
-#sidebar { float: left; font-size: 10pt; padding-right: 10px; }
+#sidebar { 
+	display: inline;
+    float: left;
+    font: 12pt Arial;
+   	height: 100%;
+    width: 16%;
+    padding-right: 10px;
+    margin: 0 10px; 
+}
 #sidebar a, #sidebar .category { color: blue; }
 #sidebar a.out { color: maroon; }
-#sidebar ul { list-style: none; padding-left: 0; }
-#menu { margin-top: 0px; margin-bottom: 0px; }
 #menu .collapsed { display: none; }
+/*#menu li { margin: 20px 0; }*/
 #menu ul li { padding-left: 20px; font-size: 10pt; }
 #menu ul li a { display: block; padding: 2px; }
 
-#authorize { float: right; margin-bottom: 20px; }
+.rounded {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+}
 
-#welcome { width: 100%; margin-top: 0px; text-align: center; clear: both; font-size: 20pt; }
+.clearfooter { height: 31px; clear: both; }
+#footer { height: 31px; padding-top: 10px; position: relative; text-align: center; }
+#footer #w3c { float: right; margin-top: -31px; }

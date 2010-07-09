@@ -6,20 +6,26 @@
 {% block title %}{% trans 'Вход для сотрудников' %}{% endblock %}
 {% endcomment %}
 {% block content %}
-<div>
+<table>
+<tr><td>
 <form method="post" action="{% url django.contrib.auth.views.login %}" style="margin-bottom:0">{% csrf_token %}
-    {% for field in form %}
-        <div style="overflow:auto;width:100%;margin-bottom:.5em;"> 
-            <div style="float:right;">
-                {{ field }}
-            </div>
-            <div style="float:right;margin-right:.5em;">
+	    <table>
+	{% for field in form %}
+            <tr style="overflow:auto;width:100%;padding:.5em;"> 
+            <td style="width:auto;text-align:right;"><!-- style="float:right;margin-right:.5em;"-->
                 {{ field.label_tag }}
-            </div>
-        </div>
+	        </td>
+            <td><!-- style="float:right;"-->
+                {{ field }}
+            </td>
+        </tr>		
     {% endfor %}
+        </table>
+	<table style="width:100%"><tr><td></td><td>
 <input type="submit" value="{% trans 'Войти' %}" style="display:block;clear:both;margin: 0 auto 0 auto;" />
+	</tr></td><td></td></table>
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
-</div>
+</td></tr>
+</table>
 {% endblock %}
