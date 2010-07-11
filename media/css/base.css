@@ -1,11 +1,32 @@
 html, body { height: 100%; }
-body { font-family: Georgia, Verdana, Arial; font-size: 10pt; min-width: 950px;}
+body { font: 12pt 'Dejavu Sans'; min-width: 950px;}
 a { text-decoration: none; }
 h1 { font-size: 220%; }
 h3 { font-size: 150%; }
 
+/* Font Definitions, as TODO work
+ * it must be embeded, and I'm not sure it works in all browsers
+ */
+
+@font-face {
+    font-family: 'Days';
+    src: url(/fonts/days.otf.jgz);
+}
+
+@font-face {
+    font-family: 'Dejavu Sans';
+    src: url(/fonts/ttf/DejaVuSans.ttf);
+}
+
 #container { min-height: 100%; margin-bottom: -31px; position: relative; }
-#welcome { clear: both; margin: 15px 0; text-align: center; width: 100%; }
+#welcome { 
+    clear: both;
+    font-family: 'Days';
+    margin: 15px 0; 
+    text-align: center; 
+    text-rendering: optimizeLegibility;
+    width: 100%; 
+}
 #content-wrap { float: left; width: 80% }
 #authorize { float: right; margin: 10px 10px; }
 #content { clear: both; font-size: 10pt; margin-left: 46px; width: 70%; }

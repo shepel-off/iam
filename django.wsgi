@@ -1,15 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#import os
-#import sys
-#from django.core.handlers.wsgi import WSGIHandler
-
-#sys.path.append('/var/www/localhost/htdocs')
-#os.environ['DJANGO_SETTINGS_MODULE'] = 'iam.settings'
-#application = WSGIHandler()
 
 import os, sys
-sys.path.append('/srv/www/vhosts')
+from os.path import dirname
+sys.path.append(dirname(dirname(__file__)))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'iam.settings'
 
 import django.core.handlers.wsgi

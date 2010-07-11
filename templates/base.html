@@ -33,7 +33,7 @@
     {% if request.path == '/' or request.path == '/news/' %}
     <h1 id="welcome">{% trans 'Институт прикладной математики ДВО РАН' %}</h1>
     {% else %}
-    <h1 id="welcome"><a href="{% url iam-root %}">{% trans 'Институт прикладной математики ДВО РАН' %}</h1></a>
+    <h1 id="welcome"><a href="{% url iam-root %}">{% trans 'Институт прикладной математики ДВО РАН' %}</a></h1>
     {% endif %}
 
     
@@ -95,7 +95,6 @@
                src="http://www.w3.org/Icons/valid-xhtml10"
                style="border:0;width:88px;height:31px;display:inline"
                alt="Valid XHTML 1.0 Transitional" /></a>
-            <a href="http://jigsaw.w3.org/css-validator/check/referer">
         </div>
         {% comment %}
                 <img style="border:0;width:88px;height:31px;display:inline"
