@@ -2,7 +2,10 @@
     clear: both; 
     font-size: 120%; 
     margin: 20px 0;
+    padding: 5px;
 }
+
+.entry table { width: 100%; }
 
 .entry .entry-title { 
     margin: 5px 0; 
@@ -15,7 +18,7 @@
 .toolbox {
     clear: both;
     float: right;
-    margin: 0 0 .5em .75em;
+    margin: 0 0 5px .75em;
     padding: 0 .5em;
     background-color: #eee;
 }
@@ -28,7 +31,7 @@
 
 .meta {
     float: right;
-    margin: 0 0 .5em .75em;
+    margin: 0 0 5px .75em;
     padding: .75em;
     width: 10em;
     background-color: #eee;
@@ -38,5 +41,3 @@
     font-size: .85em;
     color: #777;
 }
-
-

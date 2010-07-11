@@ -10,7 +10,8 @@
 {% block content %}
 <ul>
 {% for news_entry in object_list %}
-    <li class="entry">
+    <li class="entry rounded">
+    <table><tr><td>
     <h3 class="entry-title">{{ news_entry.title }}</h3>
     <div class="rel">
     <ul class="meta rounded">
@@ -26,7 +27,8 @@
             </li>
     </ul>
     {% endifequal %}
-    <span class="entry-body">{{ news_entry.body|safe }}</span></li>
+    <span class="entry-body">{{ news_entry.body|safe }}</span>
+    </td></tr></table></li>
 {% endfor %}
 </ul>
 {% endblock content %}

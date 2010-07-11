@@ -1,7 +1,8 @@
 html, body { height: 100%; }
 body { font: 12pt 'Dejavu Sans'; min-width: 950px;}
 a { text-decoration: none; }
-h1 { font-size: 220%; }
+h1 { color: #AF4E0E; font-size: 220%; }
+h1 a { color: #AF4E0E; }
 h3 { font-size: 150%; }
 
 /* Font Definitions, as TODO work
@@ -29,16 +30,16 @@ h3 { font-size: 150%; }
 }
 #content-wrap { float: left; width: 80% }
 #authorize { float: right; margin: 10px 10px; }
-#content { clear: both; font-size: 10pt; margin-left: 46px; width: 70%; }
+#content { clear: both; font-size: 10pt; margin-left: 15px; width: 70%; }
 
 #sidebar { 
 	display: inline;
     float: left;
     font: 12pt Arial;
    	height: 100%;
-    width: 16%;
-    padding-right: 10px;
     margin: 0 10px; 
+    padding-right: 10px;
+    width: 16%;
 }
 #sidebar a, #sidebar .category { color: blue; }
 #sidebar a.out { color: maroon; }
