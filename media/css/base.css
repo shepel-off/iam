@@ -1,23 +1,9 @@
 html, body { height: 100%; }
-body { font: 12pt 'Dejavu Sans'; min-width: 950px;}
+body { font: 12pt; min-width: 950px;}
 a { text-decoration: none; }
 h1 { color: #AF4E0E; font-size: 220%; }
 h1 a { color: #AF4E0E; }
 h3 { font-size: 150%; }
-
-/* Font Definitions, as TODO work
- * it must be embeded, and I'm not sure it works in all browsers
- */
-
-@font-face {
-    font-family: 'Days';
-    src: url(/fonts/days.otf.jgz);
-}
-
-@font-face {
-    font-family: 'Dejavu Sans';
-    src: url(/fonts/ttf/DejaVuSans.ttf);
-}
 
 #container { min-height: 100%; margin-bottom: -31px; position: relative; }
 #welcome { 
@@ -47,13 +33,13 @@ h3 { font-size: 150%; }
 /*#menu li { margin: 20px 0; }*/
 #menu ul li { padding-left: 20px; font-size: 10pt; }
 #menu ul li a { display: block; padding: 2px; }
-
+/*
 .rounded {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border: 1px solid #d7d7d7;
     border-radius: 5px;
-}
+}*/
 
 .clearfooter { height: 31px; clear: both; }
 #footer { height: 31px; padding-top: 10px; position: relative; text-align: center; }

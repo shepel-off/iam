@@ -11,6 +11,14 @@
     margin: 5px 0; 
 }
 
+.entry .entry-body {
+    line-height: 1.5;
+}
+
+.toolbox li {
+    height: 16px;
+}
+
 .toolbox li, .meta li { 
     margin: .25em 0;
 }
@@ -23,8 +31,7 @@
     background-color: #eee;
 }
 
-.toolbox li img {
-    border: 0;
+.toolbox li a img {
     height: 16px;
     width: 16px;
 }

@@ -1,31 +1,26 @@
 {% load i18n %}
 
-{% comment %} 
-{% extends "base.html" %}
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/form2.css" />
+{% endblock %}
 
-{% block title %}{% trans 'Вход для сотрудников' %}{% endblock %}
-{% endcomment %}
 {% block content %}
-<table>
-<tr><td>
-<form method="post" action="{% url django.contrib.auth.views.login %}" style="margin-bottom:0">{% csrf_token %}
-	    <table>
-	{% for field in form %}
-            <tr style="overflow:auto;width:100%;padding:.5em;"> 
-            <td style="width:auto;text-align:right;"><!-- style="float:right;margin-right:.5em;"-->
-                {{ field.label_tag }}
-	        </td>
-            <td><!-- style="float:right;"-->
-                {{ field }}
-            </td>
-        </tr>		
+<table><tr><td>
+<div id="login-form-wrap">
+<form id="the-login-form" method="post" action="{% url iam-login %}">{% csrf_token %}
+    <table id="formtable">
+    {% for field in form %}
+    <tr>
+        <td class="label">{{ field.label_tag }}</td>
+        <td>{{ field }}</td>
+    </tr>
     {% endfor %}
-        </table>
-	<table style="width:100%"><tr><td></td><td>
-<input type="submit" value="{% trans 'Войти' %}" style="display:block;clear:both;margin: 0 auto 0 auto;" />
-	</tr></td><td></td></table>
-<input type="hidden" name="next" value="{{ next }}" />
+    <tr class="solo">
+        <td colspan="2"><input type="submit" value="{% trans 'Войти' %}" /></td>
+    </tr>
+    </table>
+    <input type="hidden" name="next" value="{{ next }}" />
 </form>
-</td></tr>
-</table>
+</div>
+</td></tr></table>
 {% endblock %}

@@ -1,0 +1,15 @@
+#formtable {
+    vertical-align: middle;
+}
+
+#formtable td {
+    padding: 5px; 
+}
+
+#formtable td.label {
+    text-align: right;
+}
+
+#formtable tr.solo {
+    text-align: center;
+}
