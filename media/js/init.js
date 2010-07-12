@@ -18,7 +18,7 @@ function processJson(data)
         else
         {
             err.empty();
-            err.append('<li> ' + data.msg + '</li>');
+            err.append('<li style="text-align: center;"><img src="/img/icons/error.png" />' + data.msg + '<img src="/img/icons/error.png" /></li></ul>');
         }   
         $.fancybox.resize();
         $.fancybox.center();
@@ -53,6 +53,14 @@ $(document).ready(function(){
         'scrolling'         : 'no',
         'onComplete'        : function() 
         {
+            /* need to load stylesheets explicitly */
+            sh = $('#fancybox-outer').contents().find('link')
+            /*alert(sh.attr('href'))
+            newsh = document.createElement('link');
+            newsh.type = "text/css";
+            newsh.rel = "stylesheet";
+            newsh.href = sh.attr('href');*/
+            $('head').append(sh);
             $('#the-login-form').ajaxForm(
             {
                 dataType:  'json',
