@@ -12,7 +12,6 @@
     <script type="text/javascript" language="javascript" src="/js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" language="javascript" src="/js/jquery.corner.js"></script>
     <script type="text/javascript" language="javascript" src="/js/jquery.form-2.43.js"></script>
-    <script type="text/javascript" language="javascript" src="/js/treeview/jquery.cookie.js"></script>
     <script type="text/javascript" language="javascript" src="/js/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
 
     <!--[if lt IE 7]>
@@ -39,7 +38,7 @@
 
     
     <div id="sidebar">
-	<ul id="menu" class="rounded">
+	<ul class="menu-v">
         <li><a href="{% url iam-news %}">{% trans 'Новости' %}</a>
         {% if user.is_authenticated and request.path == '/news/' %}
             <ul><li><a class="popup" href="{% url news-add %}">{% trans 'Добавить' %}</a></li></ul>
@@ -70,12 +69,12 @@
 
     <div id="content-wrap">
         <div id="authorize">
-        {% if user.is_authenticated %}
-            {% trans 'Добро пожаловать' %}, <a href="/users/{{ user.get_profile.id }}">{{ user.first_name }} {{ user.get_profile.mid_name }}</a>
-            (<strong><a href="/logout/?next={{ request.path }}">{% trans 'выйти' %}</a></strong>)
-        {% else %}
-            <strong><a class="popup" href="/login/?next={{ request.path }}" name="login">{% trans 'Вход для сотрудников' %}</a></strong>
-        {% endif %}
+        	{% if user.is_authenticated %}
+                {% trans 'Добро пожаловать' %}, <a href="/users/{{ user.get_profile.id }}">{{ user.first_name }} {{ user.get_profile.mid_name }}</a>
+                (<a href="/logout/?next={{ request.path }}">{% trans 'выйти' %}</a>)
+            {% else %}
+                <a class="popup" href="/login/?next={{ request.path }}" name="login">{% trans 'Вход для сотрудников' %}</a>
+            {% endif %}
         </div>
 	<div id="content">
     	{% block content %}

@@ -7,7 +7,7 @@
 {% block content %}
 <table id="login-form-wrap"><tr><td>
 <form id="the-login-form" method="post" action="{% url iam-login %}">{% csrf_token %}
-    <table id="formtable" border="1">
+    <table id="formtable">
     {% for field in form %}
     <tr>
         <td class="label">{{ field.label_tag }}</td>
@@ -15,7 +15,7 @@
     </tr>
     {% endfor %}
     <tr class="solo">
-        <td colspan="2"><input type="submit" value="{% trans 'Войти' %}" /></td>
+        <td colspan="2"><input class="noresize" type="submit" value="{% trans 'Войти' %}" /></td>
     </tr>
     </table>
     <input type="hidden" name="next" value="{{ next }}" />

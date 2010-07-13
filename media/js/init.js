@@ -39,7 +39,13 @@ $(document).ready(function(){
         'scrolling'         : 'no',
         'onComplete'        : function()
         {
-            $('head').append($('#fancybox-inner').contents().find('script'))
+            alert($('#fancybox-outer').contents().find('script').size());
+            //alert($('#fancybox-outer').contents().find('link').size());
+            $('#the-login-form').ajaxForm(
+            {
+                dataType:  'json',
+                success:   processJson
+            });
             $.fancybox.resize();
             $.fancybox.center();
         }              

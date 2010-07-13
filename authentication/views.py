@@ -13,7 +13,7 @@ from django.utils import simplejson as json
 
 def login(request):
     if request.user.is_authenticated():
-	    return HttpResponse(json.dumps({'errors': 0, 'msg': 'Вы уже авторизовались'}), mimetype='application/json', status = 200)
+	    return HttpResponse(json.dumps({'errors': 0, 'msg': 'Вы уже авторизованы'}), mimetype='application/json', status = 200)
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']

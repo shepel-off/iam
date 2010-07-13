@@ -23,6 +23,7 @@
 {% for profileform in userformset.forms %}
 
 <div id="personal">
+<table style="margin: 0 auto"><tr><td>
 <div class="wrapper">
     <div>{{ userform.username }}</div>
     <div class="label">{{ userform.username.label_tag }}</div>
@@ -71,6 +72,7 @@
     <div>{{ profileform.academic_rank }}</div>
     <div class="label">{{ profileform.academic_rank.label_tag }}</div>
 </div>
+</td></tr></table>
 <div class="wrapper">
     <div>{{ profileform.laboratory }}</div>
     <div class="label">{{ profileform.laboratory.label_tag }}</div>

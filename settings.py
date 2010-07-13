@@ -57,7 +57,7 @@ MEDIA_ROOT = '/srv/www/vhosts/iam/media/'
 
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/'
+MEDIA_URL = '/media/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -95,6 +95,9 @@ TEMPLATE_DIRS = (
     normpath(join(dirname(__file__), './templates/')),
 )
 
+TINYMCE_JS_URL="/tinymce_media/tiny_mce/tiny_mce.js"
+TINYMCE_JS_ROOT="/tinymce_media/tiny_mce/"
+
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.debug",
@@ -122,6 +125,7 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'django.utils.simplejson', # serialization for json (ajax transfer format)
     'rosetta',
+    'tinymce',
     'iam.users',
     'iam.news',
     'iam.labs',

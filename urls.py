@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:
     # Uncomment the next line to enable the admin:
+     (r'^tinymce/', include('tinymce.urls')),
      url(r'^$', 'django.views.generic.simple.redirect_to', {'url': '/news/'}, name='iam-root'),
      (r'^admin/', include(admin.site.urls)),
      (r'^users/', include('iam.users.urls')),

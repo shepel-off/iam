@@ -6,10 +6,12 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.template import RequestContext
 from django.http import HttpResponseForbidden
 from iam.utils.decorators import user_passes_test
+from tinymce.widgets import TinyMCE
 
 import datetime
 
 class NewsForm(forms.ModelForm):
+    body = forms.CharField(widget=TinyMCE())
     class Meta:
         model = News
         fields = ('title', 'body')

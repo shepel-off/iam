@@ -1,11 +1,13 @@
 {% load i18n %}
 
 <style type="text/css">
-    #id_title { width: 99%; }	
+    #id_title { width: 98%; }
 </style>
 
+{{ form.media }}
+
 {% block content %}
-<div><form action='{% url news-add %}' method='POST' style="margin-bottom: 0;">{% csrf_token %}
+<div><form id="the-login-form" action='{% url news-add %}' method='POST' style="margin-bottom: 0;">{% csrf_token %}
     
 <div style="overflow:auto; width:100%; margin-bottom:.5em;">
     <div>{{ form.title.label_tag }}</div>
