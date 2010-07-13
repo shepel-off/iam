@@ -5,3 +5,4 @@ else
     IAM="/srv/www/vhosts/iam";
 sudo chmod 775 -R $IAM 
 sudo chgrp wheel -R $IAM
+exit 0
