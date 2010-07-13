@@ -1,11 +1,11 @@
-/* init navigation */
+/* init navigation 
 $(document).ready(function(){
     $("#sidebar").treeview({
         animated: "normal",
         collapsed: false,
         persist: "location"
     });
-});
+});*/
 
 function processJson(data)
 {
@@ -39,8 +39,6 @@ $(document).ready(function(){
         'scrolling'         : 'no',
         'onComplete'        : function()
         {
-            //$('#fancybox-inner').contents().find('div').css('font-size', '20pt');
-            //$('#fancybox-inner').contents().find(':submit').click(function() { $.fancybox.close(); });
             $('head').append($('#fancybox-inner').contents().find('script'))
             $.fancybox.resize();
             $.fancybox.center();
@@ -55,11 +53,6 @@ $(document).ready(function(){
         {
             /* need to load stylesheets explicitly */
             sh = $('#fancybox-outer').contents().find('link')
-            /*alert(sh.attr('href'))
-            newsh = document.createElement('link');
-            newsh.type = "text/css";
-            newsh.rel = "stylesheet";
-            newsh.href = sh.attr('href');*/
             $('head').append(sh);
             $('#the-login-form').ajaxForm(
             {

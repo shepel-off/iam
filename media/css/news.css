@@ -15,12 +15,12 @@
     line-height: 1.5;
 }
 
-.toolbox li {
-    height: 16px;
-}
-
 .toolbox li, .meta li { 
     margin: .25em 0;
+}
+
+.toolbox li {
+    height: 16px;
 }
 
 .toolbox {

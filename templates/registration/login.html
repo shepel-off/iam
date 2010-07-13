@@ -5,10 +5,9 @@
 {% endblock %}
 
 {% block content %}
-<table><tr><td>
-<div id="login-form-wrap">
+<table id="login-form-wrap"><tr><td>
 <form id="the-login-form" method="post" action="{% url iam-login %}">{% csrf_token %}
-    <table id="formtable">
+    <table id="formtable" border="1">
     {% for field in form %}
     <tr>
         <td class="label">{{ field.label_tag }}</td>
@@ -21,6 +20,5 @@
     </table>
     <input type="hidden" name="next" value="{{ next }}" />
 </form>
-</div>
 </td></tr></table>
 {% endblock %}
