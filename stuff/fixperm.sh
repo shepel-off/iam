@@ -1,2 +1,6 @@
 #!/bin/bash
-sudo chmod 775 -R .. && sudo chgrp wheel -R ..
+if [ $(hostname) = "Vortigaunt" ]; then
+    IAM="/var/www/localhost/htdocs/iam";
+else
+    IAM="/srv/www/vhosts/iam";
+sudo chmod 775 -R $IAM && sudo chgrp wheel -R $IAM
