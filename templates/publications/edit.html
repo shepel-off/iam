@@ -4,11 +4,24 @@
 {% block title %}{% trans 'Редактирование публикации' %}{% endblock %}
 
 {% block stylesheet %}
-<link rel="stylesheet" type="text/css" href="/css/form.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/form2.css" />
+<link rel="stylesheet" type="text/css" href="/js/asmselect/jquery.asmselect.css" />
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/asmselect/jquery.asmselect.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("select[multiple]").asmSelect({
+            removeLabel: '{% trans 'убрать' %}'                            
+        });
+    }); 
+</script>
 {% endblock %}
 
 {% block content %}
 
+{% comment %}
 {% if errors|length %}
 <div id="errors">
 <ul>
@@ -18,14 +31,26 @@
 </ul>
 </div>
 {% endif %}
+{% endcomment %}
 
 <form action={% if pub_id %}{% url publication-edit pub_id %}{% else %}{% url publication-add %}{% endif %} method="POST">{% csrf_token %}
-{{ form.as_p }}
-<input type="submit" value="{% trans 'Сохранить' %}" />
+
+    <table id="formtable" border="1">
+    {% for field in form %}
+    <tr>
+        <td class="label">{{ field.label_tag }}</td>
+        <td>{{ field }}</td>
+    </tr>
+    {% endfor %}
+    <tr class="solo"><td colspan="2">
+        <input type="submit" value="{% trans 'Удалить' %}" />
+        <input type="submit" value="{% trans 'Сохранить' %}" /></td>
+    </tr>
+    </table>
+
 </form>
 {% if pub_id %}
 <form action={% url publication-delete pub_id %} method="POST">{% csrf_token %}
-<input type="submit" value="{% trans 'Удалить' %}" />
 </form>
 {% endif %}
 {% endblock content %}

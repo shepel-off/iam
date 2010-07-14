@@ -24,6 +24,7 @@ class Profile(models.Model):
     class Meta:
         verbose_name = _(u'Профиль')
         verbose_name_plural = _(u'Профили')
+        ordering = ('user__last_name', 'user__first_name', 'mid_name',)
 
 def safe_get_profile(self):
     try:

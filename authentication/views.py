@@ -12,15 +12,18 @@ from django.template import RequestContext
 from django.utils import simplejson as json
 
 def login(request):
+    if not request.is_ajax():
+        return redirect("/news/?" + "&".join("{0}={1}".format(key, value) for key, value in request.GET.items() ) + "#login") 
+#redirect('/#login')
     if request.user.is_authenticated():
-	    return HttpResponse(json.dumps({'errors': 0, 'msg': 'Вы уже авторизованы'}), mimetype='application/json', status = 200)
+        return HttpResponse(json.dumps({'errors': 0, 'msg': 'Вы уже авторизованы'}), mimetype='application/json', status = 200)
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
         if user is None:
-	    return HttpResponse(json.dumps({'errors': 1, 'msg': 'Неверный логин или пароль'}), mimetype='application/json', status = 200)
+            return HttpResponse(json.dumps({'errors': 1, 'msg': 'Неверный логин или пароль'}), mimetype='application/json', status = 200)
         else:
             _login(request, user)
-	    return HttpResponse(json.dumps({'errors': 0, 'msg': 'Спасибо за авторизацию'}), mimetype='application/json', status = 200)
+        return HttpResponse(json.dumps({'errors': 0, 'msg': 'Спасибо за авторизацию'}), mimetype='application/json', status = 200)
     return render_to_response('registration/login.html', {'form': AuthenticationForm() }, context_instance=RequestContext(request))

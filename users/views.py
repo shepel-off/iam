@@ -15,7 +15,7 @@ from iam.publications.models import Publication
 from iam.utils.decorators import user_passes_test
 
 class UserForm(forms.ModelForm):
-    username = forms.CharField(required=True, label=_(u'Имя пользователя'))
+    username = forms.CharField(required=True, label=_(u'Логин'))
     first_name = forms.CharField(required=True, label=_(u'Имя'))
     last_name = forms.CharField(required=True, label=_(u'Фамилия'))
     email = forms.EmailField(required=True, label=_(u'Электронная почта'))

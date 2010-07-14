@@ -1,17 +1,10 @@
-/* init navigation 
-$(document).ready(function(){
-    $("#sidebar").treeview({
-        animated: "normal",
-        collapsed: false,
-        persist: "location"
-    });
-});*/
+_params = {};
 
 function processJson(data)
 {
     if(data.errors)
     {
-        var cont = $('#fancybox-inner').contents(), err;
+        var cont = $('#cboxLoadedContent').contents(), err;
         err = cont.find('#errors');
         if(!err.size())
             cont.find('#the-login-form').before('<ul id="errors"><li style="text-align: center;"><img src="/img/icons/error.png" />' + data.msg + '<img src="/img/icons/error.png" /></li></ul>');
@@ -20,27 +13,41 @@ function processJson(data)
             err.empty();
             err.append('<li style="text-align: center;"><img src="/img/icons/error.png" />' + data.msg + '<img src="/img/icons/error.png" /></li></ul>');
         }   
-        $.fancybox.resize();
-        $.fancybox.center();
+        $.colorbox.resize();
+        $.colorbox.resize();
     }
     else
     {
-        $.fancybox.close();
-        window.location.reload()
+        $.colorbox.close();
+        alert("next" in _params);
+            //window.location = _params["next"];
+        //else
+          //  window.location.reload();
     }
 }
 
-/* init fancybox */
 $(document).ready(function(){
-    $("a.popup").fancybox(
+    $("a.popup").colorbox(
+            {
+            'onComplete'        : function() 
+            {
+                $('#the-login-form').ajaxForm(
+                {
+                    dataType:  'json',
+                    success:   processJson
+                });
+                $('head').append($('#cboxLoadedContent').contents().find('script'))
+                $.colorbox.resize();
+                }
+                }
+            );
+  /*  $("a.popup").fancybox(
     {
         'centerOnScroll'    : true,
         'showCloseButton'   : false,
         'scrolling'         : 'no',
         'onComplete'        : function()
         {
-            alert($('#fancybox-outer').contents().find('script').size());
-            //alert($('#fancybox-outer').contents().find('link').size());
             $('#the-login-form').ajaxForm(
             {
                 dataType:  'json',
@@ -50,16 +57,13 @@ $(document).ready(function(){
             $.fancybox.center();
         }              
     });
-    $("a.popup[name='login']").fancybox(
+    $("#login-caller").fancybox(
     {
         'centerOnScroll'    : true,
         'showCloseButton'   : false,
         'scrolling'         : 'no',
         'onComplete'        : function() 
         {
-            /* need to load stylesheets explicitly */
-            sh = $('#fancybox-outer').contents().find('link')
-            $('head').append(sh);
             $('#the-login-form').ajaxForm(
             {
                 dataType:  'json',
@@ -70,7 +74,36 @@ $(document).ready(function(){
             $.fancybox.center();
         }              
     });
+    */
+    $('#login-caller').colorbox({
+    'opacity': 0,
+    'onComplete': function()
+    {
+            $('head').append($('#cboxLoadedContent').contents().find('link'));
+            $('#the-login-form').ajaxForm(
+            {
+                dataType:  'json',
+                success:   processJson
+            });
+            $.colorbox.resize();
+            $.colorbox.resize();
+    }
+    });
+    paramsRaw = (document.location.href.split("?", 2)[1] || "").split("#")[0].split("&") || [];
+    for(var i = 0; i< paramsRaw.length; i++){
+        var single = paramsRaw[i].split("=");
+        if(single[0])
+            _params[single[0]] = unescape(single[1]);
+    }
+    alert(document.location.hash);
 
+    if(document.location.hash == '#login')
+    {
+	alert($('#login-caller').size());
+
+        $('#login-caller').open();
+
+    }
 });
 
 /* init corners */

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-07 13:32+1100\n"
+"POT-Creation-Date: 2010-07-14 11:14+1100\n"
 "PO-Revision-Date: 2010-07-05 22:11\n"
 "Last-Translator: <idkravitz@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,7 +70,7 @@ msgstr ""
 msgid "Автор"
 msgstr "Author"
 
-#: news/models.py:18 templates/base.html:60 templates/start.html:3
+#: news/models.py:18 templates/base.html:43 templates/start.html:3
 #: templates/news/news_list.html:5
 msgid "Новости"
 msgstr "News"
@@ -173,79 +173,75 @@ msgstr "Publications"
 msgid "ИПМ ДВО РАН"
 msgstr ""
 
-#: templates/base.html:45 templates/base.html.py:47
+#: templates/base.html:35 templates/base.html.py:37
 msgid "Институт прикладной математики ДВО РАН"
 msgstr ""
 
-#: templates/base.html:52
-msgid "Добро пожаловать"
-msgstr "Welcome"
-
-#: templates/base.html:53
-msgid "выйти"
-msgstr "logout"
-
-#: templates/base.html:55 templates/registration/login.html:6
-msgid "Вход для сотрудников"
-msgstr "Login"
-
-#: templates/base.html:62
+#: templates/base.html:45 templates/news/add.html:32
 msgid "Добавить"
 msgstr "Add"
 
-#: templates/base.html:66
-msgid "Посетителям"
-msgstr ""
-
-#: templates/base.html:68
+#: templates/base.html:48
 msgid "Об институте"
 msgstr ""
 
-#: templates/base.html:69
+#: templates/base.html:49
 msgid "Студентам"
 msgstr ""
 
-#: templates/base.html:71
+#: templates/base.html:51
 msgid "Базовые кафедры"
 msgstr ""
 
-#: templates/base.html:72
+#: templates/base.html:52
 msgid "Аспирантура"
 msgstr ""
 
-#: templates/base.html:77
+#: templates/base.html:55
 msgid "Структура"
 msgstr "Structure"
 
-#: templates/base.html:79 templates/labs/labgroup_list.html:4
+#: templates/base.html:57 templates/labs/labgroup_list.html:4
 msgid "Лаборатории и сектора"
 msgstr ""
 
-#: templates/base.html:80 templates/users/profile_list.html:4
+#: templates/base.html:58 templates/users/profile_list.html:4
 msgid "Сотрудники"
 msgstr ""
 
-#: templates/base.html:81
+#: templates/base.html:59
 msgid "Директор"
 msgstr ""
 
-#: templates/base.html:82
+#: templates/base.html:60
 msgid "Хабаровское отделение"
 msgstr ""
 
-#: templates/base.html:85
+#: templates/base.html:63
 msgid "Исследования"
 msgstr ""
 
-#: templates/base.html:87
+#: templates/base.html:65
 msgid "Основные направления"
 msgstr ""
 
-#: templates/base.html:99
+#: templates/base.html:74
+msgid "Добро пожаловать"
+msgstr "Welcome"
+
+#: templates/base.html:75
+msgid "выйти"
+msgstr "logout"
+
+#: templates/base.html:77
+msgid "Вход для сотрудников"
+msgstr "Login"
+
+#: templates/base.html:87
 msgid "Институт прикладной математики"
 msgstr ""
 
-#: templates/base.html:100
+#: templates/base.html:88
 msgid "Дальневосточное отделение Российской академии наук"
 msgstr ""
 
@@ -255,9 +251,19 @@ msgid "Состав"
 msgstr "News"
 
 #: templates/labs/laboratory_detail.html:23
-#: templates/users/profile_detail.html:36
+#: templates/users/profile_detail.html:38
 msgid "Публикации:"
 msgstr "Publications"
+
+#: templates/news/news_list.html:23
+#, fuzzy
+msgid "Редактировать"
+msgstr "Edit profile"
+
+#: templates/news/news_list.html:24 templates/publications/edit.html:28
+#, fuzzy
+msgid "Удалить"
+msgstr "Add"
 
 #: templates/publications/add.html:4
 #, fuzzy
@@ -265,7 +271,7 @@ msgid "Добавление публикации"
 msgstr "Publications"
 
 #: templates/publications/add.html:13 templates/publications/edit.html:24
-#: templates/users/edit.html:81
+#: templates/users/edit.html:83
 msgid "Сохранить"
 msgstr "Save"
 
@@ -274,7 +280,7 @@ msgstr "Save"
 msgid "Редактирование публикации"
 msgstr "Edit profile"
 
-#: templates/registration/login.html:21
+#: templates/registration/login.html:18
 msgid "Войти"
 msgstr "Login"
 
@@ -282,11 +288,11 @@ msgstr "Login"
 msgid "Редактирование личных данных"
 msgstr "Edit profile"
 
-#: templates/users/profile_detail.html:26
+#: templates/users/profile_detail.html:28
 msgid "Изменить данные"
 msgstr "Edit profile"
 
-#: templates/users/profile_detail.html:27
+#: templates/users/profile_detail.html:29
 #, fuzzy
 msgid "Добавить публикацию"
 msgstr "Add"
@@ -324,8 +330,8 @@ msgstr "Profiles"
 
 #: users/views.py:18
 #, fuzzy
-msgid "Имя пользователя"
-msgstr "Welcome"
+msgid "Логин"
+msgstr "Login"
 
 #: users/views.py:19
 msgid "Имя"
@@ -338,3 +344,7 @@ msgstr "Surname"
 #: users/views.py:21
 msgid "Электронная почта"
 msgstr "Email"
+
+#, fuzzy
+#~ msgid "Имя пользователя"
+#~ msgstr "Welcome"

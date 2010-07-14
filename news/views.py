@@ -4,7 +4,7 @@ from iam.news.models import News
 from django.shortcuts import render_to_response, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.template import RequestContext
-from django.http import HttpResponseForbidden
+from django.http import HttpResponseForbidden, HttpResponse
 from iam.utils.decorators import user_passes_test
 from tinymce.widgets import TinyMCE
 
@@ -27,7 +27,7 @@ def add(request):
             news_entry.save()
             return redirect('/news/')
     f = NewsForm()
-    return render_to_response('news/add.html', {'form': f}, context_instance=RequestContext(request))
+    return render_to_response('news/add.html', {'form': f, 'media': str(f.media)}, context_instance=RequestContext(request))
 
 def is_author(user, news_id):
     return user.id == News.objects.get(pk=int(news_id)).author.user.id

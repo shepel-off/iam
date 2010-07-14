@@ -1,6 +1,6 @@
 @import url(/css/base.css);
 
-div.wrapper { overflow: auto; width: 100%; margin-bottom:.5em;line-height:1.5; }
+div.wrapper { overflow: auto; width: 100%; margin-bottom:.5em; line-height:1.5; }
 .wrapper div { float: right; }
 .wrapper div.label { margin-right: .5em; }
 

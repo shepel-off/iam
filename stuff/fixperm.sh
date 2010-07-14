@@ -4,5 +4,6 @@ if [ $(hostname) = "Vortigaunt" ]; then
 else
     IAM="/srv/www/vhosts/iam";
 fi
-sudo chmod 775 -R $IAM 
+sudo chmod 775 -R $IAM
+sudo chmod 777 -R $IAM/locale
 sudo chgrp wheel -R $IAM
