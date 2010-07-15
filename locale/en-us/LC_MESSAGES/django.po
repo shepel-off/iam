@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-14 11:14+1100\n"
+"POT-Creation-Date: 2010-07-15 16:37+1100\n"
 "PO-Revision-Date: 2010-07-05 22:11\n"
 "Last-Translator: <idkravitz@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,7 +165,7 @@ msgstr ""
 msgid "С."
 msgstr "P."
 
-#: publications/models.py:61
+#: publications/models.py:61 templates/users/profile_detail.html:48
 msgid "Публикации"
 msgstr "Publications"
 
@@ -237,11 +237,11 @@ msgstr "logout"
 msgid "Вход для сотрудников"
 msgstr "Login"
 
-#: templates/base.html:87
+#: templates/base.html:90
 msgid "Институт прикладной математики"
 msgstr ""
 
-#: templates/base.html:88
+#: templates/base.html:91
 msgid "Дальневосточное отделение Российской академии наук"
 msgstr ""
 
@@ -251,7 +251,6 @@ msgid "Состав"
 msgstr "News"
 
 #: templates/labs/laboratory_detail.html:23
-#: templates/users/profile_detail.html:38
 msgid "Публикации:"
 msgstr "Publications"
 
@@ -260,25 +259,29 @@ msgstr "Publications"
 msgid "Редактировать"
 msgstr "Edit profile"
 
-#: templates/news/news_list.html:24 templates/publications/edit.html:28
+#: templates/news/news_list.html:24 templates/publications/edit.html:68
 #, fuzzy
 msgid "Удалить"
 msgstr "Add"
-
-#: templates/publications/add.html:4
-#, fuzzy
-msgid "Добавление публикации"
-msgstr "Publications"
-
-#: templates/publications/add.html:13 templates/publications/edit.html:24
-#: templates/users/edit.html:83
-msgid "Сохранить"
-msgstr "Save"
 
 #: templates/publications/edit.html:4
 #, fuzzy
 msgid "Редактирование публикации"
 msgstr "Edit profile"
+
+#: templates/publications/edit.html:16
+#, fuzzy
+msgid "убрать"
+msgstr "article"
+
+#: templates/publications/edit.html:57 templates/users/edit.html:83
+msgid "Сохранить"
+msgstr "Save"
+
+#: templates/publications/edit.html:63
+#, fuzzy
+msgid "Отменить"
+msgstr "Add"
 
 #: templates/registration/login.html:18
 msgid "Войти"
@@ -288,11 +291,12 @@ msgstr "Login"
 msgid "Редактирование личных данных"
 msgstr "Edit profile"
 
-#: templates/users/profile_detail.html:28
+#: templates/users/profile_detail.html:31
 msgid "Изменить данные"
 msgstr "Edit profile"
 
-#: templates/users/profile_detail.html:29
+#: templates/users/profile_detail.html:45
+#: templates/users/profile_detail.html:58
 #, fuzzy
 msgid "Добавить публикацию"
 msgstr "Add"
@@ -320,11 +324,15 @@ msgstr "Add"
 msgid "Фотография"
 msgstr "monography"
 
-#: users/models.py:25
+#: users/models.py:17
+msgid "О себе"
+msgstr ""
+
+#: users/models.py:26
 msgid "Профиль"
 msgstr "Profile"
 
-#: users/models.py:26
+#: users/models.py:27
 msgid "Профили"
 msgstr "Profiles"
 
@@ -344,6 +352,10 @@ msgstr "Surname"
 #: users/views.py:21
 msgid "Электронная почта"
 msgstr "Email"
+
+#, fuzzy
+#~ msgid "Добавление публикации"
+#~ msgstr "Publications"
 
 #, fuzzy
 #~ msgid "Имя пользователя"

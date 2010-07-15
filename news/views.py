@@ -7,6 +7,7 @@ from django.template import RequestContext
 from django.http import HttpResponseForbidden, HttpResponse
 from iam.utils.decorators import user_passes_test
 from tinymce.widgets import TinyMCE
+from django.utils import simplejson as json
 
 import datetime
 
@@ -25,7 +26,7 @@ def add(request):
             news_entry.date = datetime.datetime.now()
             news_entry.author = request.user.get_profile()
             news_entry.save()
-            return redirect('/news/')
+            return HttpResponse(json.dumps({'errors': 0, 'msg': 'Новость добавлена'}), mimetype='application/json', status = 200)
     f = NewsForm()
     return render_to_response('news/add.html', {'form': f, 'media': str(f.media)}, context_instance=RequestContext(request))
 

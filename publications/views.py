@@ -11,6 +11,22 @@ from django.template import RequestContext
 from iam.utils.decorators import user_passes_test
 
 class PublicationForm(forms.ModelForm):
+    def __init__(self, *args, **kw):
+        super(forms.ModelForm, self).__init__(*args, **kw)
+        self.fields.keyOrder = [
+            'title',
+            'authors',
+            'other_authors',
+            'language',
+            'type',
+            'year',
+            'publishing_house',
+            'journal',
+            'journal_issue',
+            'start_page',
+            'end_page'
+        ]
+        
     class Meta:
         model = Publication
 

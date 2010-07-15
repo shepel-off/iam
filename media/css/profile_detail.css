@@ -1,9 +1,12 @@
-@import url(/css/base.css);
+#content { line-height: 1.5; }
 
-#name { margin-bottom: 0; margin-top: 0; text-align: center; }
-#degree { display: block; font-size: 80%; text-align: left; }
-#email { display: block; float: left; }
-#photo { float: left; }
-#edit { display: block; float: right; }
-#lab { }
-#publications { clear: both; }
+#personal { text-align: center; margin-bottom: 1em; }
+#personal #name { margin: 0 auto; }
+
+form { width: 14em; }
+form.edit { float: right; }
+form.solo-edit { clear: both; margin: 1em auto; }
+
+#publications { clear: both; margin: 2em; margin-right: 0; }
+#publications ol { list-style-type: decimal; }
+#publications ol li { font-size: 100%; }

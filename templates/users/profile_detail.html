@@ -1,46 +1,62 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}{{ object }}{% endblock %}
+{% block title %}{{ object.user.first_name }} {{ object.mid_name }} {{ object.user.last_name }}{% endblock %}
 {% block stylesheet %}
-    <link rel="stylesheet" type="text/css" href="/css/profile_detail.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/profile_detail.css" media="all" />
 {% endblock stylesheet %}
 
 {% block content %}
+
 {% if object.photo %}
 <img id="photo" src="/{{ object.photo }}" />
 {% endif %}
-<div style="float: left; margin-left: 2em;">
-<h3 id="name">{{ object }}</h3>
-<span id="degree">
-{% if object.academic_degree %}
-{{ object.academic_degree }},
-{% endif %}
-{% if object.academic_rank %}
-{{ object.academic_rank }}, 
-{% endif %}
-{{ object.post }}
-</span>
-<span id="email"><a href="mailto:{{ object.user.email }}">{{ object.user.email }}</a></span>
+
+<div id="personal">
+    <h3 id="name">{{ object.user.first_name }} {{ object.mid_name }} {{ object.user.last_name }}</h3>
+    <span id="degree">
+        {% if object.academic_degree %}
+        {{ object.academic_degree }},
+        {% endif %}
+        {% if object.academic_rank %}
+        {{ object.academic_rank }}, 
+        {% endif %}
+        {{ object.post }}
+    </span>
+    <br />
+    <span id="email"><a href="mailto:{{ object.user.email }}">{{ object.user.email }}</a></span>
 </div>
-<div id="edit">
 {% ifequal user.id object.user.id %}
-<form style="margin-bottom: 0.1em;" action="./edit/"><input type="submit" value="{% trans 'Изменить данные' %}" style="width: 100%;"/></form>
-<form action="{% url publication-add %}"><input type="submit" value="{% trans 'Добавить публикацию' %}" style="width: 100%;"/></form>
+    <form class="edit" action="{% url profile-edit object.id%}">
+        <input type="submit" value="{% trans 'Изменить данные' %}" style="width: 100%;"/>
+    </form>
 {% endifequal %}
-</div>
+
+<span id="about">{{ object.about }}</span>
 <!--
 <span id="lab"><a href="{% url iam-labs %}{{ object.laboratory.id }}">{{ object.laboratory.title }}</a></span>
 -->
 
+
 {% ifnotequal object.publication_set.all|length 0 %}
 <div id="publications">
-    <h3 id="name">{% trans 'Публикации:' %}</h3>
+    {% ifequal user.id object.user.id %}
+        <form class="edit" action="{% url publication-add %}">
+            <input type="submit" value="{% trans 'Добавить публикацию' %}" style="width: 100%;"/>
+        </form>
+    {% endifequal %}
+    <h3>{% trans 'Публикации' %}</h3>
     <ol>
     {% for pub in object.publication_set.all %}
-        <li>{% ifequal user.id object.user.id %}<a href="/publications/{{ pub.id }}/edit/">{{ pub }}</a>{% else %}{{ pub }}{% endifequal %}</li>
+    <li>{% ifequal user.id object.user.id %}<a href="{% url publication-edit pub.id %}">{{ pub }}</a>{% else %}{{ pub }}{% endifequal %}</li>
     {% endfor %}
     </ol>
 </div>
+{% else %}
+    {% ifequal user.id object.user.id %}
+        <form class="solo-edit" action="{% url publication-add %}">
+            <input type="submit" value="{% trans 'Добавить публикацию' %}" style="width: 100%;"/>
+        </form>
+    {% endifequal %}
 {% endifnotequal %}
 {% endblock %}

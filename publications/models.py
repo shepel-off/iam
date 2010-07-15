@@ -59,3 +59,4 @@ class Publication(models.Model):
 
     class Meta:
         verbose_name_plural = _(u'Публикации')
+        ordering = ('year', 'journal',)

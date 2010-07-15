@@ -14,6 +14,7 @@ class Profile(models.Model):
     academic_rank = models.CharField(max_length=100, blank=True, verbose_name=_(u'Учёное звание'))
     post = models.CharField(max_length=100, blank=True, verbose_name=_(u'Должность'))
     photo = models.ImageField(upload_to='img/', blank=True, verbose_name=_(u'Фотография'))
+    about = models.TextField(blank=True, verbose_name=_(u'О себе'))
     
     def __unicode__(self):
         return u' '.join((self.user.last_name, self.user.first_name, self.mid_name))

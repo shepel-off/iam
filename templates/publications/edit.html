@@ -13,7 +13,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("select[multiple]").asmSelect({
-            removeLabel: '{% trans 'убрать' %}'                            
+            removeLabel: '{% trans 'убрать' %}'
         });
     }); 
 </script>
@@ -21,7 +21,6 @@
 
 {% block content %}
 
-{% comment %}
 {% if errors|length %}
 <div id="errors">
 <ul>
@@ -31,26 +30,35 @@
 </ul>
 </div>
 {% endif %}
-{% endcomment %}
 
 <form action={% if pub_id %}{% url publication-edit pub_id %}{% else %}{% url publication-add %}{% endif %} method="POST">{% csrf_token %}
-
-    <table id="formtable" border="1">
-    {% for field in form %}
-    <tr>
-        <td class="label">{{ field.label_tag }}</td>
-        <td>{{ field }}</td>
-    </tr>
-    {% endfor %}
-    <tr class="solo"><td colspan="2">
-        <input type="submit" value="{% trans 'Удалить' %}" />
+    <table class="formtable">
+        <tr>
+            <td colspan="4">{{ form.title.label_tag }} {{ form.title }}</td>
+        </tr>
+        <tr>
+            <td class="top">{{ form.authors.label_tag }} {{ form.authors }}</td>
+            <td>
+                <table class="formtable inner">
+                    <tr><td>{{ form.language.label_tag }} {{ form.language }}</td></tr>
+                    <tr><td>{{ form.type.label_tag }} {{ form.type }}</td></tr>
+                    <tr><td>{{ form.year.label_tag }} {{ form.year }}</td></tr>
+                </table>                    
+            </td>
+        </tr>
+    <tr class="solo"><td colspan="4">
         <input type="submit" value="{% trans 'Сохранить' %}" /></td>
     </tr>
     </table>
-
 </form>
+
+<form action="{% url profile-detail user.profile.id %}" method="POST">{% csrf_token %}
+    <input type="submit" value="{% trans 'Отменить' %}" />
+</form>
+
 {% if pub_id %}
 <form action={% url publication-delete pub_id %} method="POST">{% csrf_token %}
+    <input type="submit" value="{% trans 'Удалить' %}" />
 </form>
 {% endif %}
 {% endblock content %}
