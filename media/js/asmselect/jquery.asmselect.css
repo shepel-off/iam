@@ -35,7 +35,7 @@
 	list-style: none;
 	background: #ddd;
 	border: 1px solid #bbb; 
-	width: 33em; /* 100% by default */
+	width: 350px; /* 100% by default */
 	margin: 0 0 -1px 0; 
 	line-height: 1em;
 }

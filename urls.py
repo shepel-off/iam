@@ -19,7 +19,7 @@ urlpatterns = patterns('',
      (r'^news/', include('iam.news.urls')),
      (r'^labs/', include('iam.labs.urls')),
      url(r'^login/$', 'iam.authentication.views.login', name='iam-login'),
-     (r'^logout/', 'django.contrib.auth.views.logout'),
+     url(r'^logout/', 'django.contrib.auth.views.logout', name='iam-logout'),
      (r'^publications/', include('iam.publications.urls')),
      (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     # For tinymce package

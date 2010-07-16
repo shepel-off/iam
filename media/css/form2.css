@@ -1,6 +1,22 @@
+.form, .form .middle { width: 100%; }
+.form .left, .form .right { width: 50%; float:left; }
+.form .middle .control { margin: 0 5px; }
+
+.form label, .form .control { margin-left: 5px; }
+.form label { display: block; clear: both; margin-bottom: 3px; }
+
+.form .two-wrapper, .form table { width: 100%; }
+.form table td { width: 50%; }
+
+.form select, .form input[type=text] { width: 100%; }
+td .control { margin-bottom: 5px; }
+
+#asmSelect0 { width: 354px; } /* see jquery.asmselect.css for width of selected entries */
+
+/*.formtable tr td { border: 1px solid; }
 .formtable tr td { padding: 3px; }
 
-.formtable { line-height: 1.5; width: 100%; }
+.formtable { line-height: 1.5; width: 100%; vertical-align: top; }
 #errors { background: #AB2723; color: #ccc; }
 .formtable td.label-r { text-align: right; }
 .formtable tr.solo { text-align: center; }
@@ -10,5 +26,5 @@
 
 #id_title { width: 99%; }
 #id_year { width: 99%; }
-select { width: 100%; }
-#id_language, #id_type { width: 25em; }
+#id_authors, #asmSelect0 { width: 400px; }
+#id_language, #id_type { width: 25em; }*/

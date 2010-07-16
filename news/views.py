@@ -17,6 +17,8 @@ class NewsForm(forms.ModelForm):
         model = News
         fields = ('title', 'body')
 
+import pynotify
+
 @login_required
 def add(request):
     if request.method == 'POST':
