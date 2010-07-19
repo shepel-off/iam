@@ -26,3 +26,4 @@ class Laboratory(models.Model):
     class Meta:
         verbose_name = _(u'Лаборатория')
         verbose_name_plural = _(u'Лаборатории')
+	ordering = ('number', 'title',)

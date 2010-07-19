@@ -4,7 +4,7 @@
 {% block title %}{% trans 'Редактирование личных данных' %}{% endblock %}
 
 {% block stylesheet %}
-<link rel="stylesheet" type="text/css" href="/css/form.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/profile_edit.css" media="all" />
 {% endblock %}
 
 {% block content %}
@@ -76,6 +76,10 @@
 <div class="wrapper">
     <div>{{ profileform.laboratory }}</div>
     <div class="label">{{ profileform.laboratory.label_tag }}</div>
+</div>
+<div class="wrapper">
+    <div>{{ profileform.about }}</div>
+    <div class="label">{{ profileform.about.label_tag }}</div>
 </div>
 </div>
 {{ profileform.id }}

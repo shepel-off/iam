@@ -2,3 +2,7 @@
     height: auto;
 }
 
+/* Форма редактирования публикаций 
+.form { overflow: hidden; }
+.form input, .form select { position: relative; }
+.form .middle .control, .form .middle .text-control { padding-right: 0; } */

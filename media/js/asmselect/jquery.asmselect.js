@@ -35,8 +35,11 @@
 			listItemClass: 'asmListItem',				// Class for the <li> list items
 			listItemLabelClass: 'asmListItemLabel',			// Class for the label text that appears in list items
 			removeClass: 'asmListItemRemove',			// Class given to the "remove" link
-			highlightClass: 'asmHighlight'				// Class given to the highlight <span>
+			highlightClass: 'asmHighlight',				// Class given to the highlight <span>
 
+			// user-defined options
+			authorID: '0'
+				
 			};
 
 		$.extend(options, customOptions); 
@@ -124,7 +127,7 @@
 
 				if($.browser.msie && $.browser.version < 7 && !ieClick) return;
 				var id = $(this).children("option:selected").slice(0,1).attr('rel'); 
-				addListItem(id); 	
+				addListItem(id, true); 	
 				ieClick = false; 
 				triggerOriginalChange(id, 'add'); // for use by user-defined callbacks
 			}
@@ -166,6 +169,21 @@
 
 				// add a first option to be the home option / default selectLabel
 				$select.prepend("<option>" + $original.attr('title') + "</option>"); 
+				
+				$original.children("option").each(function(n) {
+		
+					var $t = $(this); 
+					var id; 
+
+					if(!$t.attr('id')) $t.attr('id', 'asm' + index + 'option' + n); 
+					id = $t.attr('id'); 
+					
+					if($t.attr('value') == options.authorID) {
+						addListItem(id, false);
+						addSelectOption(id, true);
+						$t.attr('selected', 'selected');
+					}
+				});
 
 				$original.children("option").each(function(n) {
 
@@ -175,11 +193,13 @@
 					if(!$t.attr('id')) $t.attr('id', 'asm' + index + 'option' + n); 
 					id = $t.attr('id'); 
 
-					if($t.is(":selected")) {
-						addListItem(id); 
-						addSelectOption(id, true); 						
-					} else {
-						addSelectOption(id); 
+					if($t.attr('value') != options.authorID) {
+						if($t.is(":selected")) {
+							addListItem(id, true); 
+							addSelectOption(id, true); 						
+						} else {
+							addSelectOption(id); 
+						}
 					}
 				});
 
@@ -237,7 +257,7 @@
 				if($.browser.msie) $select.hide().show(); // this forces IE to update display
 			}
 
-			function addListItem(optionId) {
+			function addListItem(optionId, canRemove) {
 
 				// add a new item to the html list
 
@@ -262,8 +282,10 @@
 					.attr('rel', optionId)
 					.addClass(options.listItemClass)
 					.append($itemLabel)
-					.append($removeLink)
 					.hide();
+
+				if (canRemove)
+					$item.append($removeLink);
 
 				if(!buildingSelect) {
 					if($O.is(":selected")) return; // already have it

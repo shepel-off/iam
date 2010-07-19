@@ -13,7 +13,10 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("select[multiple]").asmSelect({
-            removeLabel: '{% trans 'убрать' %}'
+            removeLabel: '{% trans 'убрать' %}',
+            {% if user.is_authenticated %}
+            authorID: {{ user.profile.id }}
+            {% endif %}
         });
     }); 
 </script>
@@ -42,7 +45,7 @@
             <tr>
                 <td>
                     {{ form.authors.label_tag }}
-                    <div class="control">{{ form.authors }}</div>
+                    <div class="text-control">{{ form.authors }}</div>
                 </td>
                 <td>
                     {{ form.language.label_tag }}
@@ -50,46 +53,41 @@
                     {{ form.type.label_tag }}
                     <div class="control">{{ form.type }}</div>
                     {{ form.year.label_tag }}
-                    <div class="control">{{ form.year }}</div>
+                    <div><div class="text-control">{{ form.year }}</div></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="bottom-left">
+                    {{ form.other_authors.label_tag }}
+                    <div class="text-control">{{ form.other_authors }}</div>
+                    {{ form.start_page.label_tag }}
+                    <div class="text-control">{{ form.start_page }}</div>
+                    {{ form.end_page.label_tag }}
+                    <div class="text-control">{{ form.end_page }}</div>
+                </td>
+                <td>
+                    {{ form.journal.label_tag }}
+                    <div class="text-control">{{ form.journal }}</div>
+                    {{ form.journal_issue.label_tag }}
+                    <div class="text-control">{{ form.journal_issue }}</div>
+                    {{ form.publishing_house.label_tag }}
+                    <div class="text-control">{{ form.publishing_house }}</div>
                 </td>
             </tr>
         </table>
         </li>
         <li class="middle">
-            {{ form.other_authors.label_tag }}
-            <div class="control">{{ form.title }}</div>
-        <li class="middle">
             <input type="submit" value="{% trans 'Сохранить' %}" />
         </li>
     </ul> 
-    
-<!--    
-        <table class="formtable">
-        <tr>
-            <td colspan="4">{{ form.title.label_tag }} {{ form.title }}</td>
-        </tr>
-        <tr>
-            <td class="top">{{ form.authors.label_tag }} {{ form.authors }}</td>
-            <td>
-                <table class="formtable inner">
-                    <tr><td>{{ form.language.label_tag }} {{ form.language }}</td></tr>
-                    <tr><td>{{ form.type.label_tag }} {{ form.type }}</td></tr>
-                    <tr><td>{{ form.year.label_tag }} {{ form.year }}</td></tr>
-                </table>                    
-            </td>
-        </tr>
-    <tr class="solo"><td colspan="4">
-        <input type="submit" value="{% trans 'Сохранить' %}" /></td>
-    </tr>
-    </table>-->
 </form>
 
-<form action="{% url profile-detail user.profile.id %}" method="POST">{% csrf_token %}
+<form id="form-undo" action="{% url profile-detail user.profile.id %}" method="POST">{% csrf_token %}
     <input type="submit" value="{% trans 'Отменить' %}" />
 </form>
 
 {% if pub_id %}
-<form action={% url publication-delete pub_id %} method="POST">{% csrf_token %}
+<form id="form-delete" action={% url publication-delete pub_id %} method="POST">{% csrf_token %}
     <input type="submit" value="{% trans 'Удалить' %}" />
 </form>
 {% endif %}
