@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans 'Изменение информации о' %} {{ object }}
+{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="/css/labs/edit.css" media="all" />
+{% endblock %}
+
+{% block content %}
+<form action="{% url lab-edit lab_id %}" method="POST">{% csrf_token %}
+<div class="field">
+    {{ form.about.label_tag }}
+    {{ form.about }}
+<input type="submit" value="{% trans 'Сохранить' %}" />
+</form>
+<form id="form-undo" action="{% url lab-detail lab_id %}" method="POST">{% csrf_token %}
+    <input type="submit" value="{% trans 'Отменить' %}" />
+</form>
+{% endblock content %}

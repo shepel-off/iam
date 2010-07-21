@@ -1,0 +1,10 @@
+#content { line-height: 1.5; }
+#staff { margin: 0 auto; }
+#staff, #staff td, #staff th { border: 1px solid; }
+#staff td, #staff th { padding: 5px; }
+
+.center { text-align: center; }
+h4 { font-size: 120%; }
+
+form.edit { width: 14em; float: right; }
+form.edit input[type="submit"] { width: 100%; }

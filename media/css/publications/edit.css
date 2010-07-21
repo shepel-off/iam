@@ -1,0 +1,20 @@
+.form, .form .middle { width: 100%; }
+.form .left, .form .right { width: 50%; float:left; }
+.form .middle .control, .form .middle .text-control { padding-right: 5px; }
+.form .two-wrapper .text-control { padding-right: 5px; }
+
+.form label, .form .control, .form .text-control { padding-left: 5px; }
+.form label { display: block; clear: both; margin: 6px 0 3px 0; }
+
+.form .two-wrapper, .form table { width: 100%; }
+.form table td { width: 50%; }
+td .control, td .text-control { margin-bottom: 5px; }
+
+.form select, .form input[type=text] { width: 100%; margin: 0; }
+
+input[type=submit] { width: 85px; margin-top: 5px; }
+#main input[type=submit] { float: right; }
+
+#bottom-left .text-control { width: 350px; }
+
+#asmSelect0 { width: 354px; } /* see jquery.asmselect.css for width of selected entries */
