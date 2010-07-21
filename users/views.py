@@ -24,10 +24,7 @@ class UserForm(forms.ModelForm):
         fields = ('username', 'first_name', 'last_name', 'email',)
 
 def same_user(user, profile_id):
-    try:
-        return user.get_profile().id == int(profile_id)
-    except Profile.DoesNotExist:
-        return False
+    return user.get_profile().id == int(profile_id)
 
 @login_required
 @user_passes_test(same_user)

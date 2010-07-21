@@ -1,9 +1,0 @@
-div.wrapper { overflow: auto; width: 100%; margin-bottom: .5em; line-height:1.5; }
-.wrapper div { float: right; }
-.wrapper div.label { margin-right: .5em; }
-
-form { margin-bottom: 0; }
-input[type="submit"] { display: block; clear: both; margin: 0 auto; }
-textarea { width: 40.94em; }
-
-#personal { width: auto; margin: 0 auto; text-align:center; }

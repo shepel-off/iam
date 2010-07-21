@@ -23,7 +23,22 @@ class Laboratory(models.Model):
     def __unicode__(self):
         return u'{0} (№ {1})'.format(self.title, self.number)
 
+    def _is_lab(self):
+        return self.title.lower().find(u'лаборатория') != -1
+
+    def instrumental_case(self):
+        if self._is_lab():
+            return _(u'лабораторией')
+        else:
+            return _(u'сектором')
+
+    def prepositional_case(self):
+        if self._is_lab():
+            return _(u'лаборатории')
+        else:
+            return _(u'секторе')
+
     class Meta:
         verbose_name = _(u'Лаборатория')
         verbose_name_plural = _(u'Лаборатории')
-	ordering = ('number', 'title',)
+        ordering = ('number', 'title',)

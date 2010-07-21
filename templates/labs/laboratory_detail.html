@@ -1,31 +1,57 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}{{ object }}{% endblock %}
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="/css/labs/detail.css" media="all" />
+{% endblock %}
 
 {% block content %}
-<h2 style="text-align: center;">{{ object }}</h2>
+{% with object as lab %}
+<h3 class="center">{{ lab }}</h2>
 <br />
-{% with object.head.get_profile as head %}
-{% trans 'Заведующий' %}: <a href="{% url iam-users %}{{ head.id }}">{{ head }}</a>
-<br />
-{% trans 'Состав' %}:
-<ul>
-    {% for user in object.profile_set.all %}
-    {% if user.id != head.id %}
-        <li><a href="{% url iam-users %}{{ user.id }}">{{ user }}</a></li>
-    {% endif %}
+<h4 class="center">{% trans 'Состав' %}</h4>
+{% with lab.head.get_profile as head %}
+<table id="staff">
+    <tr>
+        <th>Имя</th>
+        <th>Должность</th>
+        <th>Электронная почта</th>
+    </tr>
+    <tr>
+        <td><a href="{% url iam-users %}{{ head.id }}">{{ head }}</a></td>
+        <td class="center">
+            {% trans 'заведующий' %} {{ lab.instrumental_case }}{% if head.post %}, {{ head.post }}{% endif %}
+        </td>
+        <td class="center"><a href="mailto:{{ head.user.email }}">{{ head.user.email }}</a></td>
+    </tr>
+    {% for user in lab.profile_set.all %}
+    {% ifnotequal user.id head.id %}
+    <tr>
+        <td><a href="{% url iam-users %}{{ user.id }}">{{ user }}</a></td>
+        <td class="center">{{ user.post }}</td>
+        <td class="center"><a href="mailto:{{ user.user.email }}">{{ user.user.email }}</a></td>
+    </tr>
+    {% endifnotequal %}
     {% endfor %}
-</ul>
+</table>
 {% endwith %}
+<br />
+{% ifequal lab user.laboratory %}
+    <form class="edit" action="{% url lab-edit lab.id %}">
+        <input type="submit" value="{% trans 'Изменить данные' %}"/>
+    </form>
+{% endifequal %}
+<span id="about">{{ lab.about|safe }}</span>
 
 {% comment %}
 {% trans 'Публикации:' %}<br />
 <ul>
-{% for pub in object.publications.all %}
+{% for pub in lab.publications.all %}
     <li>{{ pub }}</li>
 {% endfor %}
 </ul>
 {% endcomment %}
-
+{% endwith %}
 {% endblock %}

@@ -10,18 +10,18 @@
 {% block content %}
 <ul>
 {% for news_entry in object_list %}
-    <li class="entry rounded">
+    <li class="entry">
     <h3 class="entry-title">{{ news_entry.title }}</h3>
     <div class="rel">
     <ul class="meta rounded">
         <li class="date">{{ news_entry.date|naturalday:"d.m.Y" }}</li>
-        <li class="author">{{ news_entry.author.short_name }}</li>
+        <li class="author"><a href="{% url iam-users %}{{ news_entry.author.id }}">{{ news_entry.author.short_name }}</a></li>
     </ul>
     {% ifequal news_entry.author.user.id user.id %}
     <ul class="toolbox rounded">
             <li>
-            <a href="/news/{{ news_entry.id }}/edit/"><img alt="{% trans 'Редактировать' %}" src="/img/icons/pencil.png" /></a>
-            <a href="/news/{{ news_entry.id }}/delete/"><img alt="{% trans 'Удалить' %}" src="/img/icons/cross.png" /></a>
+                <a href="{% url news-edit news_entry.id %}"><img alt="{% trans 'Редактировать' %}" src="/img/icons/pencil.png" /></a>
+                <a href="{% url news-delete news_entry.id %}"><img alt="{% trans 'Удалить' %}" src="/img/icons/cross.png" /></a>
             </li>
     </ul>
     {% endifequal %}

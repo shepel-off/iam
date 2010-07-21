@@ -3,10 +3,16 @@
 
 {% block title%}{% trans 'Сотрудники' %}{% endblock %}
 
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="/css/lh.css" media="all" />
+{% endblock %}
+
 {% block content %}
 <ul>
     {% for profile in object_list %}
-    <li><a href="/users/{{ profile.id }}/">{{ profile }}</a></li>
+    {% ifnotequal profile.user.username 'root' %}
+    <li><a href="{% url profile-detail profile.id %}">{{ profile }}</a></li>
+    {% endifnotequal %}
     {% endfor %}
 </ul>
 {% endblock %}

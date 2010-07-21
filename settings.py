@@ -95,9 +95,6 @@ TEMPLATE_DIRS = (
     normpath(join(dirname(__file__), './templates/')),
 )
 
-TINYMCE_JS_URL="/tinymce_media/tiny_mce/tiny_mce.js"
-TINYMCE_JS_ROOT="/tinymce_media/tiny_mce/"
-
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.debug",

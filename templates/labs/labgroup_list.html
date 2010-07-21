@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title%}{% trans 'Лаборатории и сектора' %}{% endblock %}
+{% block title%}
+{% trans 'Лаборатории и сектора' %}
+{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="/css/lh.css" media="all" />
+{% endblock %}
 
 {% block content %}
 <ul>
@@ -9,9 +15,9 @@
     <li>{{ group }}
         <ul>
             {% for lab in group.laboratory_set.all %}
-            {% if lab.title != 'Группа ИТО' %}
-            <li><a href="/labs/{{ lab.id }}/">{{ lab }}</a></li>
-            {% endif %}
+            {% ifnotequal lab.number '0' %}
+            <li><a href="{% url lab-detail lab.id %}/">{{ lab }}</a></li>
+            {% endifnotequal %}
             {% endfor %}
         </ul>
         <br />

@@ -6,7 +6,7 @@
 
 {% block content %}
 <table id="login-form-wrap"><tr><td>
-<form id="the-login-form" method="post" action="{% url iam-login %}">{% csrf_token %}
+<form id="modal" method="post" action="{% url iam-login %}">{% csrf_token %}
     <table id="formtable">
     {% for field in form %}
     <tr>

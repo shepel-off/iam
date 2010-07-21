@@ -72,10 +72,10 @@
     <div id="content-wrap">
         <div id="authorize">
         	{% if user.is_authenticated %}
-                {% trans 'Добро пожаловать' %}, <a href="/users/{{ user.get_profile.id }}">{{ user.first_name }} {{ user.get_profile.mid_name }}</a>
+                {% trans 'Добро пожаловать' %}, <a href="/users/{{ user.get_profile.id }}/">{{ user.first_name }} {{ user.get_profile.mid_name }}</a>
                 (<a href="/logout/?next={% url iam-root %}">{% trans 'выйти' %}</a>)
             {% else %}
-                <a id="login-caller" href="{% url iam-login %}">{% trans 'Вход для сотрудников' %}</a>
+                <a id="login-caller" href="{% url iam-login %}#">{% trans 'Вход для сотрудников' %}</a>
             {% endif %}
         </div>
     	<div id="content">

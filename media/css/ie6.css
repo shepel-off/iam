@@ -2,7 +2,11 @@
     height: auto;
 }
 
-/* Форма редактирования публикаций 
+/* Форма редактирования публикаций */ 
 .form { overflow: hidden; }
 .form input, .form select { position: relative; }
-.form .middle .control, .form .middle .text-control { padding-right: 0; } */
+.form .middle .control, .form .middle .text-control { padding-right: 0; }
+
+#main { overflow: hidden; }
+#main input[type=submit] { position: relative; margin-right: -9px; }
+#form-undo input, #form-delete input { margin-left: 4px; }

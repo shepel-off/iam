@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}{{ object.user.first_name }} {{ object.mid_name }} {{ object.user.last_name }}{% endblock %}
+{% block title %}
+{{ object.user.first_name }} {{ object.mid_name }} {{ object.user.last_name }}
+{% endblock %}
+
 {% block stylesheet %}
-<link rel="stylesheet" type="text/css" href="/css/profile_detail.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/users/detail.css" media="all" />
 {% endblock stylesheet %}
 
 {% block content %}
-
 {% if object.photo %}
 <img id="photo" src="/{{ object.photo }}" />
 {% endif %}
@@ -19,11 +21,15 @@
         {{ object.academic_degree }},
         {% endif %}
         {% if object.academic_rank %}
-        {{ object.academic_rank }}, 
+        {{ object.academic_rank }} 
         {% endif %}
-        {{ object.post }}
+        {% if object.post %}
+        , {{ object.post }}
+        {% endif %}
     </span>
+    {% if object.academic_degree or object.academic_rank or object.post %}
     <br />
+    {% endif %}
     <span id="email"><a href="mailto:{{ object.user.email }}">{{ object.user.email }}</a></span>
 </div>
 {% ifequal user.id object.user.id %}
@@ -32,11 +38,11 @@
     </form>
 {% endifequal %}
 
-<span id="about">{{ object.about }}</span>
+<span id="about">{{ object.about|safe }}</span>
+
 <!--
 <span id="lab"><a href="{% url iam-labs %}{{ object.laboratory.id }}">{{ object.laboratory.title }}</a></span>
 -->
-
 
 {% ifnotequal object.publication_set.all|length 0 %}
 <div id="publications">

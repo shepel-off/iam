@@ -26,8 +26,3 @@ h3 { font-size: 150%; }
 .clearfooter { height: 31px; clear: both; }
 #footer { height: 31px; padding-top: 10px; position: relative; text-align: center; }
 #footer #w3c { float: right; margin-top: -29px; }
-/*input[type=text] { 
-        border: 1px solid #666666; 
-}*/
-
-

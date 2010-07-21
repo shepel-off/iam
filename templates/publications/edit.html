@@ -4,7 +4,7 @@
 {% block title %}{% trans 'Редактирование публикации' %}{% endblock %}
 
 {% block stylesheet %}
-<link rel="stylesheet" type="text/css" href="/css/form2.css" />
+<link rel="stylesheet" type="text/css" href="/css/publications/edit.css" />
 <link rel="stylesheet" type="text/css" href="/js/asmselect/jquery.asmselect.css" />
 {% endblock %}
 
@@ -34,11 +34,11 @@
 </div>
 {% endif %}
 
-<form action={% if pub_id %}{% url publication-edit pub_id %}{% else %}{% url publication-add %}{% endif %} method="POST">{% csrf_token %}
+<form id="main" action={% if pub_id %}{% url publication-edit pub_id %}{% else %}{% url publication-add %}{% endif %} method="POST">{% csrf_token %}
     <ul class="form">
         <li class="middle">
             {{ form.title.label_tag }}
-            <div class="control">{{ form.title }}</div>
+            <div class="text-control">{{ form.title }}</div>
         </li>
         <li class="two-wrapper">
         <table>
@@ -76,10 +76,8 @@
             </tr>
         </table>
         </li>
-        <li class="middle">
-            <input type="submit" value="{% trans 'Сохранить' %}" />
-        </li>
     </ul> 
+    <input id="main-submit" type="submit" value="{% trans 'Сохранить' %}" />
 </form>
 
 <form id="form-undo" action="{% url profile-detail user.profile.id %}" method="POST">{% csrf_token %}
