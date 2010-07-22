@@ -7,6 +7,7 @@
 
 {% block stylesheet %}
 <link rel="stylesheet" type="text/css" href="/css/users/detail.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/lh.css" media="all" />
 {% endblock stylesheet %}
 
 {% block content %}
@@ -16,7 +17,7 @@
 
 <div id="personal">
     <h3 id="name">{{ object.user.first_name }} {{ object.mid_name }} {{ object.user.last_name }}</h3>
-    <span id="degree">
+    <span class="solo">
         {% if object.academic_degree %}
         {{ object.academic_degree }},
         {% endif %}
@@ -27,30 +28,19 @@
         , {{ object.post }}
         {% endif %}
     </span>
-    {% if object.academic_degree or object.academic_rank or object.post %}
-    <br />
-    {% endif %}
-    <span id="email"><a href="mailto:{{ object.user.email }}">{{ object.user.email }}</a></span>
+    <span class="solo"><a href="mailto:{{ object.user.email }}">{{ object.user.email }}</a></span>
+    <span class="solo"><a href="{% url lab-detail object.laboratory.id %}">{{ object.laboratory.title }}</a></span>
 </div>
-{% ifequal user.id object.user.id %}
-    <form class="edit" action="{% url profile-edit object.id%}">
-        <input type="submit" value="{% trans 'Изменить данные' %}" style="width: 100%;"/>
-    </form>
-{% endifequal %}
-
+    {% ifequal user.id object.user.id %}
+        <ul class="edit rounded">
+            <li><a href="{% url profile-edit object.id %}">Редактировать профиль</a></li>
+            <li><a href="{% url publication-add %}">Добавить публикацию</a></li>
+        </ul>
+    {% endifequal %}
 <span id="about">{{ object.about|safe }}</span>
-
-<!--
-<span id="lab"><a href="{% url iam-labs %}{{ object.laboratory.id }}">{{ object.laboratory.title }}</a></span>
--->
 
 {% ifnotequal object.publication_set.all|length 0 %}
 <div id="publications">
-    {% ifequal user.id object.user.id %}
-        <form class="edit" action="{% url publication-add %}">
-            <input type="submit" value="{% trans 'Добавить публикацию' %}" style="width: 100%;"/>
-        </form>
-    {% endifequal %}
     <h3>{% trans 'Публикации' %}</h3>
     <ol>
     {% for pub in object.publication_set.all %}
@@ -58,11 +48,5 @@
     {% endfor %}
     </ol>
 </div>
-{% else %}
-    {% ifequal user.id object.user.id %}
-        <form class="solo-edit" action="{% url publication-add %}">
-            <input type="submit" value="{% trans 'Добавить публикацию' %}" style="width: 100%;"/>
-        </form>
-    {% endifequal %}
 {% endifnotequal %}
 {% endblock %}

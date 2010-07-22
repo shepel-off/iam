@@ -7,7 +7,7 @@
         
     <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/css/base.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/ui-lightness/jquery-ui-1.8.2.custom.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/redmond/jquery-ui-1.8.2.custom.css" />
 
     <script type="text/javascript" language="javascript" src="/js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" language="javascript" src="/js/jquery.corner.js"></script>
@@ -39,7 +39,7 @@
     {% endif %}
 
     
-    <div id="sidebar">
+    <div id="left-panel" class="rounded-right">
 	<ul class="menu-v">
         <li><a href="{% url iam-news %}">{% trans 'Новости' %}</a>
         {% if user.is_authenticated and request.path == '/news/' %}
@@ -69,22 +69,28 @@
         <li><a class="out" href="/old/">Старый сайт</a></li>
     </ul></div>
 
-    <div id="content-wrap">
-        <div id="authorize">
-        	{% if user.is_authenticated %}
-                {% trans 'Добро пожаловать' %}, <a href="/users/{{ user.get_profile.id }}/">{{ user.first_name }} {{ user.get_profile.mid_name }}</a>
-                (<a href="/logout/?next={% url iam-root %}">{% trans 'выйти' %}</a>)
-            {% else %}
-                <a id="login-caller" href="{% url iam-login %}#">{% trans 'Вход для сотрудников' %}</a>
-            {% endif %}
-        </div>
-    	<div id="content">
-    	{% block content %}
-    	{% endblock %}
-    	</div>
-        <div id="dialog-form" class="dform"></div>
-        <div id="dialog-form2" class="dform"></div>
+
+    <div id="content">
+    {% block content %}
+    {% endblock %}
     </div>
+    <div id="dialog-form" class="dform"></div>
+    <div id="dialog-form2" class="dform"></div>
+    
+    <div id="right-panel" class="rounded-left">
+      	{% if user.is_authenticated %}
+            {% trans 'Добро пожаловать' %},<br /><a href="/users/{{ user.get_profile.id }}/">{{ user.first_name }} {{ user.get_profile.mid_name }}</a>
+            (<a href="/logout/?next={% url iam-root %}">{% trans 'выйти' %}</a>)
+            <form type="multipart/form-data" action="http://mail.iam.dvo.ru/" method="POST">{% csrf_token %}
+               <input name="Username" type=text>
+               <input name="Password" type=password>
+               <input name="login" type=submit value="{% trans 'Войти в почту' %}">
+            </form>
+        {% else %}
+            <a id="login-caller" href="{% url iam-login %}#">{% trans 'Вход для сотрудников' %}</a>
+        {% endif %}
+    </div>
+   
     <div class="clearfooter"></div></div>
     <div id="footer"><hr />
         © 2010 {% trans 'Институт прикладной математики' %}<br />

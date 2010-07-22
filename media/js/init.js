@@ -8,7 +8,7 @@ function getProcessJson(target_form)
         {
             var err, msg;
             err = cont.find("#errors");
-            msg = '<li style="text-align: center;" class="ui-state-error">' + data.msg + '</li>';
+            msg = '<li style="text-align: center; padding: 5px;" class="ui-corner-all ui-state-error">' + data.msg + '</li>';
             if(!err.size())
                 cont.find("#modal").before('<ul id="errors">' + msg + "</ul>");
             else
@@ -29,14 +29,20 @@ function openAjaxDialog(target_url, target_form)
 {
     $.get(target_url, function(data) 
     {
-        $(target_form).html(data);
-        $(target_form).dialog("open");
-        $("#modal", target_form).ajaxForm(
+        var tf = $(target_form);
+        tf.html(data);
+        tf.dialog("open");
+        var oldw = tf.dialog('option', 'width'), oldh = tf.parent().height();
+        tf.dialog('option', 'width', $('#wrap', tf).width() + 32);
+        $("#modal", tf).ajaxForm(
         {
             dataType:  "json",
             success:   getProcessJson(target_form)
         });
-        $("input[type=submit]", target_form).css("display", "none");
+        $("input[type=submit]", tf).css("display", "none");
+        tf.dialog('option','position',[
+            tf.parent().position().left - (tf.parent().width() - oldw)/2,
+            tf.parent().position().top - (tf.parent().height() - oldh)/2]);
     });
 }
 
@@ -47,9 +53,7 @@ function getBaseOpts()
         draggable: false,
         modal: true,
         open: function(event, ui) { $("textarea", this).wysiwyg(); },
-        position: ['center','middle'],
-        resizable: false,
-        width: "auto"
+        resizable: false
     };
 }
 
@@ -60,12 +64,12 @@ $(document).ready(function(){
     {
         $("#dialog-form2").dialog($.extend(getBaseOpts(), 
             {
-                title: "Добавление новостей",
+                title: "Добавление новости",
                 buttons: 
                 {
                     "Добавить": function() { $("#modal", this).submit(); },
                     "Отменить": function() { $(this).dialog("close"); }
-                },
+                }
             }));
         $("#addnews").click(function() 
         {
@@ -82,9 +86,9 @@ $(document).ready(function(){
                 {
                     "Войти": function() { $("#modal", this).submit(); },
                     "Отменить": function() { $(this).dialog("close"); }
-                },
+                }
             }));
-        $("#login-caller").button().click(function() 
+        $("#login-caller").click(function() 
         {
             openAjaxDialog("/login/", "#dialog-form");
             return false;
@@ -92,4 +96,6 @@ $(document).ready(function(){
     }
     /* init corners */
     $(".rounded").corner("5px");
+    $(".rounded-right").corner("5px right");
+    $(".rounded-left").corner("5px left");
 });

@@ -16,7 +16,7 @@
         <ul>
             {% for lab in group.laboratory_set.all %}
             {% ifnotequal lab.number '0' %}
-            <li><a href="{% url lab-detail lab.id %}/">{{ lab }}</a></li>
+            <li><a href="{% url lab-detail lab.id %}">{{ lab }}</a></li>
             {% endifnotequal %}
             {% endfor %}
         </ul>

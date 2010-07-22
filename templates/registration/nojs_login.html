@@ -10,7 +10,7 @@
 {% block content %}
 <table style="margin: 0 auto" id="login-form-wrap"><tr><td>
     {% if errors %}
-    <ul><li style="text-align: center;" class="ui-state-error">{{ errors }}</li></ul>
+    <ul class="ui-corner-all ui-state-error"><li>{{ errors }}</li></ul>
     {% endif %}
 <form id="modal" method="post" action="{% url iam-login %}">{% csrf_token %}
     <table id="formtable">

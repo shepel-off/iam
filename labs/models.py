@@ -18,7 +18,7 @@ class Laboratory(models.Model):
     number = models.CharField(max_length=10, verbose_name=_(u'Номер'))
     group = models.ForeignKey(LabGroup, blank=True, verbose_name=_(u'Отдел'))
     head = models.OneToOneField(User, verbose_name=_(u'Заведующий'))
-    about = models.TextField(blank=True, verbose_name=(u'О лаборатории'))
+    about = models.TextField(blank=True, verbose_name=(u'Описание'))
 
     def __unicode__(self):
         return u'{0} (№ {1})'.format(self.title, self.number)

@@ -4,3 +4,4 @@
 #formtable td.label { text-align: right; }
 #formtable tr.solo { text-align: center; }
 #formtable tr.solo td { padding: 5px 0 0 0; }
+ul.ui-state-error { padding: 5px; text-align: center; } 

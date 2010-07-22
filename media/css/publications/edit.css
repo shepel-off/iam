@@ -12,8 +12,8 @@ td .control, td .text-control { margin-bottom: 5px; }
 
 .form select, .form input[type=text] { width: 100%; margin: 0; }
 
-input[type=submit] { width: 85px; margin-top: 5px; }
-#main input[type=submit] { float: right; }
+.pform input[type=submit] { width: 85px; margin: 5px 0 0 4px }
+#main input[type=submit] { float: right; margin-left: 0; }
 
 #bottom-left .text-control { width: 350px; }
 

@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block title %}
-{% trans 'Изменение информации о' %} {{ object }}
+{% trans 'Редактирование подразделения' %} {{ object }}
 {% endblock %}
 
 {% block stylesheet %}
@@ -10,13 +10,16 @@
 {% endblock %}
 
 {% block content %}
-<form action="{% url lab-edit lab_id %}" method="POST">{% csrf_token %}
+<form id="lab-main" action="{% url lab-edit lab_id %}" method="POST">{% csrf_token %}
+{% for field in form %}
 <div class="field">
-    {{ form.about.label_tag }}
-    {{ form.about }}
+    {{ field.label_tag }}
+    {{ field }}
+</div>
+{% endfor %}
 <input type="submit" value="{% trans 'Сохранить' %}" />
 </form>
-<form id="form-undo" action="{% url lab-detail lab_id %}" method="POST">{% csrf_token %}
+<form action="{% url lab-detail lab_id %}" method="POST">{% csrf_token %}
     <input type="submit" value="{% trans 'Отменить' %}" />
 </form>
 {% endblock content %}

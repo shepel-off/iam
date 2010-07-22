@@ -1,8 +1,8 @@
-form { margin: 0; }
-form input[type="submit"] { display: block; clear: both; float: right; }
+#lab-main { margin: 0; }
+#lab-main .field { margin-bottom: 6px; }
+#lab-main .field label { display: block; clear: both; margin-bottom: 3px; }
+#lab-main .field textarea { width: 99%; }
+#lab-main .field input { width: 100%; }
 
-form .field label { display: block; clear: both; margin-bottom: 3px; }
-form .field { margin-bottom: 6px; }
-
-form .field textarea { width: 600px; }
-form .field input { width: 600px; }
+input[type=submit] { width: 85px; margin-top: 5px; }
+#lab-main input[type=submit] { float: right; }

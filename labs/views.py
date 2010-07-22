@@ -13,7 +13,7 @@ from iam.utils.decorators import user_passes_test
 class LaboratoryForm(forms.ModelForm):
     class Meta:
         model = Laboratory
-        fields = ('about',)
+        fields = ('title', 'number', 'about',)
 
 def user_in_lab(user, lab_id):
     return user.get_profile().laboratory.id == int(lab_id)

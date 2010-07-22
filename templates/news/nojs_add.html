@@ -1,6 +1,10 @@
+{% extends "base.html" %}
 {% load i18n %}
+{% block title %}{% trans 'Добавление новости' %}{% endblock %}
 
+{% block stylesheet %}
 <link rel="stylesheet" type="text/css" media="screen" href="/css/news/edit.css" />
+{% endblock stylesheet %}
 
 {% block content %}
 <table id="wrap"><tr><td>

@@ -2,26 +2,32 @@ html { height: 100%; color: #000; font: 0.75em/1.5 Arial, Helvetica, sans-serif;
 body { height: 100%; min-width: 1020px; }
 
 a { text-decoration: none; }
+a:hover { text-decoration: underline; }
 h1 { color: #AF4E0E; font-size: 220%; }
 h1 a { color: #AF4E0E; }
 h3 { font-size: 150%; }
 
-#container { height: auto !important; height: 100%; min-height: 100%; margin-bottom: -31px; position: relative; }
-#welcome { clear: both; margin: 15px 0; text-align: center; width: 100%; }
-#content-wrap { float: left; width: 80% }
-#content { clear: both; margin-left: 15px; width: 70%; }
+#welcome { width: 100%; }
+#left-panel { width: 15%; }
+#content { width: 60%; }
 
-#sidebar { display: inline; float: left; height: 100%; margin: 0 10px; padding-right: 10px; width: 16%; line-height: 1.5; }
-#sidebar a { color: blue; }
-#sidebar a.out { color: maroon; }
-.menu-v { border-top: 1px solid #ccc; }
-.menu-v li { padding: 2px 0; border-bottom: 1px solid #ccc; }
+#container { height: auto !important; height: 100%; min-height: 100%; margin-bottom: -31px; position: relative; }
+#welcome { clear: both; margin: 15px 0; text-align: center; }
+#content { float: left; margin-left: 15px; }
+
+#left-panel { display: inline; float: left; height: 100%; margin: 0 10px 0 0px; padding: 0 10px 0 10px; line-height: 1.5; }
+#left-panel { background-color: #dcebf7; }
+#left-panel a { color: blue; }
+#left-panel a.out { color: maroon; }
+.menu-v { padding: 10px; }
+.menu-v li { padding: 2px 0; }
 .menu-v li ul { padding-left: 1em; margin-top: 2px; }
-.menu-v li li { border: none; border-top: 1px solid #ccc; }
-.menu-v a:hover { text-decoration: underline; }
+.menu-v li li { border: none; }
 .menu-v .category, .menu-v a { display: block; padding-top: 1px; }
 
-#authorize { float: right; margin: 10px; font-weight: bold; }
+#right-panel { padding: 5px 10px; margin: 0;  background-color: #dcebf7;float: right; height: 100%; line-height: 1.5; }
+#right-panel form input { display: block; clear: both; }
+#right-panel #login-caller { font-weight: bold; }
 
 .clearfooter { height: 31px; clear: both; }
 #footer { height: 31px; padding-top: 10px; position: relative; text-align: center; }

@@ -4,85 +4,92 @@
 {% block title %}{% trans 'Редактирование личных данных' %}{% endblock %}
 
 {% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="/css/lh.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/errors.css" media="all" />
 <link rel="stylesheet" type="text/css" href="/css/users/edit.css" media="all" />
 {% endblock %}
 
 {% block content %}
 {% if errors|length %}
-<div id="errors">
-<ul>
+<ul class="errors rounded">
 {% for key, value in errors.items %}
     <li>{{ key }}: {{ value|slice:"2:" }}</li> {# First two characters are: '* ', tricky way (: #}
 {% endfor %}
 </ul>
-</div>
 {% endif %}
 
 <form action="{% url profile-edit user.get_profile.id %}" method="POST">{% csrf_token %}
+<div class="half">
 {{ userformset.management_form }}
 {% for profileform in userformset.forms %}
 
-<div id="personal">
-<table style="margin: 0 auto; width: 50%;"><tr><td>
-<div class="wrapper">
-    <div>{{ userform.username }}</div>
-    {{ userform.username.label_tag }}
+{% with userform.username as field %}
+<div class="field">
+    {{ field }}
+    {% if field.field.required %}<strong>{{ field.label_tag }}</strong>{% else %}{{ field.label_tag }}{% endif %}
 </div>
-<div class="wrapper">
-    <div>{{ userform.last_name }}</div>
-    {{ userform.last_name.label_tag }}
+{% endwith %}
+{% with userform.last_name as field %}
+<div class="field">
+    {{ field }}
+    {% if field.field.required %}<strong>{{ field.label_tag }}</strong>{% else %}{{ field.label_tag }}{% endif %}
 </div>
-<div class="wrapper">
-    <div>{{ userform.first_name }}</div>
-    {{ userform.first_name.label_tag }}
+{% endwith %}
+{% with userform.first_name as field %}
+<div class="field">
+    {{ field }}
+    {% if field.field.required %}<strong>{{ field.label_tag }}</strong>{% else %}{{ field.label_tag }}{% endif %}
 </div>
-<div class="wrapper">
-    <div>{{ profileform.mid_name }}</div>
-    {{ profileform.mid_name.label_tag }}
+{% endwith %}
+{% with profileform.mid_name as field %}
+<div class="field">
+    {{ field }}
+    {% if field.field.required %}<strong>{{ field.label_tag }}</strong>{% else %}{{ field.label_tag }}{% endif %}
 </div>
-<div class="wrapper">
-    <div>{{ userform.email }}</div>
-    {{ userform.email.label_tag }}
+{% endwith %}
+{% with userform.email as field %}
+<div class="field">
+    {{ field }}
+    {% if field.field.required %}<strong>{{ field.label_tag }}</strong>{% else %}{{ field.label_tag }}{% endif %}
 </div>
-{% comment %}
-<div class="wrapper">
-    <div>{{ profileform.photo }}</div>
-    <div class="label">{{ profileform.photo.label_tag }}</div>
-</div>
-{% endcomment %}
-<hr />
+{% endwith %}
+<br />
 
 {% for field in passwordform %}
-<div class="wrapper">
-    <div>{{ field }}</div>
-    {{ field.label_tag }}
+<div class="field">
+    {{ field }}
+    {% if field.field.required %}<strong>{{ field.label_tag }}</strong>{% else %}{{ field.label_tag }}{% endif %}
 </div>
 {% endfor %}
-<hr />
+<br />
 
-<div class="wrapper">
-    <div>{{ profileform.post }}</div>
-    {{ profileform.post.label_tag }}
+{% with profileform.post as field %}
+<div class="field">
+    {{ field }}
+    {% if field.field.required %}<strong>{{ field.label_tag }}</strong>{% else %}{{ field.label_tag }}{% endif %}
 </div>
-<div class="wrapper">
-    <div>{{ profileform.academic_degree }}</div>
-    {{ profileform.academic_degree.label_tag }}
+{% endwith %}
+{% with profileform.academic_degree as field %}
+<div class="field">
+    {{ field }}
+    {% if field.field.required %}<strong>{{ field.label_tag }}</strong>{% else %}{{ field.label_tag }}{% endif %}
 </div>
-<div class="wrapper">
-    <div>{{ profileform.academic_rank }}</div>
-    {{ profileform.academic_rank.label_tag }}
+{% endwith %}
+{% with profileform.academic_rank as field %}
+<div class="field">
+    {{ field }}
+    {% if field.field.required %}<strong>{{ field.label_tag }}</strong>{% else %}{{ field.label_tag }}{% endif %}
 </div>
-{% comment %}<div class="wrapper">
-    <div>{{ profileform.laboratory }}</div>
-    {{ profileform.laboratory.label_tag }}
-</div>{% endcomment %}
-<hr />
-</td></tr></table>
-<div class="wrapper">
-    <span class="center-label">{{ profileform.about.label_tag }}</span>
-    <div>{{ profileform.about }}</div>
+{% endwith %}
 </div>
+
+{% with profileform.about as field %}
+<div class="field">
+    <span class="over">{% if field.field.required %}<strong>{{ field.label_tag }}</strong>{% else %}{{ field.label_tag }}{% endif %}</span>
+    {{ field }}
 </div>
+{% endwith %}
+
 {{ profileform.id }}
 <div style="display: none">
     {{ profileform.laboratory }}
@@ -92,4 +99,15 @@
 </form>
 {% endfor %}
 {% endblock content %}
+
+{% comment %}
+<div class="field">
+    <div>{{ profileform.photo }}</div>
+    <div class="label">{{ profileform.photo.label_tag }}</div>
+</div>
+<div class="field">
+    <div>{{ profileform.laboratory }}</div>
+    {{ profileform.laboratory.label_tag }}
+</div>
+{% endcomment %}
 

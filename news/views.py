@@ -25,13 +25,14 @@ def add(request):
             news_entry.date = datetime.datetime.now()
             news_entry.author = request.user.get_profile()
             news_entry.save()
+            if not request.is_ajax():
+                return redirect('/news/')
             return HttpResponse(json.dumps(
                 {'errors': 0, 
                  'msg': 'Новость добавлена'}), 
                 mimetype='application/json', status=200)
-    form = NewsForm()
-    return render_to_response('news/add.html', 
-            {'form': form}, 
+    return render_to_response('news/add.html' if request.is_ajax() else 'news/nojs_add.html', 
+            {'form': NewsForm()}, 
             context_instance=RequestContext(request))
 
 def is_author(user, news_id):

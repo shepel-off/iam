@@ -11,26 +11,24 @@ from django.utils import simplejson as json
 
 import pynotify
 
+def produce_error(request, msg):
+    if request.is_ajax():
+        return HttpResponse(json.dumps({'errors': 1, 'msg': msg}), mimetype='application/json', status=200)
+    return render_to_response('registration/nojs_login.html', {'form': AuthenticationForm(), 'errors': msg }, context_instance=RequestContext(request))
 
 def login(request):
-    def produce_error(msg):
-        if request.is_ajax():
-            return HttpResponse(json.dumps({'errors': 1, 'msg': msg}), mimetype='application/json', status=200)
-        return render_to_response('registration/nojs_login.html', {'form': AuthenticationForm(), 'errors': msg }, context_instance=RequestContext(request))
-    
     if request.user.is_authenticated():
-        produce_error('Вы уже авторизованы')
+        produce_error(request, 'Вы уже авторизованы')
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
         if user is None:
-            return produce_error('Неверный логин или пароль')
+            return produce_error(request, 'Неверный логин или пароль')
         _login(request, user)
-        if request.GET['next']:
-            return redirect(request.GET['next'])
-            
-        #return HttpResponse(json.dumps({'errors': 0, 'msg': 'Спасибо за авторизацию'}), mimetype='application/json', status = 200)
-    if not request.is_ajax():
-        return render_to_response('registration/nojs_login.html', {'form': AuthenticationForm() }, context_instance=RequestContext(request))
-    return render_to_response('registration/login.html', {'form': AuthenticationForm() }, context_instance=RequestContext(request))
+        if request.is_ajax():
+            return HttpResponse(json.dumps({'errors': 0, 'msg': 'Спасибо за авторизацию'}), mimetype='application/json', status = 200)
+        return redirect(request.POST['next'])
+    return render_to_response('registration/login.html' if request.is_ajax() else 'registration/nojs_login.html',
+            {'form': AuthenticationForm(),
+            'next': '/' if 'next' not in request.GET else request.GET['next'] }, context_instance=RequestContext(request))

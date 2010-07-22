@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<table id="login-form-wrap"><tr><td>
+<table id="wrap"><tr><td>
 <form id="modal" method="post" action="{% url iam-login %}">{% csrf_token %}
     <table id="formtable">
     {% for field in form %}
@@ -18,7 +18,6 @@
         <td colspan="2"><input class="noresize" type="submit" value="{% trans 'Войти' %}" /></td>
     </tr>
     </table>
-    <input type="hidden" name="next" value="{{ next }}" />
 </form>
 </td></tr></table>
 {% endblock %}

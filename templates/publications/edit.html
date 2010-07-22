@@ -4,6 +4,7 @@
 {% block title %}{% trans 'Редактирование публикации' %}{% endblock %}
 
 {% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="/css/errors.css" />
 <link rel="stylesheet" type="text/css" href="/css/publications/edit.css" />
 <link rel="stylesheet" type="text/css" href="/js/asmselect/jquery.asmselect.css" />
 {% endblock %}
@@ -25,16 +26,14 @@
 {% block content %}
 
 {% if errors|length %}
-<div id="errors">
-<ul>
+<ul class="errors rounded">
 {% for key, value in errors.items %}
-    <li class="ui-state-error">{{ key }}: {{ value|slice:"2:" }}</li> {# First two characters are: '* ', tricky way (: #}
+    <li>{{ key }}: {{ value|slice:"2:" }}</li> {# First two characters are: '* ', tricky way (: #}
 {% endfor %}
 </ul>
-</div>
 {% endif %}
 
-<form id="main" action={% if pub_id %}{% url publication-edit pub_id %}{% else %}{% url publication-add %}{% endif %} method="POST">{% csrf_token %}
+<form class="pform" id="main" action={% if pub_id %}{% url publication-edit pub_id %}{% else %}{% url publication-add %}{% endif %} method="POST">{% csrf_token %}
     <ul class="form">
         <li class="middle">
             {{ form.title.label_tag }}
@@ -76,16 +75,16 @@
             </tr>
         </table>
         </li>
-    </ul> 
+    </ul>
     <input id="main-submit" type="submit" value="{% trans 'Сохранить' %}" />
 </form>
 
-<form id="form-undo" action="{% url profile-detail user.profile.id %}" method="POST">{% csrf_token %}
+<form class="pform" action="{% url profile-detail user.profile.id %}" method="POST">{% csrf_token %}
     <input type="submit" value="{% trans 'Отменить' %}" />
 </form>
 
 {% if pub_id %}
-<form id="form-delete" action={% url publication-delete pub_id %} method="POST">{% csrf_token %}
+<form class="pform" action={% url publication-delete pub_id %} method="POST">{% csrf_token %}
     <input type="submit" value="{% trans 'Удалить' %}" />
 </form>
 {% endif %}

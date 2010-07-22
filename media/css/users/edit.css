@@ -1,10 +1,10 @@
-div.wrapper { overflow: auto; width: 100%; margin-bottom: .5em; line-height: 1.5; }
-.wrapper div, .wrapper label { float: right; }
-.wrapper label { margin-right: .5em; }
-.center-label label { display: inline; float: none; }
+form { margin: 0 auto; width: 100%; }
+form input[type=submit] { display: block; clear: both; margin: 0 auto; width: auto; }
+form textarea { width: 100%; height: 800px; }
+form textarea, form .wysiwyg { margin: .3em 0; }
 
-#personal { width: auto; margin: 0 auto; text-align: center; }
-
-form { margin-bottom: 0; }
-input { width: 150px; }
-input[type="submit"] { display: block; clear: both; margin: 0 auto; width: auto; }
+form .half { margin: 0 auto; width: 50%; }
+form .field { overflow: auto; width: 100%; margin-bottom: .5em; }
+form .field label { float: right; margin-right: .5em; }
+form .field input { float: right; width: 150px; }
+form .field .over label { display: inline; float: none; }

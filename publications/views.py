@@ -16,15 +16,15 @@ class PublicationForm(forms.ModelForm):
         self.fields.keyOrder = [
             'title',
             'authors',
-            'other_authors',
             'language',
             'type',
             'year',
-            'publishing_house',
-            'journal',
-            'journal_issue',
+            'other_authors',
             'start_page',
             'end_page'
+            'journal',
+            'journal_issue',
+            'publishing_house',
         ]
         
     class Meta:
