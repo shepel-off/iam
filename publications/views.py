@@ -21,7 +21,7 @@ class PublicationForm(forms.ModelForm):
             'year',
             'other_authors',
             'start_page',
-            'end_page'
+            'end_page',
             'journal',
             'journal_issue',
             'publishing_house',

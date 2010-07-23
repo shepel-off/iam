@@ -22,10 +22,11 @@
         {{ object.academic_degree }},
         {% endif %}
         {% if object.academic_rank %}
-        {{ object.academic_rank }} 
+        {{ object.academic_rank }}
         {% endif %}
+        {% if object.academic_rank and object.post %},{% endif %}
         {% if object.post %}
-        , {{ object.post }}
+        {{ object.post }}
         {% endif %}
     </span>
     <span class="solo"><a href="mailto:{{ object.user.email }}">{{ object.user.email }}</a></span>

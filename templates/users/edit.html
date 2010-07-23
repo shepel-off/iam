@@ -18,7 +18,7 @@
 </ul>
 {% endif %}
 
-<form action="{% url profile-edit user.get_profile.id %}" method="POST">{% csrf_token %}
+<form id="profile-edit" action="{% url profile-edit user.get_profile.id %}" method="POST">{% csrf_token %}
 <div class="half">
 {{ userformset.management_form }}
 {% for profileform in userformset.forms %}
@@ -58,7 +58,7 @@
 {% for field in passwordform %}
 <div class="field">
     {{ field }}
-    {% if field.field.required %}<strong>{{ field.label_tag }}</strong>{% else %}{{ field.label_tag }}{% endif %}
+    {{ field.label_tag }}
 </div>
 {% endfor %}
 <br />

@@ -1,7 +1,9 @@
-#formtable { vertical-align: middle; border-collapse: collapse; line-height:1.5; width: 100%; }
+#formtable { vertical-align: middle; border-collapse: collapse; line-height: 1.5; width: 100%; }
 #errors { background: #AB2723; color: #ccc; }
-#formtable td { padding: 5px; }
-#formtable td.label { text-align: right; }
+#formtable tr td { padding: 5px; }
+#formtable tr td.label { text-align: right; }
+#formtable tr td input { width: 150px; }
+#formtable tr td input.noresize { width: auto; }
 #formtable tr.solo { text-align: center; }
 #formtable tr.solo td { padding: 5px 0 0 0; }
 ul.ui-state-error { padding: 5px; text-align: center; } 

@@ -1,5 +1,6 @@
 /* Главная */
 #left-panel, #right-panel { height: auto; }
+#right-panel { width: 14%; }
 
 /* Список новостей */
 .toolbox li { height: auto; }
@@ -10,6 +11,3 @@
 .form .middle .control, .form .middle .text-control { padding-right: 0; }
 #main { overflow: hidden; }
 #main input[type=submit] { position: relative; margin-right: -9px; }
-
-/* Форма редактирования подразделения */
-#lab-main .field textarea { width: 101%; }

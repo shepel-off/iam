@@ -3,9 +3,22 @@ body { height: 100%; min-width: 1020px; }
 
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
+
 h1 { color: #AF4E0E; font-size: 220%; }
 h1 a { color: #AF4E0E; }
 h3 { font-size: 150%; }
+#left-panel a, #right-panel a { color: blue; }
+#left-panel a.out { color: maroon; }
+
+.block { display: block; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+.small { font-size: 80%; }
+.bold { font-weight: bold; }
+
+.link { color: blue; }
+.link:hover { text-decoration: underline; }
 
 #welcome { width: 100%; }
 #left-panel { width: 15%; }
@@ -17,17 +30,21 @@ h3 { font-size: 150%; }
 
 #left-panel { display: inline; float: left; height: 100%; margin: 0 10px 0 0px; padding: 0 10px 0 10px; line-height: 1.5; }
 #left-panel { background-color: #dcebf7; }
-#left-panel a { color: blue; }
-#left-panel a.out { color: maroon; }
-.menu-v { padding: 10px; }
+.menu-v { padding: 5px 0; }
 .menu-v li { padding: 2px 0; }
 .menu-v li ul { padding-left: 1em; margin-top: 2px; }
 .menu-v li li { border: none; }
 .menu-v .category, .menu-v a { display: block; padding-top: 1px; }
 
-#right-panel { padding: 5px 10px; margin: 0;  background-color: #dcebf7;float: right; height: 100%; line-height: 1.5; }
+#right-panel { margin: 0; float: right; height: 100%; line-height: 1.5; }
+#right-panel li { padding: 5px 10px; background-color: #dcebf7; margin-bottom: 10px; min-width: 133px; }
 #right-panel form input { display: block; clear: both; }
-#right-panel #login-caller { font-weight: bold; }
+
+#right-panel #mail-form ul { margin: 0 auto; }
+#right-panel #mail-form ul li { margin-bottom: 5px; padding: 0; }
+#right-panel #mail-form ul li.field label { margin: 0; }
+#right-panel #mail-form ul li.field input { width: 125px; }
+#right-panel #mail-form input[type=submit] { margin: 0 auto; }
 
 .clearfooter { height: 31px; clear: both; }
 #footer { height: 31px; padding-top: 10px; position: relative; text-align: center; }

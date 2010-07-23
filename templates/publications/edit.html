@@ -26,7 +26,7 @@
 {% block content %}
 
 {% if errors|length %}
-<ul class="errors rounded">
+<ul class="ui-state-error rounded">
 {% for key, value in errors.items %}
     <li>{{ key }}: {{ value|slice:"2:" }}</li> {# First two characters are: '* ', tricky way (: #}
 {% endfor %}

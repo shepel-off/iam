@@ -1,4 +1,3 @@
-
 function getProcessJson(target_form)
 {
     return function(data)
@@ -6,11 +5,13 @@ function getProcessJson(target_form)
         var cont = $(target_form);
         if(data.errors)
         {
-            var err, msg;
-            err = cont.find("#errors");
-            msg = '<li style="text-align: center; padding: 5px;" class="ui-corner-all ui-state-error">' + data.msg + '</li>';
+            var err, msg = '';
+            err = cont.find('ul.ui-state-error');
+            $.each(data.errors, function(i, error) {
+                msg += '<li >' + error + '</li>\n';
+            });
             if(!err.size())
-                cont.find("#modal").before('<ul id="errors">' + msg + "</ul>");
+                cont.find("#modal").before('<ul class="ui-state-error">' + msg + "</ul>");
             else
             {
                 err.empty();
@@ -52,13 +53,17 @@ function getBaseOpts()
         autoOpen: false,
         draggable: false,
         modal: true,
-        open: function(event, ui) { $("textarea", this).wysiwyg(); },
+        open: function(event, ui) {
+            $("textarea", this).wysiwyg();
+            $("div.wysiwyg").css("padding", "3px 1px");
+        },
         resizable: false
     };
 }
 
 $(document).ready(function(){
     $("textarea").wysiwyg();
+    $("div.wysiwyg").css("padding", "3px 1px");
 
     if($("#addnews").size())
     {
@@ -94,8 +99,16 @@ $(document).ready(function(){
             return false;
         });
     }
+  
     /* init corners */
     $(".rounded").corner("5px");
     $(".rounded-right").corner("5px right");
     $(".rounded-left").corner("5px left");
+
+    $("#mail-hidden").css("display", "none");
+    $("#mail-enter").click(function() {
+        $("#mail-hidden").slideToggle("slow");
+        $(".rounded-left").corner("5px left");
+    });
+
 });

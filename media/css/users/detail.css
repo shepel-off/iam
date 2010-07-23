@@ -2,7 +2,7 @@
 #personal #name { margin: 0 auto; }
 #personal .solo { display: block; clear: both; }
 
-ul.edit { clear: both; float: right; margin: 0 0 1.5em 1.5em; padding: .5em 1em; background-color: rgb(220, 235, 247); }
+ul.edit { clear: both; float: right; margin: 0 0 1.5em 1.5em; padding: .5em 1em; background-color: #dcebf7; }
 ul.edit li { text-align: right; }
 ul.edit li a { color: blue; }
 

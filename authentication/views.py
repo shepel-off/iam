@@ -13,21 +13,21 @@ import pynotify
 
 def produce_error(request, msg):
     if request.is_ajax():
-        return HttpResponse(json.dumps({'errors': 1, 'msg': msg}), mimetype='application/json', status=200)
+        return HttpResponse(json.dumps({'errors': msg}), mimetype='application/json', status=200)
     return render_to_response('registration/nojs_login.html', {'form': AuthenticationForm(), 'errors': msg }, context_instance=RequestContext(request))
 
 def login(request):
     if request.user.is_authenticated():
-        produce_error(request, 'Вы уже авторизованы')
+        produce_error(request, ['Вы уже авторизованы'])
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
         if user is None:
-            return produce_error(request, 'Неверный логин или пароль')
+            return produce_error(request, ['Неверный логин или пароль'])
         _login(request, user)
         if request.is_ajax():
-            return HttpResponse(json.dumps({'errors': 0, 'msg': 'Спасибо за авторизацию'}), mimetype='application/json', status = 200)
+            return HttpResponse(json.dumps({'msg': 'Спасибо за авторизацию'}), mimetype='application/json', status=200)
         return redirect(request.POST['next'])
     return render_to_response('registration/login.html' if request.is_ajax() else 'registration/nojs_login.html',
             {'form': AuthenticationForm(),

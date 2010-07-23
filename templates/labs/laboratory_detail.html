@@ -24,21 +24,31 @@
         <td class="center">
             {% trans 'заведующий' %} {{ lab.instrumental_case }}{% if head.post %}, {{ head.post }}{% endif %}
         </td>
+        {% if head.user.email %}
         <td class="center"><a href="mailto:{{ head.user.email }}">{{ head.user.email }}</a></td>
+        {% endif %}
     </tr>
     {% for user in lab.profile_set.all %}
     {% ifnotequal user.id head.id %}
     <tr>
         <td><a href="{% url iam-users %}{{ user.id }}">{{ user }}</a></td>
-        <td class="center">{{ user.post }}</td>
-        <td class="center"><a href="mailto:{{ user.user.email }}">{{ user.user.email }}</a></td>
+        <td class="center">
+        {% if user.post %}
+            {{ user.post }}
+        {% endif %}
+        </td>
+        <td class="center">
+        {% if head.user.email %}
+            <a href="mailto:{{ user.user.email }}">{{ user.user.email }}</a>
+        {% endif %}
+        </td>
     </tr>
     {% endifnotequal %}
     {% endfor %}
 </table>
 {% endwith %}
 <br />
-{% ifequal lab user.laboratory %}
+{% ifequal lab.id user.profile.laboratory.id %}
     <form class="edit" action="{% url lab-edit lab.id %}">
         <input type="submit" value="{% trans 'Изменить данные' %}"/>
     </form>
