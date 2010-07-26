@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Django settings for iam project.
 
-DEBUG = True
+DEBUG = True 
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (

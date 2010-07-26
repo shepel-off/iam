@@ -13,7 +13,7 @@ class Profile(models.Model):
     academic_degree = models.CharField(max_length=100, blank=True, verbose_name=_(u'Учёная степень'))
     academic_rank = models.CharField(max_length=100, blank=True, verbose_name=_(u'Учёное звание'))
     post = models.CharField(max_length=100, blank=True, verbose_name=_(u'Должность'))
-    photo = models.ImageField(upload_to='img/', blank=True, verbose_name=_(u'Фотография'))
+    photo = models.ImageField(upload_to='img/uploads/photo/', blank=True, verbose_name=_(u'Фотография'))
     about = models.TextField(blank=True, verbose_name=_(u'О себе'))
     
     def __unicode__(self):

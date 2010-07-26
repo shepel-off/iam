@@ -4,5 +4,5 @@
 #lab-main .field textarea { width: 100%; }
 #lab-main .field input { width: 100%; }
 
-input[type=submit] { width: 85px; margin-top: 5px; }
-#lab-main input[type=submit] { float: right; }
+#lab-main input[type=submit] { float: right; width: 85px; margin: 5px -4px 0 0;}
+#lab-undo input[type=submit] { margin-left: -1px; }

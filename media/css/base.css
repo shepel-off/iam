@@ -43,8 +43,10 @@ h3 { font-size: 150%; }
 #right-panel #mail-form ul { margin: 0 auto; }
 #right-panel #mail-form ul li { margin-bottom: 5px; padding: 0; }
 #right-panel #mail-form ul li.field label { margin: 0; }
-#right-panel #mail-form ul li.field input { width: 125px; }
+#right-panel #mail-form ul li.field input { width: 129px; }
 #right-panel #mail-form input[type=submit] { margin: 0 auto; }
+#right-panel #mail-form #mail-enter { cursor: pointer; cursor: hand; }
+
 
 .clearfooter { height: 31px; clear: both; }
 #footer { height: 31px; padding-top: 10px; position: relative; text-align: center; }

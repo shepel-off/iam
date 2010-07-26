@@ -41,7 +41,7 @@ function openAjaxDialog(target_url, target_form)
             success:   getProcessJson(target_form)
         });
         $("input[type=submit]", tf).css("display", "none");
-        tf.dialog('option','position',[
+        tf.dialog('option', 'position',[
             tf.parent().position().left - (tf.parent().width() - oldw)/2,
             tf.parent().position().top - (tf.parent().height() - oldh)/2]);
     });

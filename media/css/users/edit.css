@@ -1,10 +1,11 @@
 #profile-edit { margin: 0 auto; width: 100%; }
 #profile-edit input[type=submit] { display: block; clear: both; margin: 0 auto; width: auto; }
-#profile-edit textarea { width: 95%; height: 800px; }
-#profile-edit textarea, #profile-edit .wysiwyg { margin: .3em 0; }
+#profile-edit textarea { width: 99%; height: 800px; }
 
 #profile-edit .half { margin: 0 auto; width: 50%; }
 #profile-edit .field { overflow: auto; width: 100%; margin-bottom: .5em; }
 #profile-edit .field label { float: right; margin-right: .5em; }
 #profile-edit .field input { float: right; width: 150px; }
 #profile-edit .field .over label { display: inline; float: none; }
+
+#profile-edit div.wysiwyg { margin: 0 auto; }

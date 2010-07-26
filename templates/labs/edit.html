@@ -19,7 +19,7 @@
 {% endfor %}
 <input type="submit" value="{% trans 'Сохранить' %}" />
 </form>
-<form action="{% url lab-detail lab_id %}" method="POST">{% csrf_token %}
+<form id="lab-undo" action="{% url lab-detail lab_id %}" method="POST">{% csrf_token %}
     <input type="submit" value="{% trans 'Отменить' %}" />
 </form>
 {% endblock content %}
