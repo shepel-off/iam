@@ -1,14 +1,13 @@
 .entry { clear: both; font-size: 120%; margin: 0 0 20px 0; padding: 5px; }
-.entry table { width: 100%; }
-.entry .entry-title { margin: 5px 0; }
+.entry h2 { border-bottom:1px dotted #CACACA; padding: 0 50px 1px 0; }
 .entry .entry-body { line-height: 1.5; }
 
-.toolbox { clear: both; float: right; margin: 0 0 5px .75em;  padding: 0 .5em; background-color: #dcebf7; }
-.toolbox li, .meta li { margin: .25em 0; }
-.toolbox li { height: 16px; }
+.toolbox { float: right; background-color: #fff; }
+.toolbox li { margin: .25em 0; height: 16px; }
 .toolbox li a img { height: 16px; width: 16px; }
 
-.meta { float: right; margin: 0 0 5px .75em; padding: .75em; width: 10em; background-color: #dcebf7; }
-.meta .author { font-size: .85em; color: #777; }
-.meta .author a { color: #777; }
-.meta .author a:hover { text-decoration: underline; }
+.entry .meta span { display: inline-block; font-size: .85em; padding-top: .4em; }
+.entry .meta .date { padding-right: .2em; }
+.entry .meta .author { color: #777; border-left: 1px dotted #CACACA; padding-left: .5em; }
+.entry .meta .author a { color: #777; }
+.entry .meta .author a:hover { text-decoration: underline; }

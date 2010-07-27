@@ -18,7 +18,7 @@
 </ul>
 {% endif %}
 
-<form id="profile-edit" action="{% url profile-edit user.get_profile.id %}" method="POST">{% csrf_token %}
+<form id="profile-edit" enctype="multipart/form-data" action="{% url profile-edit user.get_profile.id %}" method="POST">{% csrf_token %}
 <div class="half">
 {{ userformset.management_form }}
 {% for profileform in userformset.forms %}
@@ -76,6 +76,12 @@
 </div>
 {% endwith %}
 {% with profileform.academic_rank as field %}
+<div class="field">
+    {{ field }}
+    {% if field.field.required %}<strong>{{ field.label_tag }}</strong>{% else %}{{ field.label_tag }}{% endif %}
+</div>
+{% endwith %}
+{% with profileform.photo as field %}
 <div class="field">
     {{ field }}
     {% if field.field.required %}<strong>{{ field.label_tag }}</strong>{% else %}{{ field.label_tag }}{% endif %}

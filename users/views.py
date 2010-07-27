@@ -37,9 +37,10 @@ def editprofile(request, profile_id):
     userformset = UserFormSet(instance=user)
     readableErrors = {}
     if request.method == 'POST':
-        userform = UserForm(request.POST, instance=user)
+        #return HttpResponse(request)
+        userform = UserForm(request.POST, request.FILES, instance=user)
         passwordform = PasswordChangeForm(user, request.POST)
-        userformset = UserFormSet(request.POST, instance=user)
+        userformset = UserFormSet(request.POST, request.FILES, instance=user)
         forms = [userform, userformset.forms[0], passwordform]
         for form in forms:
             if form.has_changed():

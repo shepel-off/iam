@@ -1,17 +1,13 @@
 html { height: 100%; color: #000; font: 0.75em/1.5 Arial, Helvetica, sans-serif; }
-body { height: 100%; min-width: 1020px; }
+body { height: 100%; min-width: 1020px; color:#7A7A7A; }
 
-a { text-decoration: none; }
-a:hover { text-decoration: underline; }
+a { color: blue; text-decoration: none; }
+.menu-v a:hover, a:hover { text-decoration: underline; }
 
-h1 { color: #AF4E0E; font-size: 220%; }
-h1 a { color: #AF4E0E; }
-h3 { font-size: 150%; }
-#left-panel a, #right-panel a { color: blue; }
-#left-panel a.out { color: maroon; }
-
+/* common classes */
 .block { display: block; }
 .center { text-align: center; }
+.clear { clear: both; }
 .right { text-align: right; }
 
 .small { font-size: 80%; }
@@ -20,34 +16,50 @@ h3 { font-size: 150%; }
 .link { color: blue; }
 .link:hover { text-decoration: underline; }
 
-#welcome { width: 100%; }
-#left-panel { width: 15%; }
-#content { width: 60%; }
+/* layout */
+#outer { margin: 2.5em 3em 1.5em; }
 
-#container { height: auto !important; height: 100%; min-height: 100%; margin-bottom: -31px; position: relative; }
-#welcome { clear: both; margin: 15px 0; text-align: center; }
-#content { float: left; margin-left: 15px; }
+#header { background: url("/img/a1.gif") no-repeat scroll right top #AF0A0A; float: left; height: 8em; padding: 0 1.5em; position: relative; width: 15em; }
+#header h1 { bottom: 2.2em; font-size: 1.8em; letter-spacing: 0.1em; position: absolute; }
+#header * { color: #FFFFFF; text-decoration:none; } 
 
+#title { background:url("/img/a2.gif") repeat-x scroll left top #FAFAFA; height:8em; margin-left:18em; position:relative; }
+#title h1 { margin-left: 1.5em; position:absolute; top: 2.4em; font-size: 1.6em; letter-spacing: 0.05em; color:#6A6A6A; }
+
+#content { background:url("/img/a3.gif") repeat-x scroll left top #FFFFFF; margin-top:1px; padding-top:1.5em; }
+#primary-wrap { float:right; margin-left:-19em; width:100%; }
+#primary { border-left:1px dotted #CACACA; margin:0 0 0 18em; padding:1.5em; min-height: 309px; }
+/* #content h2, h3, h4, h5, h6 {  margin-bottom:.5em; padding-bottom:0.2em; } */
+#content h2 { font-size:1.5em; } 
+
+#footer {
+    border-top: 1px dotted #CACACA;
+    font-size: 0.9em;
+    margin-top: 1em;
+    padding: 1.5em;
+    text-align: center;
+}
+#secondary { float:left; padding:1.5em; width:15em; }
+
+/* left panel */
 #left-panel { display: inline; float: left; height: 100%; margin: 0 10px 0 0px; padding: 0 10px 0 10px; line-height: 1.5; }
 #left-panel { background-color: #dcebf7; }
+#left-panel a { color: blue; }
+#left-panel a.out { color: maroon; }
 .menu-v { padding: 5px 0; }
 .menu-v li { padding: 2px 0; }
 .menu-v li ul { padding-left: 1em; margin-top: 2px; }
 .menu-v li li { border: none; }
-.menu-v .category, .menu-v a { display: block; padding-top: 1px; }
+.menu-v .category, .menu-v a { display: block; padding-top: 1px; font-weight: bold; color: #6a6a6a; text-decoration: none; }
 
+/* right-panel */
 #right-panel { margin: 0; float: right; height: 100%; line-height: 1.5; }
+#right-panel a { color: blue; }
 #right-panel li { padding: 5px 10px; background-color: #dcebf7; margin-bottom: 10px; min-width: 133px; }
 #right-panel form input { display: block; clear: both; }
-
 #right-panel #mail-form ul { margin: 0 auto; }
 #right-panel #mail-form ul li { margin-bottom: 5px; padding: 0; }
 #right-panel #mail-form ul li.field label { margin: 0; }
 #right-panel #mail-form ul li.field input { width: 129px; }
 #right-panel #mail-form input[type=submit] { margin: 0 auto; }
 #right-panel #mail-form #mail-enter { cursor: pointer; cursor: hand; }
-
-
-.clearfooter { height: 31px; clear: both; }
-#footer { height: 31px; padding-top: 10px; position: relative; text-align: center; }
-#footer #w3c { float: right; margin-top: -29px; }

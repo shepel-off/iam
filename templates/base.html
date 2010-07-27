@@ -13,11 +13,9 @@
     <script type="text/javascript" language="javascript" src="/js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" language="javascript" src="/js/jquery.corner.js"></script>
     <script type="text/javascript" language="javascript" src="/js/jquery.form-2.43.js"></script>
-
     <!--[if lt IE 9]>
     <script type="text/javascript" src="/js/ie/IE9.js">IE7_PNG_SUFFIX=".png";</script>
     <![endif]-->
-
     <script type="text/javascript" language="javascript" src="/js/jquery-ui-1.8.2.custom.min.js"></script>
     <script type="text/javascript" language="javascript" src="/js/jquery.wysiwyg.js"></script>
     <script type="text/javascript" language="javascript" src="/js/init.js"></script>
@@ -33,53 +31,63 @@
 </head>
 
 <body>
-    <div id="container">
-    {% if request.path == '/' or request.path == '/news/' %}
-    <h1 id="welcome">{% trans 'Институт прикладной математики ДВО РАН' %}</h1>
-    {% else %}
-    <h1 id="welcome"><a href="{% url iam-root %}">{% trans 'Институт прикладной математики ДВО РАН' %}</a></h1>
-    {% endif %}
+    <div id="outer">
+        <div id="header">
+            <h1>
+            {% if request.path == '/' or request.path == '/news/' %}
+            {% trans 'ИПМ' %}
+            {% else %}
+            <a href="{% url iam-root %}">{% trans 'ИПМ' %}</a>
+            {% endif %}</h1>
+        </div>
+        <div id="title">
+            <h1>{% trans 'Институт прикладной математики ДВО РАН' %}</h1>
+        </div>
     
-    <div id="left-panel" class="rounded-right">
-	<ul class="menu-v">
-        <li><a href="{% url iam-news %}">{% trans 'Новости' %}</a>
-        {% if user.is_authenticated and request.path == '/news/' %}
-        <ul><li><a id="addnews" class="popup" href="{% url news-add %}">{% trans 'Добавить' %}</a></li></ul>
-        {% endif %}
-        </li>
-        <li><a href="/about/">{% trans 'Об институте' %}</a></li>
-        <li><span class="category">{% trans 'Студентам' %}</span>
-            <ul>
-                <li><a href="/basic-chairs/">{% trans 'Базовые кафедры' %}</a></li>
-                <li><a href="/grad/">{% trans 'Аспирантура' %}</a></li>
-            </ul>
-        </li>
-        <li><span class="category">{% trans 'Структура' %}</span>
-            <ul>
-                <li><a href="{% url iam-labs %}">{% trans 'Лаборатории и сектора' %}</a></li>
-                {% comment %}<li><a href="{% url iam-users %}">{% trans 'Сотрудники' %}</a></li>{% endcomment %}
-                <li><a href="{% url iam-users %}head/">{% trans 'Директор' %}</a></li>
-                <li><a class="out" href="http://www.iam.khv.ru/">{% trans 'Хабаровское отделение' %}</a></li>
-            </ul>
-        </li>
-        <li><span class="category">{% trans 'Исследования' %}</span>
-            <ul>
-                <li><a href="/research/main/">{% trans 'Основные направления' %}</a></li>
-                <li><a href="/research/publications/">{% trans 'Научные сборники' %}</a></li>
-                <li><a href="/research/reports/">{% trans 'Отчёты' %}</a></li>
-            </ul>
-        </li>
-        <li><a class="out" href="/old/">Старый сайт</a></li>
-    </ul></div>
-
-    <div id="content">
-    {% block content %}
-    {% endblock %}
-    </div>
+        <div id="content">
+            <div id="primary-wrap">
+                <div id="primary">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+            <div id="secondary" class="rounded-right">
+	            <ul class="menu-v">
+                    <li><a href="{% url iam-news %}">{% trans 'Новости' %}</a>
+                        {% if user.is_authenticated and request.path == '/news/' %}
+                        <ul><li><a id="addnews" class="popup" href="{% url news-add %}">{% trans 'Добавить' %}</a></li></ul>
+                        {% endif %}
+                    </li>
+                    <li><a href="/about/">{% trans 'Об институте' %}</a></li>
+                    <li><span class="category">{% trans 'Студентам' %}</span>
+                        <ul>
+                            <li><a href="/basic-chairs/">{% trans 'Базовые кафедры' %}</a></li>
+                            <li><a href="/grad/">{% trans 'Аспирантура' %}</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="category">{% trans 'Структура' %}</span>
+                        <ul>
+                            <li><a href="{% url iam-labs %}">{% trans 'Лаборатории и сектора' %}</a></li>
+                            {% comment %}<li><a href="{% url iam-users %}">{% trans 'Сотрудники' %}</a></li>{% endcomment %}
+                            <li><a href="{% url iam-users %}head/">{% trans 'Директор' %}</a></li>
+                            <li><a class="out" href="http://www.iam.khv.ru/">{% trans 'Хабаровское отделение' %}</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="category">{% trans 'Исследования' %}</span>
+                        <ul>
+                            <li><a href="/research/main/">{% trans 'Основные направления' %}</a></li>
+                            <li><a href="/research/publications/">{% trans 'Научные сборники' %}</a></li>
+                            <li><a href="/research/reports/">{% trans 'Отчёты' %}</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="out" href="/old/">Старый сайт</a></li>
+                </ul>
+            </div>
+        </div>
     <div id="dialog-form" class="dform"></div>
     <div id="dialog-form2" class="dform"></div>
     
-    <ul id="right-panel">
+    <!--ul id="right-panel">
         <li class="rounded-left">
         {% if user.is_authenticated %}
         <span class="block center">
@@ -111,18 +119,15 @@
             </ul>
         </form>
         </li>
-    </ul>
+    </ul-->
+    <div class="clear"></div>
    
-    <div class="clearfooter"></div></div>
-    <div id="footer"><hr />
-        © 2010 {% trans 'Институт прикладной математики' %}<br />
-        {% trans 'Дальневосточное отделение Российской академии наук' %}<br />
-        <div id="w3c">
-            <a href="http://validator.w3.org/check?uri=referer"><img
-               src="http://www.w3.org/Icons/valid-xhtml10"
-               style="border:0;width:88px;height:31px;display:inline"
-               alt="Valid XHTML 1.0 Transitional" /></a>
-        </div>
+    <div id="footer">
+        <p>
+            © 2010 {% trans 'Институт прикладной математики' %}<br />
+            {% trans 'Дальневосточное отделение Российской академии наук' %}<br />
+        </p>
+    </div>
     </div>
 </body>
 </html>
