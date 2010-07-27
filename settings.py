@@ -57,7 +57,7 @@ MEDIA_ROOT = '/srv/www/vhosts/iam/media/'
 
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/media/'
+MEDIA_URL = '/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -122,7 +122,7 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'django.utils.simplejson', # serialization for json (ajax transfer format)
     'rosetta',
-    'markitup',
+#    'markitup',
     'iam.users',
     'iam.news',
     'iam.labs',
