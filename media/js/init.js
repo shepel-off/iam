@@ -1,4 +1,4 @@
-function getProcessJson(target_form)
+/*function getProcessJson(target_form)
 {
     return function(data)
     {
@@ -60,11 +60,11 @@ function getBaseOpts()
         resizable: false
     };
 }
-
+*/
 $(document).ready(function(){
     $("textarea").wysiwyg();
     $("div.wysiwyg").css("padding", "3px 1px");
-
+/*
     if($("#addnews").size())
     {
         $("#dialog-form2").dialog($.extend(getBaseOpts(), 
@@ -99,16 +99,16 @@ $(document).ready(function(){
             return false;
         });
     }
-  
+*/  
     /* init corners */
     $(".rounded").corner("5px");
     $(".rounded-right").corner("5px right");
     $(".rounded-left").corner("5px left");
-
+/*
     $("#mail-hidden").css("display", "none");
     $("#mail-enter").click(function() {
         $("#mail-hidden").slideToggle("slow");
         $(".rounded-left").corner("5px left");
-    });
+    });*/
 
 });

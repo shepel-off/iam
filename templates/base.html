@@ -12,11 +12,11 @@
 
     <script type="text/javascript" language="javascript" src="/js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" language="javascript" src="/js/jquery.corner.js"></script>
-    <script type="text/javascript" language="javascript" src="/js/jquery.form-2.43.js"></script>
+    <!--<script type="text/javascript" language="javascript" src="/js/jquery.form-2.43.js"></script-->
     <!--[if lt IE 9]>
     <script type="text/javascript" src="/js/ie/IE9.js">IE7_PNG_SUFFIX=".png";</script>
     <![endif]-->
-    <script type="text/javascript" language="javascript" src="/js/jquery-ui-1.8.2.custom.min.js"></script>
+    <!--script type="text/javascript" language="javascript" src="/js/jquery-ui-1.8.2.custom.min.js"></script-->
     <script type="text/javascript" language="javascript" src="/js/jquery.wysiwyg.js"></script>
     <script type="text/javascript" language="javascript" src="/js/init.js"></script>
     {% block stylesheet %}
@@ -24,15 +24,27 @@
     {% block script %}
     {% endblock %}
     <link rel="stylesheet" type="text/css" media="screen" href="/css/jquery.wysiwyg.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/redmond/jquery-ui-1.8.2.custom.css" />
+    <!--link rel="stylesheet" type="text/css" media="screen" href="/css/redmond/jquery-ui-1.8.2.custom.css" /-->
     <!--[if lte IE 7]>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/ie67.css" />
     <![endif]-->
 </head>
 
 <body>
-    <div id="outer">
-        <div id="header">
+    <div id="main">
+        <div id="header"><h1>{% trans 'Институт прикладной математики ДВО РАН' %}</h1></div>
+        <div id="menu-h"></div>
+        <div id="clearfooter"></div>
+        <div id="footer">
+            <p>
+                © 2010 {% trans 'Институт прикладной математики' %}<br />
+                {% trans 'Дальневосточное отделение Российской академии наук' %}<br />
+            </p>
+        </div>
+    </div>
+    <div id="header-image"></div>
+    <div id="menu-v"></div>
+<!--        <div id="header">
             <h1>
             {% if request.path == '/' or request.path == '/news/' %}
             {% trans 'ИПМ' %}
@@ -84,8 +96,9 @@
                 </ul>
             </div>
         </div>
+    
     <div id="dialog-form" class="dform"></div>
-    <div id="dialog-form2" class="dform"></div>
+    <div id="dialog-form2" class="dform"></div>-->
     
     <!--ul id="right-panel">
         <li class="rounded-left">
@@ -120,14 +133,5 @@
         </form>
         </li>
     </ul-->
-    <div class="clear"></div>
-   
-    <div id="footer">
-        <p>
-            © 2010 {% trans 'Институт прикладной математики' %}<br />
-            {% trans 'Дальневосточное отделение Российской академии наук' %}<br />
-        </p>
-    </div>
-    </div>
 </body>
 </html>

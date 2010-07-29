@@ -1,10 +1,87 @@
-html { height: 100%; color: #000; font: 0.75em/1.5 Arial, Helvetica, sans-serif; }
-body { height: 100%; min-width: 1020px; color:#7A7A7A; }
+#header { background-color: #adbeef; }
+#header-image { background-color: maroon; }
+#menu-h { background-color: #deadbe; }
+#menu-v { background-color: #befefe; }
 
-a { color: blue; text-decoration: none; }
-.menu-v a:hover, a:hover { text-decoration: underline; }
+.colored { background-color: #dcebf7; }
 
-/* common classes */
+html { 
+    height: 100%; 
+    font: 0.75em/1.5 Arial, Helvetica, sans-serif; 
+}
+
+body {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    background: url("/img/grad.gif") repeat-x scroll left top #e6e8ea;
+    position: relative;
+}
+
+a { 
+    color: blue; 
+    text-decoration: none; 
+}
+a:hover { text-decoration: underline; }
+
+/* layout */
+#main { 
+    width: 800px; 
+    height: 100%; 
+    margin: 13px 0 13px 200px; 
+    background-color: white;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+}
+#header h1 {
+    line-height: 100px;
+    text-align: center;
+    font-size: 200%;
+}
+
+#header-image {
+    width: 1000px;
+    height: 150px;
+    position: absolute;
+    display: block;
+    top: 113px;
+}
+
+#menu-h {
+    width: 100%;
+    height: 50px;
+    margin-top: 150px;
+}
+
+#menu-v {    
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: -200px;
+    top: 300px; 
+}
+
+#clearfooter { clear: both; }
+#footer {
+    margin-top: 930px;
+    height: 50px;
+    background: url("/img/footer-grad.gif") repeat-x scroll left top #119500;
+    font-size: 0.9em;
+    margin-top: 1em;
+    padding: 1.5em;
+    text-align: center;
+}
+
+
+
+/*#secondary { float:left; padding:1.5em; width:15em; } */
+
+
+
+/* common classes 
 .block { display: block; }
 .center { text-align: center; }
 .clear { clear: both; }
@@ -14,11 +91,10 @@ a { color: blue; text-decoration: none; }
 .bold { font-weight: bold; }
 
 .link { color: blue; }
-.link:hover { text-decoration: underline; }
+.link:hover { text-decoration: underline; } */
 
 /* layout */
-#outer { margin: 2.5em 3em 1.5em; }
-
+/*
 #header { background: url("/img/a1.gif") no-repeat scroll right top #AF0A0A; float: left; height: 8em; padding: 0 1.5em; position: relative; width: 15em; }
 #header h1 { bottom: 2.2em; font-size: 1.8em; letter-spacing: 0.1em; position: absolute; }
 #header * { color: #FFFFFF; text-decoration:none; } 
@@ -29,19 +105,10 @@ a { color: blue; text-decoration: none; }
 #content { background:url("/img/a3.gif") repeat-x scroll left top #FFFFFF; margin-top:1px; padding-top:1.5em; }
 #primary-wrap { float:right; margin-left:-19em; width:100%; }
 #primary { border-left:1px dotted #CACACA; margin:0 0 0 18em; padding:1.5em; min-height: 309px; }
-/* #content h2, h3, h4, h5, h6 {  margin-bottom:.5em; padding-bottom:0.2em; } */
 #content h2 { font-size:1.5em; } 
 
-#footer {
-    border-top: 1px dotted #CACACA;
-    font-size: 0.9em;
-    margin-top: 1em;
-    padding: 1.5em;
-    text-align: center;
-}
-#secondary { float:left; padding:1.5em; width:15em; }
 
-/* left panel */
+/* left panel 
 #left-panel { display: inline; float: left; height: 100%; margin: 0 10px 0 0px; padding: 0 10px 0 10px; line-height: 1.5; }
 #left-panel { background-color: #dcebf7; }
 #left-panel a { color: blue; }
@@ -52,7 +119,7 @@ a { color: blue; text-decoration: none; }
 .menu-v li li { border: none; }
 .menu-v .category, .menu-v a { display: block; padding-top: 1px; font-weight: bold; color: #6a6a6a; text-decoration: none; }
 
-/* right-panel */
+/* right-panel 
 #right-panel { margin: 0; float: right; height: 100%; line-height: 1.5; }
 #right-panel a { color: blue; }
 #right-panel li { padding: 5px 10px; background-color: #dcebf7; margin-bottom: 10px; min-width: 133px; }
@@ -62,4 +129,4 @@ a { color: blue; text-decoration: none; }
 #right-panel #mail-form ul li.field label { margin: 0; }
 #right-panel #mail-form ul li.field input { width: 129px; }
 #right-panel #mail-form input[type=submit] { margin: 0 auto; }
-#right-panel #mail-form #mail-enter { cursor: pointer; cursor: hand; }
+#right-panel #mail-form #mail-enter { cursor: pointer; cursor: hand; } */
