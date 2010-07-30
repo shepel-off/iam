@@ -1,21 +1,14 @@
 #header { background-color: #adbeef; }
 #header-image { background-color: maroon; }
 #menu-h { background-color: #deadbe; }
-#menu-v { background-color: #befefe; }
 
 .colored { background-color: #dcebf7; }
-
-html { 
-    height: 100%; 
-    font: 0.75em/1.5 Arial, Helvetica, sans-serif; 
-}
+html { font: 0.75em/1.5 Arial, Helvetica, sans-serif; }
 
 body {
     width: 1000px;
-    height: 100%;
     margin: 0 auto;
     background: url("/img/grad.gif") repeat-x scroll left top #e6e8ea;
-    position: relative;
 }
 
 a { 
@@ -27,13 +20,16 @@ a:hover { text-decoration: underline; }
 /* layout */
 #main { 
     width: 800px; 
-    height: 100%; 
-    margin: 13px 0 13px 200px; 
+    margin: 13px 0px 13px 200px; 
     background-color: white;
 }
 
+#main .offset-left {
+    position: relative;
+    margin-right: -100%;
+}
+
 #header {
-    width: 100%;
     height: 100px;
 }
 #header h1 {
@@ -45,33 +41,69 @@ a:hover { text-decoration: underline; }
 #header-image {
     width: 1000px;
     height: 150px;
-    position: absolute;
-    display: block;
-    top: 113px;
+    left: -200px;
 }
+
+#login-block {
+	float: left;
+	height: 50px;
+	width: 200px;
+	left: -200px;
+}
+
+#login-block p {  
+    text-align: center;
+    color: #fff;
+}
+
+#login-block input[type="text"], #login-block input[type="password"] { width: 70px}
 
 #menu-h {
+	float: left;
     width: 100%;
     height: 50px;
-    margin-top: 150px;
 }
 
-#menu-v {    
+#menu-v {
+    margin: 0 auto;
+    font-size: 120%;
+}
+
+#content-wrapper { display: inline-block; }
+#content {
+    float: left;
+    width: 780px;
+    padding: 10px;
+    line-height: 1.5;
+}
+#menu-v-wrapper {    
     width: 200px;
-    height: 300px;
-    position: absolute;
     left: -200px;
-    top: 300px; 
+    float: left;
+}
+
+#menu-v li a, #menu-v .category span {
+    display: block;
+    padding: 5px 0px 5px 0px;
+    color: #fff;
+    width: 100%;
+}
+#menu-v li a:hover, #menu-v .category span:hover {
+    cursor: pointer;
+    cursor: hand;
+    text-decoration: underline;
+}
+
+#menu-v li ul { 
+    padding-left: 10px;
+    font-size: 90%;
 }
 
 #clearfooter { clear: both; }
 #footer {
-    margin-top: 930px;
     height: 50px;
     background: url("/img/footer-grad.gif") repeat-x scroll left top #119500;
     font-size: 0.9em;
-    margin-top: 1em;
-    padding: 1.5em;
     text-align: center;
 }
 
@@ -109,15 +141,6 @@ a:hover { text-decoration: underline; }
 
 
 /* left panel 
-#left-panel { display: inline; float: left; height: 100%; margin: 0 10px 0 0px; padding: 0 10px 0 10px; line-height: 1.5; }
-#left-panel { background-color: #dcebf7; }
-#left-panel a { color: blue; }
-#left-panel a.out { color: maroon; }
-.menu-v { padding: 5px 0; }
-.menu-v li { padding: 2px 0; }
-.menu-v li ul { padding-left: 1em; margin-top: 2px; }
-.menu-v li li { border: none; }
-.menu-v .category, .menu-v a { display: block; padding-top: 1px; font-weight: bold; color: #6a6a6a; text-decoration: none; }
 
 /* right-panel 
 #right-panel { margin: 0; float: right; height: 100%; line-height: 1.5; }
@@ -129,4 +152,3 @@ a:hover { text-decoration: underline; }
 #right-panel #mail-form ul li.field label { margin: 0; }
 #right-panel #mail-form ul li.field input { width: 129px; }
 #right-panel #mail-form input[type=submit] { margin: 0 auto; }
-#right-panel #mail-form #mail-enter { cursor: pointer; cursor: hand; } */

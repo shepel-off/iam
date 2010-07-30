@@ -33,7 +33,65 @@
 <body>
     <div id="main">
         <div id="header"><h1>{% trans 'Институт прикладной математики ДВО РАН' %}</h1></div>
-        <div id="menu-h"></div>
+        <div id="header-image" class="offset-left"></div>
+        <div id="login-block" class="offset-left">
+            {% if user.is_authenticated %}
+            <span class="block center">
+                {% trans 'Добро пожаловать' %},
+                <br />
+                <a href="{% url profile-detail user.get_profile.id %}">{{ user.first_name }} {{ user.get_profile.mid_name }}</a>
+                <br />
+            </span>
+            <span class="block small right"><a href="/logout/?next={% url iam-root %}">{% trans 'выйти' %}</a></span>
+            {% else %}
+            <p>{% trans 'Вход' %}</p>
+			<form action="{% url iam-login %}" method="post">{% csrf_token %}
+                <input type="text" maxlength="30" name="username" id="id_username" value="{% trans 'Логин' %}"/>
+                <input type="password" id="id_password" name="password" value="{% trans 'Пароль' %}"/>
+                <input type="image" src="/img/icons/door_in.png" alt="Войти" />
+                <input type="hidden" value="{{ request.path }}" name="next">
+            </form>
+            {% endif %}
+		</div>
+		<div id="menu-h"></div>
+        <span id="content-wrapper">
+            <div id="menu-v-wrapper" class="offset-left">
+	            <ul id="menu-v">
+                    <li><a href="{% url iam-news %}">{% trans 'Новости' %}</a>
+                        {% if user.is_authenticated and request.path == '/news/' %}
+                        <ul><li><a id="addnews" class="popup" href="{% url news-add %}">{% trans 'Добавить' %}</a></li></ul>
+                        {% endif %}
+                    </li>
+                    <li><a href="/about/">{% trans 'Об институте' %}</a></li>
+                    <li class="category"><span>{% trans 'Студентам' %}</span>
+                        <ul>
+                            <li><a href="/basic-chairs/">{% trans 'Базовые кафедры' %}</a></li>
+                            <li><a href="/grad/">{% trans 'Аспирантура' %}</a></li>
+                        </ul>
+                    </li>
+                    <li class="category"><span>{% trans 'Структура' %}</span>
+                        <ul>
+                            <li><a href="{% url iam-labs %}">{% trans 'Лаборатории и сектора' %}</a></li>
+                            <li><a href="{% url iam-users %}">{% trans 'Сотрудники' %}</a></li>
+                            <li><a href="{% url iam-users %}head/">{% trans 'Директор' %}</a></li>
+                            <li><a class="out" href="http://www.iam.khv.ru/">{% trans 'Хабаровское отделение' %}</a></li>
+                        </ul>
+                    </li>
+                    <li class="category"><span>{% trans 'Исследования' %}</span>
+                        <ul>
+                            <li><a href="/research/main/">{% trans 'Основные направления' %}</a></li>
+                            <li><a href="/research/publications/">{% trans 'Научные сборники' %}</a></li>
+                            <li><a href="/research/reports/">{% trans 'Отчёты' %}</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="out" href="/old/">Старый сайт</a></li>
+                </ul>
+            </div>
+            <div id="content">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </span>
         <div id="clearfooter"></div>
         <div id="footer">
             <p>
@@ -42,8 +100,6 @@
             </p>
         </div>
     </div>
-    <div id="header-image"></div>
-    <div id="menu-v"></div>
 <!--        <div id="header">
             <h1>
             {% if request.path == '/' or request.path == '/news/' %}
@@ -59,41 +115,9 @@
         <div id="content">
             <div id="primary-wrap">
                 <div id="primary">
-                    {% block content %}
-                    {% endblock %}
                 </div>
             </div>
             <div id="secondary" class="rounded-right">
-	            <ul class="menu-v">
-                    <li><a href="{% url iam-news %}">{% trans 'Новости' %}</a>
-                        {% if user.is_authenticated and request.path == '/news/' %}
-                        <ul><li><a id="addnews" class="popup" href="{% url news-add %}">{% trans 'Добавить' %}</a></li></ul>
-                        {% endif %}
-                    </li>
-                    <li><a href="/about/">{% trans 'Об институте' %}</a></li>
-                    <li><span class="category">{% trans 'Студентам' %}</span>
-                        <ul>
-                            <li><a href="/basic-chairs/">{% trans 'Базовые кафедры' %}</a></li>
-                            <li><a href="/grad/">{% trans 'Аспирантура' %}</a></li>
-                        </ul>
-                    </li>
-                    <li><span class="category">{% trans 'Структура' %}</span>
-                        <ul>
-                            <li><a href="{% url iam-labs %}">{% trans 'Лаборатории и сектора' %}</a></li>
-                            {% comment %}<li><a href="{% url iam-users %}">{% trans 'Сотрудники' %}</a></li>{% endcomment %}
-                            <li><a href="{% url iam-users %}head/">{% trans 'Директор' %}</a></li>
-                            <li><a class="out" href="http://www.iam.khv.ru/">{% trans 'Хабаровское отделение' %}</a></li>
-                        </ul>
-                    </li>
-                    <li><span class="category">{% trans 'Исследования' %}</span>
-                        <ul>
-                            <li><a href="/research/main/">{% trans 'Основные направления' %}</a></li>
-                            <li><a href="/research/publications/">{% trans 'Научные сборники' %}</a></li>
-                            <li><a href="/research/reports/">{% trans 'Отчёты' %}</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="out" href="/old/">Старый сайт</a></li>
-                </ul>
             </div>
         </div>
     
@@ -102,17 +126,7 @@
     
     <!--ul id="right-panel">
         <li class="rounded-left">
-        {% if user.is_authenticated %}
-        <span class="block center">
-        {% trans 'Добро пожаловать' %},
-            <br />
-            <a href="{% url profile-detail user.get_profile.id %}">{{ user.first_name }} {{ user.get_profile.mid_name }}</a>
-            <br />
-        </span>
-        <span class="block small right"><a href="/logout/?next={% url iam-root %}">{% trans 'выйти' %}</a></span>
-        {% else %}
-            <a id="login-caller" class="block center bold" href="{% url iam-login %}#">{% trans 'Вход для сотрудников' %}</a>
-        {% endif %}
+        
         </li>
         <li class="rounded-left">
         <form id="mail-form" type="multipart/form-data" action="http://mail.iam.dvo.ru/" method="POST">{% csrf_token %}

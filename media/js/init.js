@@ -1,110 +1,19 @@
-/*function getProcessJson(target_form)
-{
-    return function(data)
-    {
-        var cont = $(target_form);
-        if(data.errors)
-        {
-            var err, msg = '';
-            err = cont.find('ul.ui-state-error');
-            $.each(data.errors, function(i, error) {
-                msg += '<li >' + error + '</li>\n';
-            });
-            if(!err.size())
-                cont.find("#modal").before('<ul class="ui-state-error">' + msg + "</ul>");
-            else
-            {
-                err.empty();
-                err.append(msg);
-            }   
-        }
-        else
-        {
-            cont.dialog("close");
-            window.location.reload();
-        }
-    }   
-}
-
-function openAjaxDialog(target_url, target_form)
-{
-    $.get(target_url, function(data) 
-    {
-        var tf = $(target_form);
-        tf.html(data);
-        tf.dialog("open");
-        var oldw = tf.dialog('option', 'width'), oldh = tf.parent().height();
-        tf.dialog('option', 'width', $('#wrap', tf).width() + 32);
-        $("#modal", tf).ajaxForm(
-        {
-            dataType:  "json",
-            success:   getProcessJson(target_form)
-        });
-        $("input[type=submit]", tf).css("display", "none");
-        tf.dialog('option', 'position',[
-            tf.parent().position().left - (tf.parent().width() - oldw)/2,
-            tf.parent().position().top - (tf.parent().height() - oldh)/2]);
-    });
-}
-
-function getBaseOpts()
-{
-    return {
-        autoOpen: false,
-        draggable: false,
-        modal: true,
-        open: function(event, ui) {
-            $("textarea", this).wysiwyg();
-            $("div.wysiwyg").css("padding", "3px 1px");
-        },
-        resizable: false
-    };
-}
-*/
 $(document).ready(function(){
     $("textarea").wysiwyg();
     $("div.wysiwyg").css("padding", "3px 1px");
-/*
-    if($("#addnews").size())
-    {
-        $("#dialog-form2").dialog($.extend(getBaseOpts(), 
-            {
-                title: "Добавление новости",
-                buttons: 
-                {
-                    "Добавить": function() { $("#modal", this).submit(); },
-                    "Отменить": function() { $(this).dialog("close"); }
-                }
-            }));
-        $("#addnews").click(function() 
-        {
-            openAjaxDialog("/news/add/", "#dialog-form2");
-            return false;            
-        });
-    }
-    if($("#login-caller").size())
-    {
-        $("#dialog-form").dialog($.extend(getBaseOpts(),
-            {
-                title: $("#login-caller").text(),
-                buttons: 
-                {
-                    "Войти": function() { $("#modal", this).submit(); },
-                    "Отменить": function() { $(this).dialog("close"); }
-                }
-            }));
-        $("#login-caller").click(function() 
-        {
-            openAjaxDialog("/login/", "#dialog-form");
-            return false;
-        });
-    }
-*/  
+
+    $("#content-wrapper").css("height", $("#content-wrapper").height());
+    $("#menu-v .category ul").css("display", "none");
+    $("#menu-v .category span").click(function() {
+        $("ul", $(this).parent()).slideToggle("fast");
+    });
+    
     /* init corners */
     $(".rounded").corner("5px");
     $(".rounded-right").corner("5px right");
     $(".rounded-left").corner("5px left");
-/*
+
+    /*
     $("#mail-hidden").css("display", "none");
     $("#mail-enter").click(function() {
         $("#mail-hidden").slideToggle("slow");
