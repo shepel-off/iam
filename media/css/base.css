@@ -3,6 +3,12 @@
 #menu-h { background-color: #deadbe; }
 
 .colored { background-color: #dcebf7; }
+.hyperlink:hover {
+	cursor: pointer;
+    cursor: hand;
+    text-decoration: underline;
+}
+
 html { font: 0.75em/1.5 Arial, Helvetica, sans-serif; }
 
 body {
@@ -51,12 +57,31 @@ a:hover { text-decoration: underline; }
 	left: -200px;
 }
 
-#login-block p {  
+#login-caller {  
     text-align: center;
     color: #fff;
+	display: none;
+	line-height: 50px;
 }
-
-#login-block input[type="text"], #login-block input[type="password"] { width: 70px}
+.floated-forms input[type="text"], .floated-forms input[type="password"] {
+    width: 70px; 
+	height: 12px; 
+	font-size: 10px; 
+	border: 1px solid black;
+    padding: 1px; 
+	display: block; 
+	float: left; 
+	margin: 0 2px 0 0;
+}
+#login-block input[type="image"] { 
+    height: 16px; 
+	width: 16px;
+}
+#login-block form { margin: 15px 0; }
+#login-block form span { 
+    display: inline-block; 
+	margin: 2px 14px 0 14px; 
+}
 
 #menu-h {
 	float: left;
@@ -65,21 +90,34 @@ a:hover { text-decoration: underline; }
 }
 
 #menu-v {
-    margin: 0 auto;
+    margin: 0;
     font-size: 120%;
+	width: 200px;
 }
 
 #content-wrapper { display: inline-block; }
-#content {
+.content {
     float: left;
-    width: 780px;
+	width: 779px; /* due to stupid ie7 */
     padding: 10px;
     line-height: 1.5;
 }
+
+/*
+*:first-child+html div#content {
+	width: 770px;
+}
+*/
+
 #menu-v-wrapper {    
     width: 200px;
     left: -200px;
     float: left;
+}
+
+#menu-v-wrapper #mail {
+    position: absolute;
+	bottom: -74px;
 }
 
 #menu-v li a, #menu-v .category span {
@@ -88,11 +126,13 @@ a:hover { text-decoration: underline; }
     color: #fff;
     width: 100%;
 }
+
 #menu-v li a:hover, #menu-v .category span:hover {
     cursor: pointer;
     cursor: hand;
     text-decoration: underline;
 }
+
 
 #menu-v li ul { 
     padding-left: 10px;

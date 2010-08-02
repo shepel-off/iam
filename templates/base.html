@@ -34,24 +34,25 @@
     <div id="main">
         <div id="header"><h1>{% trans 'Институт прикладной математики ДВО РАН' %}</h1></div>
         <div id="header-image" class="offset-left"></div>
-        <div id="login-block" class="offset-left">
+        <div id="login-block" class="offset-left floated-forms">
             {% if user.is_authenticated %}
-            <span class="block center">
                 {% trans 'Добро пожаловать' %},
                 <br />
                 <a href="{% url profile-detail user.get_profile.id %}">{{ user.first_name }} {{ user.get_profile.mid_name }}</a>
                 <br />
-            </span>
-            <span class="block small right"><a href="/logout/?next={% url iam-root %}">{% trans 'выйти' %}</a></span>
+            <a href="/logout/?next={% url iam-root %}">{% trans 'выйти' %}</a>
             {% else %}
-            <p>{% trans 'Вход' %}</p>
+            <p id='login-caller' class="hyperlink">{% trans 'Вход для сотрудников' %}</p>
 			<form action="{% url iam-login %}" method="post">{% csrf_token %}
-                <input type="text" maxlength="30" name="username" id="id_username" value="{% trans 'Логин' %}"/>
-                <input type="password" id="id_password" name="password" value="{% trans 'Пароль' %}"/>
-                <input type="image" src="/img/icons/door_in.png" alt="Войти" />
-                <input type="hidden" value="{{ request.path }}" name="next">
+                <span>
+		            <input type="text" maxlength="30" name="username" id="id_username" value="{% trans 'логин' %}"/>
+				    <input style="display: none" type="text" id="id_passwd_temp" value="{% trans 'пароль' %}"/>
+                    <input type="password" id="id_password" name="password" />
+		            <input type="image" src="/img/icons/door_in.png" alt="Войти" />
+		            <input type="hidden" value="{{ request.path }}" name="next" />
+			    </span>
             </form>
-            {% endif %}
+			{% endif %}
 		</div>
 		<div id="menu-h"></div>
         <span id="content-wrapper">
@@ -86,8 +87,26 @@
                     </li>
                     <li><a class="out" href="/old/">Старый сайт</a></li>
                 </ul>
+				<!--div id="mail" class="floated-forms">
+				<form id="mail-form" type="multipart/form-data" action="http://mail.iam.dvo.ru/" method="POST">{% csrf_token %}
+            <span id="mail-enter" class="link block center bold">{% trans 'Вход в почту' %}</span>
+            <ul id="mail-hidden">            
+            <li class="field">
+                <label>{% trans 'Логин' %}</label>
+                <input name="Username" type=text>
+            </li>
+            <li class="field">
+                <label>{% trans 'Пароль' %}</label>
+                <input name="Password" type=password>
+            </li>
+            <li>
+            <input name="login" type=submit value="{% trans 'Войти' %}">
+            </li>
+            </ul>
+        </form>
+				</div-->
             </div>
-            <div id="content">
+            <div id="content" class="content">
             {% block content %}
             {% endblock %}
             </div>

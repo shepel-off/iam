@@ -1,12 +1,15 @@
-/* Главная */
+/* fix in base.css */
+#content { width: 770px; }
+
+/* Главная 
 #left-panel, #right-panel { height: auto; }
 #right-panel { width: 14%; }
 #right-panel #mail-form ul li.field input { width: 131px; }
 
-/* Список новостей */
+ Список новостей 
 .toolbox li { height: auto; }
 
-/* Форма редактирования публикаций */
+ Форма редактирования публикаций 
 .form { overflow: hidden; }
 .form input, .form select { position: relative; }
 .form .middle .control, .form .middle .text-control { padding-right: 0; }
