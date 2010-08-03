@@ -1,6 +1,4 @@
-/* fix in base.css */
-#content { width: 770px; }
-
+#id_passwd_temp { margin: 0; }
 /* Главная 
 #left-panel, #right-panel { height: auto; }
 #right-panel { width: 14%; }

@@ -2,7 +2,7 @@ $(document).ready(function(){
     $("textarea").wysiwyg();
     $("div.wysiwyg").css("padding", "3px 1px");
 	
-	$("#content-wrapper").css("height", $("#content-wrapper").height());
+	//$("#content-wrapper").css("height", $("#content-wrapper").height());
     $("#menu-v .category ul").css("display", "none");
     $("#menu-v .category span").click(function() {
 	    $("#mail").css('position','relative');
@@ -39,14 +39,28 @@ $(document).ready(function(){
             login.attr('value', login_text);
     });
 	
-    var login_form = $("form", "#login-block"),
-        login_caller = $("#login-caller", "#login-block"); 
+    var login_form = $("#login-form", "#login-block"),
+        login_caller = $("#login-caller", "#login-block"),
+		mail_caller = $("#mail-caller", "#login-block"),
+		mail_form = $("#mail-form", "#login-block");
     login_form.toggle();
     login_caller.toggle();
-    $("#login-caller").click(function() {
-        login_form.toggle();
-        login_caller.toggle();
+    
+	function hideForm(form) {
+        if (form.css('display') != 'none')
+            form.toggle();
+	};
+	
+	$("#login-caller").click(function() {
+		hideForm(mail_form);
+        login_form.slideToggle('fast');
     });
+    mail_caller.toggle();
+	mail_form.toggle();
+	$("#mail-caller").click(function() {
+        hideForm(login_form);
+        mail_form.slideToggle('fast');
+	});
 
     /* init corners 
     $(".rounded").corner("5px");

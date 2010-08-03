@@ -1,2 +1,2 @@
-ul.ui-state-error { width: 70%; margin: 5px auto; padding: 5px; }
-ul.ui-state-error li { text-align: center; font-size: 110%;}
+ul.errors { width: 70%; margin: 5px auto; padding: 5px; }
+ul.errors li { text-align: center; font-size: 110%;}

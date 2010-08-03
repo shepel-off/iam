@@ -5,26 +5,23 @@
 <head>
     <title>{% trans 'ИПМ ДВО РАН' %} — {% block title %}{% endblock %}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        
     <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/css/base.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/css/errors.css" />
+    {% block stylesheet %}
+    {% endblock %}
 
     <script type="text/javascript" language="javascript" src="/js/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" language="javascript" src="/js/jquery.corner.js"></script>
-    <!--<script type="text/javascript" language="javascript" src="/js/jquery.form-2.43.js"></script-->
+    <!--script type="text/javascript" language="javascript" src="/js/jquery.corner.js"></script-->
     <!--[if lt IE 9]>
     <script type="text/javascript" src="/js/ie/IE9.js">IE7_PNG_SUFFIX=".png";</script>
     <![endif]-->
-    <!--script type="text/javascript" language="javascript" src="/js/jquery-ui-1.8.2.custom.min.js"></script-->
     <script type="text/javascript" language="javascript" src="/js/jquery.wysiwyg.js"></script>
     <script type="text/javascript" language="javascript" src="/js/init.js"></script>
-    {% block stylesheet %}
-    {% endblock %}
     {% block script %}
     {% endblock %}
+
     <link rel="stylesheet" type="text/css" media="screen" href="/css/jquery.wysiwyg.css" />
-    <!--link rel="stylesheet" type="text/css" media="screen" href="/css/redmond/jquery-ui-1.8.2.custom.css" /-->
     <!--[if lte IE 7]>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/ie67.css" />
     <![endif]-->
@@ -42,8 +39,8 @@
                 <br />
             <a href="/logout/?next={% url iam-root %}">{% trans 'выйти' %}</a>
             {% else %}
-            <p id='login-caller' class="hyperlink">{% trans 'Вход для сотрудников' %}</p>
-			<form action="{% url iam-login %}" method="post">{% csrf_token %}
+            <p id='login-caller' class="hyperlink">{% trans 'Войти на сайт' %}</p>
+			<form id="login-form" action="{% url iam-login %}" method="post">{% csrf_token %}
                 <span>
 		            <input type="text" maxlength="30" name="username" id="id_username" value="{% trans 'логин' %}"/>
 				    <input style="display: none" type="text" id="id_passwd_temp" value="{% trans 'пароль' %}"/>
@@ -53,64 +50,60 @@
 			    </span>
             </form>
 			{% endif %}
+			<p id="mail-caller" class="hyperlink">{% trans 'Почта' %}</p>
+            <form id="mail-form" type="multipart/form-data" action="http://mail.iam.dvo.ru/" method="POST">{% csrf_token %}
+                <ul>
+                    <li class="field">
+                        <label>{% trans 'Логин' %}</label>
+                        <input name="Username" type=text>
+                    </li>
+                    <li class="field">
+                        <label>{% trans 'Пароль' %}</label>
+                        <input name="Password" type=password>
+                    </li>
+                    <li>
+                        <input name="login" type=submit value="{% trans 'Войти' %}">
+                    </li>
+                </ul>
+            </form>
 		</div>
 		<div id="menu-h"></div>
-        <span id="content-wrapper">
-            <div id="menu-v-wrapper" class="offset-left">
-	            <ul id="menu-v">
-                    <li><a href="{% url iam-news %}">{% trans 'Новости' %}</a>
-                        {% if user.is_authenticated and request.path == '/news/' %}
-                        <ul><li><a id="addnews" class="popup" href="{% url news-add %}">{% trans 'Добавить' %}</a></li></ul>
-                        {% endif %}
-                    </li>
-                    <li><a href="/about/">{% trans 'Об институте' %}</a></li>
-                    <li class="category"><span>{% trans 'Студентам' %}</span>
-                        <ul>
-                            <li><a href="/basic-chairs/">{% trans 'Базовые кафедры' %}</a></li>
-                            <li><a href="/grad/">{% trans 'Аспирантура' %}</a></li>
-                        </ul>
-                    </li>
-                    <li class="category"><span>{% trans 'Структура' %}</span>
-                        <ul>
-                            <li><a href="{% url iam-labs %}">{% trans 'Лаборатории и сектора' %}</a></li>
-                            <li><a href="{% url iam-users %}">{% trans 'Сотрудники' %}</a></li>
-                            <li><a href="{% url iam-users %}head/">{% trans 'Директор' %}</a></li>
-                            <li><a class="out" href="http://www.iam.khv.ru/">{% trans 'Хабаровское отделение' %}</a></li>
-                        </ul>
-                    </li>
-                    <li class="category"><span>{% trans 'Исследования' %}</span>
-                        <ul>
-                            <li><a href="/research/main/">{% trans 'Основные направления' %}</a></li>
-                            <li><a href="/research/publications/">{% trans 'Научные сборники' %}</a></li>
-                            <li><a href="/research/reports/">{% trans 'Отчёты' %}</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="out" href="/old/">Старый сайт</a></li>
-                </ul>
-				<!--div id="mail" class="floated-forms">
-				<form id="mail-form" type="multipart/form-data" action="http://mail.iam.dvo.ru/" method="POST">{% csrf_token %}
-            <span id="mail-enter" class="link block center bold">{% trans 'Вход в почту' %}</span>
-            <ul id="mail-hidden">            
-            <li class="field">
-                <label>{% trans 'Логин' %}</label>
-                <input name="Username" type=text>
-            </li>
-            <li class="field">
-                <label>{% trans 'Пароль' %}</label>
-                <input name="Password" type=password>
-            </li>
-            <li>
-            <input name="login" type=submit value="{% trans 'Войти' %}">
-            </li>
+        <div id="menu-v-wrapper" class="offset-left">
+            <ul id="menu-v">
+                <li><a href="{% url iam-news %}">{% trans 'Новости' %}</a>
+                    {% if user.is_authenticated and request.path == '/news/' %}
+                    <ul><li><a id="addnews" class="popup" href="{% url news-add %}">{% trans 'Добавить' %}</a></li></ul>
+                    {% endif %}
+                </li>
+                <li><a href="/about/">{% trans 'Об институте' %}</a></li>
+                <li class="category"><span>{% trans 'Студентам' %}</span>
+                    <ul>
+                        <li><a href="/basic-chairs/">{% trans 'Базовые кафедры' %}</a></li>
+                        <li><a href="/grad/">{% trans 'Аспирантура' %}</a></li>
+                    </ul>
+                </li>
+                <li class="category"><span>{% trans 'Структура' %}</span>
+                    <ul>
+                        <li><a href="{% url iam-labs %}">{% trans 'Лаборатории и сектора' %}</a></li>
+                        <li><a href="{% url iam-users %}">{% trans 'Сотрудники' %}</a></li>
+                        <li><a href="{% url iam-users %}head/">{% trans 'Директор' %}</a></li>
+                        <li><a class="out" href="http://www.iam.khv.ru/">{% trans 'Хабаровское отделение' %}</a></li>
+                    </ul>
+                </li>
+                <li class="category"><span>{% trans 'Исследования' %}</span>
+                    <ul>
+                        <li><a href="/research/main/">{% trans 'Основные направления' %}</a></li>
+                        <li><a href="/research/publications/">{% trans 'Научные сборники' %}</a></li>
+                        <li><a href="/research/reports/">{% trans 'Отчёты' %}</a></li>
+                    </ul>
+                </li>
+                <li><a class="out" href="/old/">Старый сайт</a></li>
             </ul>
-        </form>
-				</div-->
-            </div>
-            <div id="content" class="content">
+        </div>
+        <div id="content">
             {% block content %}
             {% endblock %}
-            </div>
-        </span>
+        </div>
         <div id="clearfooter"></div>
         <div id="footer">
             <p>

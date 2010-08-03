@@ -9,10 +9,14 @@
     text-decoration: underline;
 }
 
-html { font: 0.75em/1.5 Arial, Helvetica, sans-serif; }
+html { 
+    font: 0.75em/1.5 Arial, Helvetica, sans-serif;
+	height: 100%; 
+}
 
 body {
     width: 1000px;
+    height: 100%;
     margin: 0 auto;
     background: url("/img/grad.gif") repeat-x scroll left top #e6e8ea;
 }
@@ -25,9 +29,11 @@ a:hover { text-decoration: underline; }
 
 /* layout */
 #main { 
+    min-height: 100%;
     width: 800px; 
-    margin: 13px 0px 13px 200px; 
+	margin: 0 0 0 200px; 
     background-color: white;
+	position: relative;
 }
 
 #main .offset-left {
@@ -50,39 +56,6 @@ a:hover { text-decoration: underline; }
     left: -200px;
 }
 
-#login-block {
-	float: left;
-	height: 50px;
-	width: 200px;
-	left: -200px;
-}
-
-#login-caller {  
-    text-align: center;
-    color: #fff;
-	display: none;
-	line-height: 50px;
-}
-.floated-forms input[type="text"], .floated-forms input[type="password"] {
-    width: 70px; 
-	height: 12px; 
-	font-size: 10px; 
-	border: 1px solid black;
-    padding: 1px; 
-	display: block; 
-	float: left; 
-	margin: 0 2px 0 0;
-}
-#login-block input[type="image"] { 
-    height: 16px; 
-	width: 16px;
-}
-#login-block form { margin: 15px 0; }
-#login-block form span { 
-    display: inline-block; 
-	margin: 2px 14px 0 14px; 
-}
-
 #menu-h {
 	float: left;
     width: 100%;
@@ -95,29 +68,18 @@ a:hover { text-decoration: underline; }
 	width: 200px;
 }
 
-#content-wrapper { display: inline-block; }
-.content {
+#content {
     float: left;
 	width: 779px; /* due to stupid ie7 */
-    padding: 10px;
+    padding: 0 0 80px 10px;
     line-height: 1.5;
 }
-
-/*
-*:first-child+html div#content {
-	width: 770px;
-}
-*/
 
 #menu-v-wrapper {    
     width: 200px;
     left: -200px;
     float: left;
-}
-
-#menu-v-wrapper #mail {
-    position: absolute;
-	bottom: -74px;
+	clear: both;
 }
 
 #menu-v li a, #menu-v .category span {
@@ -141,54 +103,81 @@ a:hover { text-decoration: underline; }
 
 #clearfooter { clear: both; }
 #footer {
-    height: 50px;
+    height: 60px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
     background: url("/img/footer-grad.gif") repeat-x scroll left top #119500;
     font-size: 0.9em;
     text-align: center;
 }
+#menu-v-wrapper #mail {
+    position: absolute;
+    bottom: -74px;
+}
 
+#login-block {
+    float: left;
+    height: 50px;
+    width: 200px;
+    left: -200px;
+}
 
+#mail-caller, #login-caller {  
+    text-align: center;
+    color: #fff;
+    width: 100px;
+    float: left;
+    display: none;
+    line-height: 50px;
+}
 
-/*#secondary { float:left; padding:1.5em; width:15em; } */
+.floated-forms input[type="text"], 
+.floated-forms input[type="password"] {
+    width: 70px; 
+    height: 12px; 
+    font-size: 10px; 
+    border: 1px solid black;
+    padding: 1px; 
+    display: block; 
+    float: left; 
+    margin: 0 2px 0 0;
+}
 
+#login-block input[type="image"] { 
+    height: 16px; 
+    width: 16px;
+}
 
+#login-block form {  
+    position: absolute;
+	left: 0;
+	top: 0;
+    z-index: 1000;	
+}
 
-/* common classes 
-.block { display: block; }
-.center { text-align: center; }
-.clear { clear: both; }
-.right { text-align: right; }
+#login-block form { margin: 50px 0 0; }
+#login-block form span { 
+    display: inline-block; 
+    margin: 2px 14px 0 14px; 
+}
 
-.small { font-size: 80%; }
-.bold { font-weight: bold; }
+/*#mail li { padding: 5px 10px; background-color: #dcebf7; margin-bottom: 10px; min-width: 133px; }*/
+#mail-form input { display: block; clear: both; }
+#login-block form ul { margin: 0 auto; }
+#login-block form ul li { margin-bottom: 5px; padding: 0; }
+#login-block form ul li.field label { margin: 0; }
+#login-block form ul li.field input { width: 129px; }
+#login-block form input[type=submit] { margin: 0 auto; }
 
-.link { color: blue; }
-.link:hover { text-decoration: underline; } */
-
-/* layout */
-/*
-#header { background: url("/img/a1.gif") no-repeat scroll right top #AF0A0A; float: left; height: 8em; padding: 0 1.5em; position: relative; width: 15em; }
-#header h1 { bottom: 2.2em; font-size: 1.8em; letter-spacing: 0.1em; position: absolute; }
-#header * { color: #FFFFFF; text-decoration:none; } 
-
-#title { background:url("/img/a2.gif") repeat-x scroll left top #FAFAFA; height:8em; margin-left:18em; position:relative; }
-#title h1 { margin-left: 1.5em; position:absolute; top: 2.4em; font-size: 1.6em; letter-spacing: 0.05em; color:#6A6A6A; }
-
-#content { background:url("/img/a3.gif") repeat-x scroll left top #FFFFFF; margin-top:1px; padding-top:1.5em; }
-#primary-wrap { float:right; margin-left:-19em; width:100%; }
-#primary { border-left:1px dotted #CACACA; margin:0 0 0 18em; padding:1.5em; min-height: 309px; }
-#content h2 { font-size:1.5em; } 
-
-
-/* left panel 
-
-/* right-panel 
-#right-panel { margin: 0; float: right; height: 100%; line-height: 1.5; }
-#right-panel a { color: blue; }
-#right-panel li { padding: 5px 10px; background-color: #dcebf7; margin-bottom: 10px; min-width: 133px; }
-#right-panel form input { display: block; clear: both; }
-#right-panel #mail-form ul { margin: 0 auto; }
-#right-panel #mail-form ul li { margin-bottom: 5px; padding: 0; }
-#right-panel #mail-form ul li.field label { margin: 0; }
-#right-panel #mail-form ul li.field input { width: 129px; }
-#right-panel #mail-form input[type=submit] { margin: 0 auto; }
+/* mail 
+#mail { margin: 0; float: right; height: 100%; line-height: 1.5; }
+#mail a { color: blue; }
+#mail li { padding: 5px 10px; background-color: #dcebf7; margin-bottom: 10px; min-width: 133px; }
+#mail form input { display: block; clear: both; }
+#mail #mail-form ul { margin: 0 auto; }
+#mail #mail-form ul li { margin-bottom: 5px; padding: 0; }
+#mail #mail-form ul li.field label { margin: 0; }
+#mail #mail-form ul li.field input { width: 129px; }
+#mail #mail-form input[type=submit] { margin: 0 auto; }
+*/
