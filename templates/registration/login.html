@@ -1,3 +1,4 @@
+{% extends "base.html" %}
 {% load i18n %}
 
 {% block stylesheet %}
@@ -5,7 +6,15 @@
 {% endblock %}
 
 {% block content %}
-<table id="wrap"><tr><td>
+
+{% if errors|length %}
+<ul class="errors rounded">
+{% for value in errors %}
+    <li>{{ value }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
 <form id="modal" method="post" action="{% url iam-login %}">{% csrf_token %}
     <table id="formtable">
     {% for field in form %}
@@ -18,6 +27,6 @@
         <td colspan="2"><input class="noresize" type="submit" value="{% trans 'Войти' %}" /></td>
     </tr>
     </table>
+    <input type="hidden" value="{{ request.path }}" name="next" />
 </form>
-</td></tr></table>
 {% endblock %}

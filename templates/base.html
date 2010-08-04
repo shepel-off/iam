@@ -12,7 +12,7 @@
     {% endblock %}
 
     <script type="text/javascript" language="javascript" src="/js/jquery-1.4.2.min.js"></script>
-    <!--script type="text/javascript" language="javascript" src="/js/jquery.corner.js"></script-->
+    <script type="text/javascript" language="javascript" src="/js/jquery.corner.js"></script>
     <!--[if lt IE 9]>
     <script type="text/javascript" src="/js/ie/IE9.js">IE7_PNG_SUFFIX=".png";</script>
     <![endif]-->
@@ -31,41 +31,54 @@
     <div id="main">
         <div id="header"><h1>{% trans 'Институт прикладной математики ДВО РАН' %}</h1></div>
         <div id="header-image" class="offset-left"></div>
-        <div id="login-block" class="offset-left floated-forms">
+        <div id="login-block" class="offset-left">
             {% if user.is_authenticated %}
-                {% trans 'Добро пожаловать' %},
+            <div id="welcome" class="in-login">
+                <a href="{% url profile-detail user.get_profile.id %}">{{ user.get_profile.short_name }}</a>
                 <br />
-                <a href="{% url profile-detail user.get_profile.id %}">{{ user.first_name }} {{ user.get_profile.mid_name }}</a>
-                <br />
-            <a href="/logout/?next={% url iam-root %}">{% trans 'выйти' %}</a>
+                (<a href="/logout/?next={% url iam-root %}">{% trans 'выйти' %}</a>)
+            </div>
             {% else %}
-            <p id='login-caller' class="hyperlink">{% trans 'Войти на сайт' %}</p>
-			<form id="login-form" action="{% url iam-login %}" method="post">{% csrf_token %}
-                <span>
-		            <input type="text" maxlength="30" name="username" id="id_username" value="{% trans 'логин' %}"/>
-				    <input style="display: none" type="text" id="id_passwd_temp" value="{% trans 'пароль' %}"/>
-                    <input type="password" id="id_password" name="password" />
-		            <input type="image" src="/img/icons/door_in.png" alt="Войти" />
-		            <input type="hidden" value="{{ request.path }}" name="next" />
-			    </span>
-            </form>
+            <a id="login-link" class="in-login" href="{% url iam-login %}">{% trans 'Войти на сайт' %}</a>
+            <p id='login-caller' class="hyperlink in-login">{% trans 'Войти на сайт' %}</p>
+			<div class="form-wrapper">
+                <form id="login-form" method="post" action="{% url iam-login %}">{% csrf_token %}
+                    <table>
+                        <tr>
+                            <td class="label">{% trans 'Логин' %}</td>
+                            <td><input id="id_username" type="text" name="username" maxlength="30" /></td>
+                        </tr>                    
+                        <tr>
+                            <td class="label">{% trans 'Пароль' %}</td>
+                            <td><input id="id_password" type="password" name="password" /></td>
+                        </tr>
+                        <tr class="solo">
+                            <td colspan="2"><input class="noresize" type="submit" value="{% trans 'Войти' %}" /></td>
+                        </tr>
+                    </table>
+                    <input type="hidden" value="{{ request.path }}" name="next" />
+                </form>
+			</div>
 			{% endif %}
-			<p id="mail-caller" class="hyperlink">{% trans 'Почта' %}</p>
-            <form id="mail-form" type="multipart/form-data" action="http://mail.iam.dvo.ru/" method="POST">{% csrf_token %}
-                <ul>
-                    <li class="field">
-                        <label>{% trans 'Логин' %}</label>
-                        <input name="Username" type=text>
-                    </li>
-                    <li class="field">
-                        <label>{% trans 'Пароль' %}</label>
-                        <input name="Password" type=password>
-                    </li>
-                    <li>
-                        <input name="login" type=submit value="{% trans 'Войти' %}">
-                    </li>
-                </ul>
-            </form>
+            <a id="mail-link" class="in-login" href="http://mail.iam.dvo.ru">{% trans 'Почта' %}</a>
+			<p id="mail-caller" class="hyperlink in-login">{% trans 'Почта' %}</p>
+			<div class="form-wrapper">
+	            <form id="mail-form" type="multipart/form-data" action="http://mail.iam.dvo.ru/" method="POST">{% csrf_token %}
+                    <table>
+                        <tr>
+                            <td class="label">{% trans 'Логин' %}</td>
+                            <td><input name="Username" type=text></td>
+                        </tr>                    
+                        <tr>
+                            <td class="label">{% trans 'Пароль' %}</td>
+                            <td><input name="Password" type=password></td>
+                        </tr>
+                        <tr class="solo">
+                            <td colspan="2"><input class="noresize" type="submit" value="{% trans 'Войти' %}" /></td>
+                        </tr>
+                    </table>
+                </form>
+			</div>
 		</div>
 		<div id="menu-h"></div>
         <div id="menu-v-wrapper" class="offset-left">
@@ -107,8 +120,8 @@
         <div id="clearfooter"></div>
         <div id="footer">
             <p>
-                © 2010 {% trans 'Институт прикладной математики' %}<br />
-                {% trans 'Дальневосточное отделение Российской академии наук' %}<br />
+            &copy; 2002&#150;2010 {% trans 'Институт прикладной математики' %}<br />
+            {% trans 'Дальневосточное отделение Российской академии наук' %}<br />
             </p>
         </div>
     </div>

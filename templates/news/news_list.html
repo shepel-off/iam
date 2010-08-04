@@ -20,11 +20,11 @@
         </ul>
         {% endifequal %}
         <h2>{{ news_entry.title }}</h2>
-        <div class="meta">
+        <span class="meta">
             <span class="date">{{ news_entry.date|naturalday:"d.m.Y" }}</span>
             <span class="author"><a href="{% url iam-users %}{{ news_entry.author.id }}">{{ news_entry.author.short_name }}</a></span>
-        </div>
-        <span class="entry-body">{{ news_entry.body|safe }}</span>
+        </span>
+        <div class="entry-body">{{ news_entry.body|safe }}</div>
     </li>
 {% endfor %}
 </ul>

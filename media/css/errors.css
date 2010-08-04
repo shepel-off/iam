@@ -1,2 +1,2 @@
-ul.errors { width: 70%; margin: 5px auto; padding: 5px; }
+ul.errors { width: 70%; margin: 5px auto; padding: 5px; background-color: #ff0033; }
 ul.errors li { text-align: center; font-size: 110%;}

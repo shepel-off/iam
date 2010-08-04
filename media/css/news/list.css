@@ -1,13 +1,13 @@
 .entry { clear: both; font-size: 120%; margin: 0 0 20px 0; padding: 5px; }
-.entry h2 { border-bottom:1px dotted #CACACA; padding: 0 50px 1px 0; }
+.entry h2 { padding: 0 50px 1px 0; }
 .entry .entry-body { line-height: 1.5; }
 
 .toolbox { float: right; background-color: #fff; }
 .toolbox li { margin: .25em 0; height: 16px; }
 .toolbox li a img { height: 16px; width: 16px; }
-
-.entry .meta span { display: inline-block; font-size: .85em; padding-top: .4em; }
-.entry .meta .date { padding-right: .2em; }
+.entry .meta { border-top: 1px dotted #CACACA; border-bottom: 1px dotted #CACACA; display: inline-block; width: 100%}
+.entry .meta span { float: left; display: block; font-size: .85em; }
+.entry .meta .date { padding-right: .5em; width: 62px; }
 .entry .meta .author { color: #777; border-left: 1px dotted #CACACA; padding-left: .5em; }
 .entry .meta .author a { color: #777; }
 .entry .meta .author a:hover { text-decoration: underline; }

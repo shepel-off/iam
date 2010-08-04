@@ -6,10 +6,11 @@
 
  Список новостей 
 .toolbox li { height: auto; }
+*/
 
- Форма редактирования публикаций 
-.form { overflow: hidden; }
-.form input, .form select { position: relative; }
-.form .middle .control, .form .middle .text-control { padding-right: 0; }
-/* #main { overflow: hidden; } 
-#main input[type=submit] { position: relative; margin-right: -9px; } */
+/* Форма редактирования публикаций */
+#pub-form { margin-right: 10px; }
+#pub-form ul { overflow: hidden; }
+#pub-form ul input, #pub-form ul select { position: relative; }
+#pub-form ul .middle .control, #pub-form ul .middle .text-control { padding-right: 0; }
+#pub-form #main-submit { position: relative; margin-right: -9px; }

@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}{% trans 'Редактирование публикации' %}{% endblock %}
+{% block title %}
+{% if pub_id %}
+{% trans 'Редактирование публикации' %}
+{% else %}
+{% trans 'Добавление публикации' %}
+{% endif %}
+{% endblock %}
 
 {% block stylesheet %}
 <link rel="stylesheet" type="text/css" href="/css/errors.css" />
@@ -26,15 +32,15 @@
 {% block content %}
 
 {% if errors|length %}
-<ul class="ui-state-error rounded">
+<ul class="errors rounded">
 {% for key, value in errors.items %}
     <li>{{ key }}: {{ value|slice:"2:" }}</li> {# First two characters are: '* ', tricky way (: #}
 {% endfor %}
 </ul>
 {% endif %}
 
-<form class="pform" id="main" action={% if pub_id %}{% url publication-edit pub_id %}{% else %}{% url publication-add %}{% endif %} method="POST">{% csrf_token %}
-    <ul class="form">
+<form class="pform" id="pub-form" action={% if pub_id %}{% url publication-edit pub_id %}{% else %}{% url publication-add %}{% endif %} method="POST">{% csrf_token %}
+    <ul>
         <li class="middle">
             {{ form.title.label_tag }}
             <div class="text-control">{{ form.title }}</div>
