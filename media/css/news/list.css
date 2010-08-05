@@ -2,6 +2,7 @@
 .entry h2 { padding: 0 50px 1px 0; }
 .entry .entry-body { line-height: 1.5; }
 
+/*
 .toolbox { float: right; background-color: #fff; }
 .toolbox li { margin: .25em 0; height: 16px; }
 .toolbox li a img { height: 16px; width: 16px; }
@@ -9,5 +10,17 @@
 .entry .meta span { float: left; display: block; font-size: .85em; }
 .entry .meta .date { padding-right: .5em; width: 62px; }
 .entry .meta .author { color: #777; border-left: 1px dotted #CACACA; padding-left: .5em; }
+.entry .meta .author a { color: #777; }
+.entry .meta .author a:hover { text-decoration: underline; }
+*/
+
+.entry .toolbox-outer { margin: 0 0 5px .75em; float: right; clear: both; background: #CACACA; }
+.entry .toolbox { padding: 0 .5em; background-color: #def1c9; }
+.entry .toolbox li a img { height: 16px; width: 16px; margin-top: 4px; }
+.entry .toolbox a { display:inline-block; height: 16px; width: 16px; }
+
+.entry .meta-outer { width: 10em; float: right; margin: 0 0 5px .75em; background: #CACACA; }
+.entry .meta { line-height: 1.1; background-color: #def1c9; padding: 10px 10px; }
+.entry .meta .author { font-size: .85em; color: #777; }
 .entry .meta .author a { color: #777; }
 .entry .meta .author a:hover { text-decoration: underline; }

@@ -7,15 +7,16 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<table id="wrap"><tr><td>
+
 {% if errors|length %}
-<ul class="errors rounded ui-state-error">
+<ul class="errors rounded">
 {% for key, value in errors.items %}
     <li>{{ key }}: {{ value|slice:"2:" }}</li> {# First two characters are: '* ', tricky way (: #}
 {% endfor %}
 </ul>
 {% endif %}
-<form id="modal" action="{% if news_id %}{% url news-edit news_id %}{% else %}{% url news-add %}{% endif %}" method="POST">{% csrf_token %}
+
+<form id="news-edit" action="{% if news_id %}{% url news-edit news_id %}{% else %}{% url news-add %}{% endif %}" method="POST">{% csrf_token %}
 {% for field in form %}
 <div class="field">
     {{ field.label_tag }}
@@ -24,5 +25,4 @@
 {% endfor %}
 <input type="submit" value="{% trans 'Добавить' %}" />
 </form>
-</td></tr></table>
 {% endblock content %}

@@ -11,52 +11,54 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<div id="detail-head">
-	{% if object.photo %}
-	<span style="display: inline-block; float: left;">
-	   <img id="photo" src="/{{ object.photo }}" />
-	</span>
-	{% endif %}
-		<div id="personal">
-		    <span id="name">{{ object.user.first_name }} {{ object.mid_name }} {{ object.user.last_name }}</span>
-		    <p class="solo">
-		       {% if object.academic_degree %}
-		        {{ object.academic_degree }},
-		        {% endif %}
-		        {% if object.academic_rank %}
-		        {{ object.academic_rank }}
-		        {% endif %}
-		        {% if object.academic_rank and object.post %},{% endif %}
-		        {% if object.post %}
-		        {{ object.post }}
-		        {% endif %}
-		    </p>
-		    <p class="solo"><a href="mailto:{{ object.user.email }}">{{ object.user.email }}</a></p>
-		    <p class="solo"><a href="{% url lab-detail object.laboratory.id %}">{{ object.laboratory.title }}</a></p>
-		</div>
-    <div id="clear-rest"></div>
-</div>
+<table id="head">
+    {% if object.photo %}
+    <th><img id="photo" src="/{{ object.photo }}" /></th>
+  	{% endif %}
+    <th id="near-photo">
+        {{ object.user.first_name }} {{ object.mid_name }} {{ object.user.last_name }}
+        <p>
+        {% if object.academic_degree %}
+        {{ object.academic_degree }},
+        {% endif %}
+        {% if object.academic_rank %}
+        {{ object.academic_rank }}{% endif %}{% if object.academic_rank and object.post %},{% endif %}
+        {% if object.post %}
+        {{ object.post }}
+        {% endif %}
+        </p>
+        <p><a href="mailto:{{ object.user.email }}">{{ object.user.email }}</a></p>
+        <p><a href="{% url lab-detail object.laboratory.id %}">{{ object.laboratory.title }}</a></p>
+    </th>
+</table>
 
 {% ifequal user.id object.user.id %}
-    <ul class="edit rounded">
+    <ul id="edit-profile" class="rounded">
         <li><a href="{% url profile-edit object.id %}">Редактировать профиль</a></li>
         <li><a href="{% url publication-add %}">Добавить публикацию</a></li>
     </ul>
 {% endifequal %}
 
 {% ifnotequal object.about|length 0 %}
-<p id="label-about">О себе:</p>
 <span id="about">{{ object.about|safe }}</span>
 {% endifnotequal %}
 
 {% ifnotequal object.publication_set.all|length 0 %}
-<div id="publications">
+<ol id="publications">
     <h3>{% trans 'Публикации' %}</h3>
-    <ol>
     {% for pub in object.publication_set.all %}
-    <li>{% ifequal user.id object.user.id %}<a href="{% url publication-edit pub.id %}">{{ pub }}</a>{% else %}{{ pub }}{% endifequal %}</li>
+    <li><ul class="pub-entry">
+        <li>
+            {% if user.get_profile in pub.authors.all %}
+            <a href="{% url publication-edit pub.id %}">{{ pub.title }}</a>
+            {% else %}
+            {{ pub.title }}
+            {% endif %}
+        </li>
+        <li>{{ pub.all_authors }}</li>
+        <li>{{ pub.about }}</li>
+    </ul></li>
     {% endfor %}
-    </ol>
-</div>
+</ul>
 {% endifnotequal %}
 {% endblock %}

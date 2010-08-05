@@ -1,8 +1,4 @@
-#modal { margin: 0; }
-#modal input[type="submit"] { display: block; clear: both; float: right; }
-
-#modal .field label { display: block; clear: both; margin-bottom: 3px; }
-#modal .field { margin-bottom: 6px; }
-
-#modal .field textarea { width: 600px; }
-#modal .field input { width: 600px; }
+#news-edit .field { margin-bottom: 6px; }
+#news-edit .field label { display: block; clear: both; margin-bottom: 3px; }
+#news-edit .field textarea, #news-edit .field input { width: 100%; }
+#news-edit input[type="submit"] { display: block; clear: both; float: right; }

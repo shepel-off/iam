@@ -1,12 +1,24 @@
 $(document).ready(function(){
-    $("textarea").wysiwyg();
+    // Initialize WYSIWYG Editors
+	$("textarea").wysiwyg();
     $("div.wysiwyg").css("padding", "3px 1px");
 	
-    $("#menu-v .category ul").css("display", "none");
-    $("#menu-v .category span").click(function() {
+	// Simple "Tree"-like menu
+	var menu_root = $('#menu-v', '#menu-v-wrapper');
+	var root_url = /(http:\/\/[^\/]+)/.exec(window.location)[1];
+    $(".category ul", menu_root).css("display", "none");
+    $(".category span", menu_root).click(function() {
         $("ul", $(this).parent()).toggle();
     });
-    
+    $('a', menu_root).each(function(i, ch) {
+		  var href = ($(ch).attr('href')[0] == '/' ? root_url : '') + $(ch).attr('href');
+          if (href == window.location) {
+		  	$(ch).parentsUntil('#menu-v').css("display", "block");
+		  	$(ch).addClass('current-location');
+		  }
+	});
+
+	// Initialization for Tabed authentication forms (login, mail)
 	function initHiddenForm(name, freeSide)
 	{
         var caller = $("#" + name + "-caller", "#login-block");
@@ -37,6 +49,7 @@ $(document).ready(function(){
 	}
 	
 	initHiddenForm('login', 'right')('mail', 'left');
-
+	
     $('.rounded').corner("5px");
+    $('.rounded-with-border').corner("5px").parent().css('padding', '1px').corner('round 6px');
 });

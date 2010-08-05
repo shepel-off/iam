@@ -127,6 +127,9 @@ a:hover { text-decoration: underline; }
     font-weight: bold;
     color: #fff;
 }
+.current-location {
+	background: #e4e4e0;
+}
 
 #login-block a.in-login, p.hyperlink {
     line-height: 40px;

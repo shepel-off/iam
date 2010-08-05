@@ -11,19 +11,24 @@
 <ul id="news">
 {% for news_entry in object_list %}
     <li class="entry">
-        {% ifequal news_entry.author.user.id user.id %}
-        <ul class="toolbox">
-            <li>
-                <a href="{% url news-edit news_entry.id %}"><img alt="{% trans 'Редактировать' %}" src="/img/icons/pencil.png" /></a>
-                <a href="{% url news-delete news_entry.id %}"><img alt="{% trans 'Удалить' %}" src="/img/icons/cross.png" /></a>
-            </li>
-        </ul>
-        {% endifequal %}
         <h2>{{ news_entry.title }}</h2>
-        <span class="meta">
-            <span class="date">{{ news_entry.date|naturalday:"d.m.Y" }}</span>
-            <span class="author"><a href="{% url iam-users %}{{ news_entry.author.id }}">{{ news_entry.author.short_name }}</a></span>
-        </span>
+        <div class="meta-outer">
+		    <ul class="meta rounded-with-border">
+                <li class="date">{{ news_entry.date|naturalday:"d.m.Y" }}</li>
+                <li class="author"><a href="{% url iam-users %}{{ news_entry.author.id }}">{{ news_entry.author.short_name }}</a></li>
+            </ul>
+		</div>
+        {% ifequal news_entry.author.user.id user.id %}
+		<div class="toolbox-outer">
+	        <ul class="toolbox rounded-with-border">
+	            <li>
+	                <a href="{% url news-edit news_entry.id %}"><img alt="{% trans 'Редактировать' %}" src="/img/icons/pencil.png" /></a>
+	                <a href="{% url news-delete news_entry.id %}"><img alt="{% trans 'Удалить' %}" src="/img/icons/cross.png" /></a>
+	            </li>
+	        </ul>
+		</div>
+        {% endifequal %}
+
         <div class="entry-body">{{ news_entry.body|safe }}</div>
     </li>
 {% endfor %}

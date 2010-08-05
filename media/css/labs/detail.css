@@ -1,7 +1,7 @@
 #content { line-height: 1.5; }
 #staff { margin: 0 auto; }
 #staff, #staff td, #staff th { border: 1px solid; }
-#staff td, #staff th { padding: 5px; }
+#staff td, #staff th { padding: 5px; vertical-align: middle;}
 
 .center { text-align: center; }
 h4 { font-size: 120%; }

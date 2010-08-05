@@ -1,23 +1,26 @@
-#detail-head { 
-    margin: 5px auto;
-	width: 769px;
-}
-
-#detail-head #photo { 
-    float: left;
-    margin-right: 10px;
-}
-
-#detail-head #personal { text-align: left; }
-#detail-head #personal #name { font-weight: bold; }
-#label-about { border-top: 1px dashed #CACACA; }
-
-ul.edit { clear: both; float: right; margin: 0 0 1.5em 1.5em; padding: .5em 1em; background-color: #dcebf7; }
-ul.edit li { text-align: right; }
-ul.edit li a { color: blue; }
-
-#publications { clear: both; margin: 2em 0 2em 2em; }
-#publications ol { list-style-type: decimal; }
-
+#head th { vertical-align: middle; padding: 5px; }
+#head, #head #near-photo { width: 100%; } 
 
 #clear-rest { clear: both; }
+
+#edit-profile { 
+    clear: both; 
+    float: right; 
+    margin: 0 0 1.5em 1.5em; 
+    padding: .5em 1em; 
+    background-color: #dcebf7; 
+}
+
+#edit-profile li { text-align: right; }
+#edit-profile li a { color: blue; }
+
+#publications { 
+    clear: both; 
+    margin: 2em 0 2em 2em; 
+    list-style-type: decimal; 
+    font-size: 120%; 
+    line-height: normal;
+}
+
+#publications ul.pub-entry { margin: 4px 0; }
+#publications ul.pub-entry li { margin: 1px 0; }

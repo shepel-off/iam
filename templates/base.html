@@ -85,7 +85,11 @@
             <ul id="menu-v">
                 <li><a href="{% url iam-news %}">{% trans 'Новости' %}</a>
                     {% if user.is_authenticated and request.path == '/news/' %}
-                    <ul><li><a id="addnews" class="popup" href="{% url news-add %}">{% trans 'Добавить' %}</a></li></ul>
+                    <ul>
+                    	<li>
+                    		<a id="addnews" class="popup" href="{% url news-add %}">{% trans 'Добавить' %}</a>
+					    </li>
+				    </ul>
                     {% endif %}
                 </li>
                 <li><a href="/about/">{% trans 'Об институте' %}</a></li>
@@ -125,52 +129,5 @@
             </p>
         </div>
     </div>
-<!--        <div id="header">
-            <h1>
-            {% if request.path == '/' or request.path == '/news/' %}
-            {% trans 'ИПМ' %}
-            {% else %}
-            <a href="{% url iam-root %}">{% trans 'ИПМ' %}</a>
-            {% endif %}</h1>
-        </div>
-        <div id="title">
-            <h1>{% trans 'Институт прикладной математики ДВО РАН' %}</h1>
-        </div>
-    
-        <div id="content">
-            <div id="primary-wrap">
-                <div id="primary">
-                </div>
-            </div>
-            <div id="secondary" class="rounded-right">
-            </div>
-        </div>
-    
-    <div id="dialog-form" class="dform"></div>
-    <div id="dialog-form2" class="dform"></div>-->
-    
-    <!--ul id="right-panel">
-        <li class="rounded-left">
-        
-        </li>
-        <li class="rounded-left">
-        <form id="mail-form" type="multipart/form-data" action="http://mail.iam.dvo.ru/" method="POST">{% csrf_token %}
-            <span id="mail-enter" class="link block center bold">{% trans 'Вход в почту' %}</span>
-            <ul id="mail-hidden">            
-            <li class="field">
-                <label>{% trans 'Логин' %}</label>
-                <input name="Username" type=text>
-            </li>
-            <li class="field">
-                <label>{% trans 'Пароль' %}</label>
-                <input name="Password" type=password>
-            </li>
-            <li>
-            <input name="login" type=submit value="{% trans 'Войти' %}">
-            </li>
-            </ul>
-        </form>
-        </li>
-    </ul-->
 </body>
 </html>

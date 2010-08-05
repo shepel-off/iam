@@ -4,8 +4,6 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from iam.users.models import Profile
 
-# Create your models here.
-
 class Publication(models.Model):
     authors = models.ManyToManyField(Profile, verbose_name=_(u'Авторы'))
     title = models.CharField(max_length=200, verbose_name=_(u'Название'))
@@ -37,23 +35,37 @@ class Publication(models.Model):
     start_page = models.PositiveIntegerField(verbose_name=_(u'Первая страница публикации'))
     end_page = models.PositiveIntegerField(verbose_name=_(u'Последняя страница публикации'))
 
-    def __unicode__(self):
+    def all_authors(self):
+        authors = u', '.join(author.short_name() for author in self.authors.all())
         other_authors = u', ' + self.other_authors.strip() if self.other_authors else ''
+        return authors + other_authors
+
+    def about(self):
+        pub_house = self.publishing_house.strip() + ',' if self.publishing_house else ''
+        pub_pages = u'{0} {1}'.format(_(u'С.'), self.start_page)
+        if self.start_page != self.end_page:
+            pub_pages += u'-' + str(self.end_page)
+        
+        return u'{journal}.{pubhouse} {year}. {issue}. {pages}.'.format(
+            journal = self.journal.strip().rstrip('.'),
+            pubhouse = pub_house,
+            year = self.year,
+            issue = self.journal_issue.strip(),
+            pages = pub_pages
+            )
+
+    def __unicode__(self):
+        authors = self.all_authors()
         pub_house = self.publishing_house.strip() + ',' if self.publishing_house else ''
         
         pub_pages = u'{0} {1}'.format(_(u'С.'), self.start_page)
         if self.start_page != self.end_page:
             pub_pages += u'-' + str(self.end_page)
 
-        return u'{authors}{other} {title} // {journal}.{pubhouse} {year}. {issue}. {pages}.'.format(
-            authors = ', '.join(author.short_name() for author in self.authors.all()),
-            other = other_authors,
+        return u'{authors}{other} {title} // {about}'.format(
+            authors = authors,
             title = self.title.strip(),
-            journal = self.journal.strip().rstrip('.'),
-            pubhouse = pub_house,
-            year = self.year,
-            issue = self.journal_issue.strip(),
-            pages = pub_pages
+            about = about
             )
         model = Publication
 
