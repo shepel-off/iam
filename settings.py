@@ -109,6 +109,20 @@ LOGIN_URL = '/login/'
 #TINYMCE_DEFAULT_CONFIG = {
 #    'theme': "advanced",
 #}
+TINYMCE_DEFAULT_CONFIG = {
+    'mode': "textareas",    
+    'plugins': "safari,table,style,layer,pagebreak,iespell,insertdatetime,media,spellchecker,contextmenu,fullscreen,paste,searchreplace",
+    'theme': "advanced",
+    'theme_advanced_toolbar_location': "top",
+    'theme_advanced_toolbar_align': "left",
+    'theme_advanced_statusbar_location': "bottom",
+    'cleanup_on_startup': True,
+    'cols': 80,
+    'rows': 30,
+    'custom_undo_redo_levels': 10,
+}
+TINYMCE_SPELLCHECKER = True
+
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -120,9 +134,8 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.flatpages',
     'django.contrib.humanize',
-    'django.utils.simplejson', # serialization for json (ajax transfer format)
     'rosetta',
-#    'markitup',
+    'tinymce',
     'iam.users',
     'iam.news',
     'iam.labs',

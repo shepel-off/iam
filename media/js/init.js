@@ -1,7 +1,5 @@
 $(document).ready(function(){
     // Initialize WYSIWYG Editors
-	$("textarea").wysiwyg();
-    $("div.wysiwyg").css("padding", "3px 1px");
 	
 	// Simple "Tree"-like menu
 	var menu_root = $('#menu-v', '#menu-v-wrapper');
@@ -11,7 +9,8 @@ $(document).ready(function(){
         $("ul", $(this).parent()).toggle();
     });
     $('a', menu_root).each(function(i, ch) {
-		  var href = ($(ch).attr('href')[0] == '/' ? root_url : '') + $(ch).attr('href');
+         
+		  var href = (/^\/.*/.test($(ch).attr('href')) ? root_url : '') + $(ch).attr('href');
           if (href == window.location) {
 		  	$(ch).parentsUntil('#menu-v').css("display", "block");
 		  	$(ch).addClass('current-location');

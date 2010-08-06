@@ -7,17 +7,18 @@
 
 {% block stylesheet %}
 <link rel="stylesheet" type="text/css" href="/css/labs/edit.css" media="all" />
+{{ form.media }}
 {% endblock %}
 
 {% block content %}
 <form id="lab-main" action="{% url lab-edit lab_id %}" method="POST">{% csrf_token %}
 {% for field in form %}
-<div class="field">
-    {{ field.label_tag }}
-    {{ field }}
-</div>
+    <div class="field">
+        {{ field.label_tag }}
+        {{ field }}
+    </div>
 {% endfor %}
-<input type="submit" value="{% trans 'Сохранить' %}" />
+    <input type="submit" value="{% trans 'Сохранить' %}" />
 </form>
 <form id="lab-undo" action="{% url lab-detail lab_id %}" method="POST">{% csrf_token %}
     <input type="submit" value="{% trans 'Отменить' %}" />

@@ -4,20 +4,22 @@ from django.http import HttpResponseForbidden, HttpResponse
 from django.shortcuts import render_to_response, redirect
 from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
-from django.utils import simplejson as json
+from django.utils.translation import ugettext_lazy as _
 
 from iam.news.models import News
 from iam.utils.decorators import user_passes_test
 
 import datetime
+#from tinymce.widgets import TinyMCE
 
 class NewsForm(forms.ModelForm):
+    #body = forms.CharField(widget=TinyMCE(), label=_('Тело'))
     class Meta:
         model = News
         fields = ('title', 'body')
 
-def is_author(user, news_id):
-    return user.id == News.objects.get(pk=int(news_id)).author.user.id
+def is_author_or_stuff(user, news_id):
+    return user.id == News.objects.get(pk=int(news_id)).author.user.id or user.is_staff
 
 def edit_or_add(request, news_id):
     entry = News.objects.get(pk=news_id) if news_id else News()
@@ -48,12 +50,12 @@ def add(request):
     return edit_or_add(request, 0)
 
 @login_required
-@user_passes_test(is_author)
+@user_passes_test(is_author_or_stuff)
 def edit(request, news_id):
     return edit_or_add(request, int(news_id))
 
 @login_required
-@user_passes_test(is_author)
+@user_passes_test(is_author_or_stuff)
 def delete(request, news_id):
     news_id = int(news_id)
     entry = News.objects.get(pk=news_id)

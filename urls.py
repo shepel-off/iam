@@ -21,6 +21,7 @@ urlpatterns = patterns('',
      (r'^news/', include('iam.news.urls')),
      (r'^labs/', include('iam.labs.urls')),
      (r'^publications/', include('iam.publications.urls')),
+     (r'^tinymce/', include('tinymce.urls')),
 )
 
 from django.conf import settings

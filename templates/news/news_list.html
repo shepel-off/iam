@@ -18,16 +18,16 @@
                 <li class="author"><a href="{% url iam-users %}{{ news_entry.author.id }}">{{ news_entry.author.short_name }}</a></li>
             </ul>
 		</div>
-        {% ifequal news_entry.author.user.id user.id %}
-		<div class="toolbox-outer">
+        {% if news_entry.author.user.id == user.id or user.is_staff %}
+		<span class="toolbox-outer">
 	        <ul class="toolbox rounded-with-border">
 	            <li>
 	                <a href="{% url news-edit news_entry.id %}"><img alt="{% trans 'Редактировать' %}" src="/img/icons/pencil.png" /></a>
 	                <a href="{% url news-delete news_entry.id %}"><img alt="{% trans 'Удалить' %}" src="/img/icons/cross.png" /></a>
 	            </li>
 	        </ul>
-		</div>
-        {% endifequal %}
+		</span>
+        {% endif %}
 
         <div class="entry-body">{{ news_entry.body|safe }}</div>
     </li>

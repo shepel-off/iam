@@ -9,8 +9,10 @@ from django.utils.translation import ugettext_lazy as _
 
 from iam.labs.models import Laboratory
 from iam.utils.decorators import user_passes_test
+#from tinymce.widgets import TinyMCE
 
 class LaboratoryForm(forms.ModelForm):
+#    about = forms.CharField(widget=TinyMCE(), label=_('Описание'))
     class Meta:
         model = Laboratory
         fields = ('title', 'number', 'about',)
