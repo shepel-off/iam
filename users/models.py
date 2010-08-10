@@ -23,7 +23,7 @@ class Profile(models.Model):
         return u' '.join((self.user.last_name, self.user.first_name, self.mid_name))
 
     def short_name(self):
-        return u'{0} {1[0]}. {2[0]}.'.format(self.user.last_name, self.user.first_name, self.mid_name)
+        return u'%s %s. %s.' % (self.user.last_name, self.user.first_name[0], self.mid_name[0])
 
     class Meta:
         verbose_name = _(u'Профиль')

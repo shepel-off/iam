@@ -50,7 +50,7 @@ def editprofile(request, profile_id):
             for form in forms:
                 if form.has_changed():
                     form.save()
-            return redirect('/users/{0}'.format(profile_id))
+            return redirect('/users/%d' % profile_id)
     return render_to_response('users/edit.html',
         {'userform': userform, 'passwordform': passwordform,
          'userformset': userformset, 'errors': readableErrors},

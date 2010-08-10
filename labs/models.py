@@ -21,7 +21,7 @@ class Laboratory(models.Model):
     about = models.TextField(blank=True, verbose_name=(u'Описание'))
 
     def __unicode__(self):
-        return u'{0} (№ {1})'.format(self.title, self.number)
+        return u'%s (№ %s)' % (self.title, self.number)
 
     def _is_lab(self):
         return self.title.lower().find(u'лаборатория') != -1

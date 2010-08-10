@@ -29,7 +29,7 @@ def edit(request, lab_id):
         form = LaboratoryForm(request.POST, instance=lab)
         if form.is_valid():
             form.save()
-            return redirect('/labs/{0}'.format(lab_id))
+            return redirect('/labs/%d' % lab_id)
     form = LaboratoryForm(instance=lab)
     return render_to_response('labs/edit.html',
             {'form': form,

@@ -40,9 +40,9 @@ class Publication(models.Model):
         other_authors = u', ' + self.other_authors.strip() if self.other_authors else ''
         return authors + other_authors
 
-    def about(self):
+    '''def about(self):
         pub_house = self.publishing_house.strip() + ',' if self.publishing_house else ''
-        pub_pages = u'{0} {1}'.format(_(u'С.'), self.start_page)
+        pub_pages = u'%s %s' % (_(u'С.'), self.start_page)
         if self.start_page != self.end_page:
             pub_pages += u'-' + str(self.end_page)
         
@@ -52,13 +52,13 @@ class Publication(models.Model):
             year = self.year,
             issue = self.journal_issue.strip(),
             pages = pub_pages
-            )
+            )'''
 
-    def __unicode__(self):
+    '''def __unicode__(self):
         authors = self.all_authors()
         pub_house = self.publishing_house.strip() + ',' if self.publishing_house else ''
         
-        pub_pages = u'{0} {1}'.format(_(u'С.'), self.start_page)
+        pub_pages = u'%s %s' % (_(u'С.'), self.start_page)
         if self.start_page != self.end_page:
             pub_pages += u'-' + str(self.end_page)
 
@@ -67,7 +67,7 @@ class Publication(models.Model):
             title = self.title.strip(),
             about = about
             )
-        model = Publication
+        model = Publication'''
 
     class Meta:
         verbose_name_plural = _(u'Публикации')

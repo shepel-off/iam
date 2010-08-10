@@ -47,7 +47,7 @@ def edit_or_add(request, pub_id):
             readableErrors.update( (unicode(form.base_fields[key].label), form.errors[key].as_text()) for key in form.errors.keys() )
         if len(readableErrors) == 0 and form.has_changed():
             form.save()
-            return redirect('/users/{0}'.format(request.user.get_profile().id))
+            return redirect('/users/%s' % request.user.get_profile().id)
     return render_to_response('publications/edit.html', {'form': form, 'pub_id': pub_id, 'errors': readableErrors},
         context_instance=RequestContext(request))
 

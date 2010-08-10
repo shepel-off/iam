@@ -16,7 +16,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'IAM',                      # Or path to database file if using sqlite3.
         'USER': 'django',                      # Not used with sqlite3.
-        'PASSWORD': 'norkolli',                  # Not used with sqlite3.
+        'PASSWORD': 'django-pony',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -53,7 +53,7 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/srv/www/vhosts/iam/media/'
+MEDIA_ROOT = '/var/www/vhosts/iam/media/'
 
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
@@ -106,9 +106,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 AUTH_PROFILE_MODULE = 'users.Profile'
 LOGIN_URL = '/login/'
-#TINYMCE_DEFAULT_CONFIG = {
-#    'theme': "advanced",
-#}
 TINYMCE_DEFAULT_CONFIG = {
     'mode': "textareas",    
     'plugins': "safari,table,style,layer,pagebreak,iespell,insertdatetime,media,spellchecker,contextmenu,fullscreen,paste,searchreplace",

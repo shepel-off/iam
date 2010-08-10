@@ -8,8 +8,6 @@ from django.http import HttpResponse
 from django.utils.translation import ugettext_lazy as _
 from django.template import RequestContext
 
-import pynotify
-
 def produce_error(request, msg):
     return render_to_response('registration/login.html', {'form': AuthenticationForm(), 'errors': msg }, context_instance=RequestContext(request))
 

@@ -74,7 +74,7 @@ a:hover { text-decoration: underline; }
 #content {
     float: left;
 	width: 779px; /* due to stupid ie7 */
-    padding: 0 0 80px 10px;
+    padding: 10px 0 80px 10px;
     line-height: 1.5;
 }
 

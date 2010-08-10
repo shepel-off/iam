@@ -10,7 +10,6 @@ from iam.news.models import News
 from iam.utils.decorators import user_passes_test
 
 import datetime
-#from tinymce.widgets import TinyMCE
 
 class NewsForm(forms.ModelForm):
     #body = forms.CharField(widget=TinyMCE(), label=_('Тело'))
