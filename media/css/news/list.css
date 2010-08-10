@@ -38,3 +38,11 @@ display:inline-block;
 .entry .meta .author { font-size: .85em; color: #777; }
 .entry .meta .author a { color: #777; }
 .entry .meta .author a:hover { text-decoration: underline; }
+
+#paginator { 
+    bottom: 65px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: right;
+}
