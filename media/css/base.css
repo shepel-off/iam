@@ -3,8 +3,14 @@
 }
 
 #header { background-color: #adbeef; }
-#header-image { background-color: maroon; }
-#menu-h { background-color: #deadbe; }
+#header-image { 
+    background: url("/img/greengrad.png") repeat-y scroll left top;
+}
+
+#menu-h { 
+    background-color: #e6e8ea; }
+
+/* main content */
 
 .hyperlink:hover {
 	cursor: pointer;
@@ -109,7 +115,7 @@ a:hover { text-decoration: underline; }
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-    background: url("/img/footer-grad.gif") repeat-x scroll left top #119500;
+    background: url("/img/footer_back.jpg") repeat-x scroll left top;
     font-size: 0.9em;
     text-align: center;
 }
