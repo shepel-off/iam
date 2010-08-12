@@ -2,13 +2,21 @@
     background-color: #708090;
 }
 
-#header { background-color: #adbeef; }
+/*#header { background-color: #adbeef; }*/
 #header-image { 
-    background: url("/img/greengrad.png") repeat-y scroll left top;
+    background-color: #e6e8ea;
 }
 
 #menu-h { 
     background-color: #e6e8ea; }
+
+#phone span, #address {
+    color: #6f798a;
+}
+
+#footer, #login-block form { 
+    color: #B3C0AB;
+}
 
 /* main content */
 
@@ -40,8 +48,10 @@ a:hover { text-decoration: underline; }
 #main { 
     min-height: 100%;
     width: 800px; 
-	margin: 0 0 0 200px; 
+    color: #5a6370;
+	margin: 5px 0 5px 200px; 
     background-color: white;
+    border: 2px solid #606060;
 	position: relative;
 }
 
@@ -51,7 +61,7 @@ a:hover { text-decoration: underline; }
 }
 
 #header {
-    height: 100px;
+    height: 200px;
 }
 #header h1 {
     line-height: 100px;
@@ -59,33 +69,57 @@ a:hover { text-decoration: underline; }
     font-size: 200%;
 }
 
+#header th { vertical-align: middle; width: 400px;}
+
+#phone {
+    color: #babfc7;
+    font-family: Arial Narrow;
+    font-size: 21px;
+    text-align: left;
+}
+#address {
+    font-size: 11px;
+}
+
+
 #header-image {
-    width: 1000px;
-    height: 150px;
-    left: -200px;
+    width: 796px;
+    margin: 0 2px;
+    height: 170px;
+}
+#header-image img {
+    margin: 10px 19px;
+    width: 756px;
+    border: 2px solid white;
 }
 
 #menu-h {
 	float: left;
-    width: 100%;
+    display: inline;
+    width: 796px;
+    _width: 798px;
+    margin: 0 2px;
     height: 50px;
 }
 
 #menu-v {
     margin: 0;
     font-size: 120%;
-	width: 200px;
+	width: 170px;
+    padding: 0 5px;
+    border: 2px solid white;
+    background-color: #e6e8ea;
 }
 
 #content {
     float: left;
-	width: 779px; /* due to stupid ie7 */
-    padding: 10px 0 80px 10px;
+	width: 780px; /* due to stupid ie7 */
+    padding: 10px 10px 257px;
     line-height: 1.5;
 }
 
 #menu-v-wrapper {    
-    width: 200px;
+    width: 175px;
     left: -200px;
     float: left;
 	clear: both;
@@ -94,8 +128,7 @@ a:hover { text-decoration: underline; }
 #menu-v li a, #menu-v .category span {
     display: block;
     padding: 5px 0px 5px 0px;
-    color: #fff;
-    width: 100%;
+    color: #5f6776;
 }
 
 #menu-v li a:hover, #menu-v .category span:hover {
@@ -104,20 +137,24 @@ a:hover { text-decoration: underline; }
     text-decoration: underline;
 }
 
-#menu-v li ul { 
+#menu-v li ul li a { 
     padding-left: 10px;
     font-size: 90%;
 }
 
 #clearfooter { clear: both; }
 #footer {
-    height: 60px;
+    height: 237px;
 	position: absolute;
-	bottom: 0;
-	width: 100%;
-    background: url("/img/footer_back.jpg") repeat-x scroll left top;
+	bottom: 1px;
+    left: 2px;
+	width: 796px;
+    background: url("/img/footer-bg.png") repeat-x scroll left top;
     font-size: 0.9em;
     text-align: center;
+}
+#footer th {
+    vertical-align: middle;
 }
 
 #login-block {
@@ -134,7 +171,7 @@ a:hover { text-decoration: underline; }
     color: #fff;
 }
 .current-location {
-	background: #e4e4e0;
+	background: white;
 }
 
 #login-block a.in-login, p.hyperlink {

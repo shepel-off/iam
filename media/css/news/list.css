@@ -40,9 +40,9 @@ display:inline-block;
 .entry .meta .author a:hover { text-decoration: underline; }
 
 #paginator { 
-    bottom: 65px;
+    bottom: 237px;
     position: absolute;
     width: 100%;
-    left: 0;
+    left: 0px;
     text-align: right;
 }

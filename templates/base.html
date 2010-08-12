@@ -29,8 +29,24 @@
 
 <body>
     <div id="main">
-        <div id="header"><h1>{% trans 'Институт прикладной математики ДВО РАН' %}</h1></div>
-        <div id="header-image" class="offset-left"></div>
+        <table id="header">
+            <tr>
+                <th><img src="/img/iam_herb.gif"/></th>
+                <th>
+                    <div id="phone">
+                        +7 (4232)
+                        <span>xx-xx-xx</span>
+                        <p id="address">
+                            Владивосток, ул. Радио 7, 3 этаж в здании Института географии ДВО РАН
+                        </p>
+                    </div>
+                </th>
+            <!--h1>{% trans 'Институт прикладной математики ДВО РАН' %}</h1-->
+            </tr>
+        </table>
+        <div id="header-image">
+            <img src="/img/logo.png" />
+        </div>
         <div id="login-block" class="offset-left">
             {% if user.is_authenticated %}
             <div id="welcome" class="in-login">
@@ -122,12 +138,14 @@
             {% endblock %}
         </div>
         <div id="clearfooter"></div>
-        <div id="footer">
-            <p>
-            &copy; 2002&#150;2010 {% trans 'Институт прикладной математики' %}<br />
-            {% trans 'Дальневосточное отделение Российской академии наук' %}<br />
-            </p>
-        </div>
+        <table id="footer">
+            <th>
+                <p>
+                &copy; 2002&#150;2010 {% trans 'Институт прикладной математики' %}<br />
+                {% trans 'Дальневосточное отделение Российской академии наук' %}<br />
+                </p>
+            </th>
+        </table>
     </div>
 </body>
 </html>
