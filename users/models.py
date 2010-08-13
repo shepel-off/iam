@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
+import os.path 
+
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 
 from iam.labs.models import Laboratory
-import os.path 
 
 class Profile(models.Model):
     user = models.OneToOneField(User)
@@ -15,7 +16,7 @@ class Profile(models.Model):
     academic_rank = models.CharField(max_length=100, blank=True, verbose_name=_(u'Учёное звание'))
     post = models.CharField(max_length=100, blank=True, verbose_name=_(u'Должность'))
     photo = models.ImageField(upload_to=lambda instance, filename:
-            'img/uploads/photo/{0}{1}'.format(instance.user.id, os.path.splitext(filename)[1].lower()) ,
+            'img/uploads/photo/{0}{1}'.format(instance.user.id, os.path.splitext(filename)[1].lower()),
             blank=True, verbose_name=_(u'Фотография'))
     about = models.TextField(blank=True, verbose_name=_(u'О себе'))
     
@@ -24,6 +25,9 @@ class Profile(models.Model):
 
     def short_name(self):
         return u'%s %s. %s.' % (self.user.last_name, self.user.first_name[0], self.mid_name[0])
+
+    def short_name_human(self):
+        return u'%s. %s. %s' % (self.user.first_name[0], self.mid_name[0], self.user.last_name)
 
     class Meta:
         verbose_name = _(u'Профиль')
