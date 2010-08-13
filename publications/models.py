@@ -27,10 +27,11 @@ class Publication(models.Model):
         (u'2', _(u'другой'))
     )
     language = models.CharField(max_length=1, choices=LANGUAGES, verbose_name=_(u'Язык'))
-    other_authors = models.CharField(max_length=100, blank=True, verbose_name=_(u'Другие авторы'),
-        help_text=_(u'отсутствующие в списке'))
+    other_authors = models.CharField(max_length=100, blank=True, 
+        verbose_name=_(u'Другие авторы'), help_text=_(u'отсутствующие в списке'))
     year = models.PositiveIntegerField(verbose_name=_(u'Год публикации'))
-    publishing_house = models.CharField(max_length=200, blank=True, verbose_name=_(u'Издательство'))
+    publishing_house = models.CharField(max_length=200, blank=True, 
+        verbose_name=_(u'Издательство'))
     journal = models.CharField(max_length=200, verbose_name=_(u'Научное издание'))
     journal_issue = models.CharField(max_length=20, verbose_name=_(u'Номер издания'))
     start_page = models.PositiveIntegerField(verbose_name=_(u'Первая страница публикации'))
