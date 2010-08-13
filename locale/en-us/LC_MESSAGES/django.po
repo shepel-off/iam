@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-23 11:48+1100\n"
+"POT-Creation-Date: 2010-08-13 13:28+1100\n"
 "PO-Revision-Date: 2010-07-23 11:56\n"
 "Last-Translator: <guzev@iam.dvo.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Отделы"
 msgstr ""
 
-#: labs/models.py:17 publications/models.py:11
+#: labs/models.py:17 publications/models.py:9
 msgid "Название"
 msgstr "Title"
 
@@ -66,7 +66,7 @@ msgstr "Laboratories"
 msgid "секторе"
 msgstr "Author"
 
-#: labs/models.py:42 users/models.py:11
+#: labs/models.py:42 users/models.py:13
 msgid "Лаборатория"
 msgstr "Laboratory"
 
@@ -90,195 +90,203 @@ msgstr ""
 msgid "Автор"
 msgstr "Author"
 
-#: news/models.py:18 templates/base.html:44 templates/news/news_list.html:5
+#: news/models.py:18 templates/base.html:102 templates/news/news_list.html:5
 msgid "Новости"
 msgstr "News"
 
-#: publications/models.py:10
+#: publications/models.py:8
 msgid "Авторы"
 msgstr "Authors"
 
-#: publications/models.py:14
+#: publications/models.py:12
 #, fuzzy
 msgid "автореферат"
 msgstr "Laboratory"
 
-#: publications/models.py:15
+#: publications/models.py:13
 msgid "диссертация"
 msgstr ""
 
-#: publications/models.py:16
+#: publications/models.py:14
 msgid "монография"
 msgstr "monography"
 
-#: publications/models.py:17
+#: publications/models.py:15
 msgid "препринт"
 msgstr "preprint"
 
-#: publications/models.py:18
+#: publications/models.py:16
 msgid "сборник"
 msgstr ""
 
-#: publications/models.py:19
+#: publications/models.py:17
 msgid "статья"
 msgstr "article"
 
-#: publications/models.py:20
+#: publications/models.py:18
 msgid "тезисы"
 msgstr ""
 
-#: publications/models.py:23
+#: publications/models.py:21
 msgid "Вид"
 msgstr ""
 
-#: publications/models.py:26
+#: publications/models.py:24
 msgid "русский"
 msgstr "Russian"
 
-#: publications/models.py:27
+#: publications/models.py:25
 msgid "английский"
 msgstr "English"
 
-#: publications/models.py:28
+#: publications/models.py:26
 msgid "другой"
 msgstr "other"
 
-#: publications/models.py:30
+#: publications/models.py:28
 msgid "Язык"
 msgstr "Language"
 
-#: publications/models.py:31
+#: publications/models.py:29
 msgid "Другие авторы"
 msgstr "Other authors"
 
-#: publications/models.py:32
-msgid "Отсутствующие в списке"
+#: publications/models.py:30
+msgid "отсутствующие в списке"
 msgstr ""
 
-#: publications/models.py:33
+#: publications/models.py:31
 msgid "Год публикации"
 msgstr ""
 
-#: publications/models.py:34
+#: publications/models.py:32
 msgid "Издательство"
 msgstr ""
 
-#: publications/models.py:35
+#: publications/models.py:33
 msgid "Научное издание"
 msgstr ""
 
-#: publications/models.py:36
+#: publications/models.py:34
 msgid "Номер издания"
 msgstr ""
 
-#: publications/models.py:37
+#: publications/models.py:35
 msgid "Первая страница публикации"
 msgstr ""
 
-#: publications/models.py:38
+#: publications/models.py:36
 msgid "Последняя страница публикации"
 msgstr ""
 
 #: publications/models.py:44
-msgid "С."
-msgstr "P."
+msgid "стр."
+msgstr ""
 
-#: publications/models.py:61 templates/users/profile_detail.html:45
+#: publications/models.py:50 templates/users/profile_detail.html:48
 msgid "Публикации"
 msgstr "Publications"
+
+#: templates/404.html:4
+msgid "Ошибка 404"
+msgstr ""
 
 #: templates/base.html:6
 msgid "ИПМ ДВО РАН"
 msgstr ""
 
-#: templates/base.html:37 templates/base.html.py:39
+#: templates/base.html:44
 msgid "Институт прикладной математики ДВО РАН"
 msgstr ""
 
-#: templates/base.html:46 templates/news/add.html:31
-#: templates/news/nojs_add.html:18
-msgid "Добавить"
-msgstr "Add"
-
-#: templates/base.html:49
-msgid "Об институте"
-msgstr ""
-
-#: templates/base.html:50
-msgid "Студентам"
-msgstr ""
-
-#: templates/base.html:52
-msgid "Базовые кафедры"
-msgstr ""
-
-#: templates/base.html:53
-msgid "Аспирантура"
-msgstr ""
-
-#: templates/base.html:56
-msgid "Структура"
-msgstr "Structure"
-
-#: templates/base.html:58 templates/labs/labgroup_list.html:5
-msgid "Лаборатории и сектора"
-msgstr ""
-
-#: templates/base.html:59 templates/users/profile_list.html:4
-msgid "Сотрудники"
-msgstr ""
-
-#: templates/base.html:60
-msgid "Директор"
-msgstr ""
-
-#: templates/base.html:61
-msgid "Хабаровское отделение"
-msgstr ""
-
-#: templates/base.html:64
-msgid "Исследования"
-msgstr ""
-
-#: templates/base.html:66
-msgid "Основные направления"
-msgstr ""
-
-#: templates/base.html:83
-msgid "Добро пожаловать"
-msgstr "Welcome"
-
-#: templates/base.html:88
+#: templates/base.html:55
 msgid "выйти"
 msgstr "logout"
 
-#: templates/base.html:90 templates/registration/nojs_login.html:4
-msgid "Вход для сотрудников"
-msgstr "Login"
+#: templates/base.html:58 templates/base.html.py:59
+msgid "Войти на сайт"
+msgstr ""
 
-#: templates/base.html:95
-#, fuzzy
-msgid "Вход в почту"
-msgstr "Add"
-
-#: templates/base.html:98 users/views.py:18
+#: templates/base.html:64 templates/base.html.py:85 users/views.py:18
 msgid "Логин"
 msgstr "Login"
 
-#: templates/base.html:102
+#: templates/base.html:68 templates/base.html.py:89
 msgid "Пароль"
 msgstr "Password"
 
-#: templates/base.html:106 templates/registration/login.html:18
-#: templates/registration/nojs_login.html:24
+#: templates/base.html:72 templates/base.html.py:93
+#: templates/registration/login.html:27
 msgid "Войти"
 msgstr "Login"
 
-#: templates/base.html:113
-msgid "Институт прикладной математики"
+#: templates/base.html:79 templates/base.html.py:80
+#, fuzzy
+msgid "Почта"
+msgstr "News"
+
+#: templates/base.html:106 templates/news/add.html:27
+msgid "Добавить"
+msgstr "Add"
+
+#: templates/base.html:111
+msgid "Об институте"
+msgstr ""
+
+#: templates/base.html:112
+msgid "Студентам"
 msgstr ""
 
 #: templates/base.html:114
+msgid "Базовые кафедры"
+msgstr ""
+
+#: templates/base.html:115
+msgid "Аспирантура"
+msgstr ""
+
+#: templates/base.html:118
+msgid "Структура"
+msgstr "Structure"
+
+#: templates/base.html:120 templates/labs/labgroup_list.html:5
+msgid "Лаборатории и сектора"
+msgstr ""
+
+#: templates/base.html:121 templates/users/profile_list.html:4
+msgid "Сотрудники"
+msgstr ""
+
+#: templates/base.html:122
+msgid "Директор"
+msgstr ""
+
+#: templates/base.html:123
+msgid "Хабаровское отделение"
+msgstr ""
+
+#: templates/base.html:126
+msgid "Исследования"
+msgstr ""
+
+#: templates/base.html:128
+msgid "Основные направления"
+msgstr ""
+
+#: templates/base.html:129
+msgid "Научные сборники"
+msgstr ""
+
+#: templates/base.html:130
+#, fuzzy
+msgid "Отчёты"
+msgstr "Middle name"
+
+#: templates/base.html:144
+msgid "Институт прикладной математики"
+msgstr ""
+
+#: templates/base.html:145
 msgid "Дальневосточное отделение Российской академии наук"
 msgstr ""
 
@@ -287,12 +295,12 @@ msgstr ""
 msgid "Редактирование подразделения"
 msgstr "Edit profile"
 
-#: templates/labs/edit.html:20 templates/publications/edit.html:79
-#: templates/users/edit.html:98
+#: templates/labs/edit.html:21 templates/publications/edit.html:85
+#: templates/users/edit.html:104
 msgid "Сохранить"
 msgstr "Save"
 
-#: templates/labs/edit.html:23 templates/publications/edit.html:83
+#: templates/labs/edit.html:24 templates/publications/edit.html:89
 msgid "Отменить"
 msgstr "Cancel"
 
@@ -314,26 +322,31 @@ msgstr "Edit profile"
 msgid "Публикации:"
 msgstr "Publications"
 
-#: templates/news/news_list.html:23
+#: templates/news/add.html:3
+msgid "Добавление новости"
+msgstr ""
+
+#: templates/news/news_list.html:25
 #, fuzzy
 msgid "Редактировать"
 msgstr "Edit profile"
 
-#: templates/news/news_list.html:24 templates/publications/edit.html:88
+#: templates/news/news_list.html:26 templates/publications/edit.html:94
 #, fuzzy
 msgid "Удалить"
 msgstr "Add"
 
-#: templates/news/nojs_add.html:3
-msgid "Добавление новости"
-msgstr ""
-
-#: templates/publications/edit.html:4
+#: templates/publications/edit.html:6
 #, fuzzy
 msgid "Редактирование публикации"
 msgstr "Edit profile"
 
-#: templates/publications/edit.html:17
+#: templates/publications/edit.html:8
+#, fuzzy
+msgid "Добавление публикации"
+msgstr "Add"
+
+#: templates/publications/edit.html:23
 msgid "убрать"
 msgstr "remove"
 
@@ -341,37 +354,37 @@ msgstr "remove"
 msgid "Редактирование личных данных"
 msgstr "Edit profile"
 
-#: users/models.py:12
+#: users/models.py:14
 msgid "Отчество"
 msgstr "Middle name"
 
-#: users/models.py:13
+#: users/models.py:15
 msgid "Учёная степень"
 msgstr "Academic degree"
 
-#: users/models.py:14
+#: users/models.py:16
 #, fuzzy
 msgid "Учёное звание"
 msgstr "Title"
 
-#: users/models.py:15
+#: users/models.py:17
 #, fuzzy
 msgid "Должность"
 msgstr "Add"
 
-#: users/models.py:16
+#: users/models.py:20
 msgid "Фотография"
 msgstr "Photo"
 
-#: users/models.py:17
+#: users/models.py:21
 msgid "О себе"
 msgstr "About"
 
-#: users/models.py:26
+#: users/models.py:33
 msgid "Профиль"
 msgstr "Profile"
 
-#: users/models.py:27
+#: users/models.py:34
 msgid "Профили"
 msgstr "Profiles"
 
@@ -387,11 +400,21 @@ msgstr "Surname"
 msgid "Электронная почта"
 msgstr "Email"
 
+#~ msgid "С."
+#~ msgstr "P."
+
+#~ msgid "Добро пожаловать"
+#~ msgstr "Welcome"
+
+#~ msgid "Вход для сотрудников"
+#~ msgstr "Login"
+
+#, fuzzy
+#~ msgid "Вход в почту"
+#~ msgstr "Add"
+
 #~ msgid "Изменение информации о"
 #~ msgstr "Publications"
-
-#~ msgid "Добавить публикацию"
-#~ msgstr "Add"
 
 #~ msgid "Имя пользователя"
 #~ msgstr "Welcome"
