@@ -8,7 +8,7 @@ from iam.users.models import Profile
 class Publication(models.Model):
     authors = models.ManyToManyField(Profile, verbose_name=_(u'Авторы'))
     title = models.CharField(max_length=200, verbose_name=_(u'Название'))
-    
+
     PUBLICATION_TYPES = (
         (u'5', _(u'автореферат')),
         (u'6', _(u'диссертация')),
@@ -20,17 +20,17 @@ class Publication(models.Model):
     )
 
     type = models.CharField(max_length=1, choices=PUBLICATION_TYPES, verbose_name=_(u'Вид'))
-    
+
     LANGUAGES = (
         (u'0', _(u'русский')),
         (u'1', _(u'английский')),
         (u'2', _(u'другой'))
     )
     language = models.CharField(max_length=1, choices=LANGUAGES, verbose_name=_(u'Язык'))
-    other_authors = models.CharField(max_length=100, blank=True, 
+    other_authors = models.CharField(max_length=100, blank=True,
         verbose_name=_(u'Другие авторы'), help_text=_(u'отсутствующие в списке'))
     year = models.PositiveIntegerField(verbose_name=_(u'Год публикации'))
-    publishing_house = models.CharField(max_length=200, blank=True, 
+    publishing_house = models.CharField(max_length=200, blank=True,
         verbose_name=_(u'Издательство'))
     journal = models.CharField(max_length=200, verbose_name=_(u'Научное издание'))
     journal_issue = models.CharField(max_length=20, verbose_name=_(u'Номер издания'))
@@ -39,13 +39,16 @@ class Publication(models.Model):
 
     def all_authors(self):
         authors = u', '.join(author.short_name_human() for author in self.authors.all())
-        other_authors = u', ' + self.other_authors.strip() if self.other_authors else ''
+        if self.other_authors:
+            other_authors = u', ' + self.other_authors.strip()
+        else:
+            other_authors = ''
         return authors + other_authors
 
     def about(self):
         pages = u'%s %s' % (_(u'стр.'), self.start_page)
         if self.start_page != self.end_page:
-            pages = u'%s&ndash;%s' % (pages, self.end_page) 
+            pages = u'%s&ndash;%s' % (pages, self.end_page)
         return u'%s, %s, %s, %s' % (self.journal, self.year, self.journal_issue, pages)
 
     class Meta:

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
+
 from django import forms
-from django.http import HttpResponseForbidden, HttpResponse
-from django.shortcuts import render_to_response, redirect
+from django.views.generic.simple import direct_to_template
+from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
-from django.template import RequestContext
 from django.utils.translation import ugettext_lazy as _
 
 from iam.news.models import News
@@ -12,16 +12,18 @@ from iam.utils.decorators import user_passes_test
 import datetime
 
 class NewsForm(forms.ModelForm):
-    #body = forms.CharField(widget=TinyMCE(), label=_('Тело'))
     class Meta:
         model = News
         fields = ('title', 'body')
 
-def is_author_or_stuff(user, news_id):
-    return user.id == News.objects.get(pk=int(news_id)).author.user.id or user.is_staff
+def is_staff(user):
+    return user.is_staff
 
 def edit_or_add(request, news_id):
-    entry = News.objects.get(pk=news_id) if news_id else News()
+    if news_id:
+        entry = News.objects.get(pk=news_id)
+    else:
+        entry = News()
     readableErrors = {}
     if request.method == 'POST':
         form = NewsForm(request.POST, instance=entry)
@@ -38,25 +40,26 @@ def edit_or_add(request, news_id):
             readableErrors.update((unicode(form.base_fields[key].label), form.errors[key].as_text()) for key in form.errors.keys())
     else:
         form = NewsForm(instance=entry)
-    return render_to_response('news/add.html', {
-        'form': form,
-        'errors': readableErrors,
-        'news_id': news_id,}, 
-        context_instance=RequestContext(request))
+    return direct_to_template(request, 'news/add.html',
+        {
+            'form': form,
+            'errors': readableErrors,
+            'news_id': news_id,
+        })
 
 @login_required
+@user_passes_test(is_staff)
 def add(request):
     return edit_or_add(request, 0)
 
 @login_required
-@user_passes_test(is_author_or_stuff)
+@user_passes_test(is_staff)
 def edit(request, news_id):
     return edit_or_add(request, int(news_id))
 
 @login_required
-@user_passes_test(is_author_or_stuff)
+@user_passes_test(is_staff)
 def delete(request, news_id):
-    news_id = int(news_id)
-    entry = News.objects.get(pk=news_id)
+    entry = News.objects.get(pk=int(news_id))
     entry.delete()
     return redirect('/news/')

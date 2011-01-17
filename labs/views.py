@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from django import forms
-from django.shortcuts import render_to_response, redirect
+from django.shortcuts import redirect
+from django.views.generic.simple import direct_to_template
 from django.contrib.auth.decorators import login_required
-from django.template import RequestContext
-from django.http import HttpResponse
 from django.utils.translation import ugettext_lazy as _
 
 from iam.labs.models import Laboratory
@@ -31,7 +30,8 @@ def edit(request, lab_id):
             form.save()
             return redirect('/labs/%d' % lab_id)
     form = LaboratoryForm(instance=lab)
-    return render_to_response('labs/edit.html',
-            {'form': form,
-             'lab_id': lab_id},
-            context_instance=RequestContext(request))
+    return direct_to_template(request, 'labs/edit.html',
+        {
+            'form': form,
+            'lab_id': lab_id
+        })

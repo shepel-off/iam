@@ -13,12 +13,14 @@ admin.site.unregister(User)
 
 def middle_name(self):
     profile = self.safe_get_profile()
-    return profile.mid_name if profile else None
+    if profile:
+        return profile.mid_name
 User.middle_name = middle_name
 
 def academic_degree(self):
     profile = self.safe_get_profile()
-    return profile.academic_degree if profile else None
+    if profile:
+        return profile.academic_degree
 User.academic_degree = academic_degree
 
 class ProfileInline(admin.StackedInline):

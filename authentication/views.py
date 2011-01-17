@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 
 from django import forms
-from django.contrib.auth import authenticate, login as _login
+from django.views.generic.simple import direct_to_template
+from django.shortcuts import redirect
+from django.contrib.auth import authenticate, login as django_login
 from django.contrib.auth.forms import AuthenticationForm
-from django.shortcuts import render_to_response, redirect
-from django.http import HttpResponse
 from django.utils.translation import ugettext_lazy as _
-from django.template import RequestContext
 
-def produce_error(request, msg):
-    return render_to_response('registration/login.html', {'form': AuthenticationForm(), 'errors': msg }, context_instance=RequestContext(request))
+def answer(**kwargs):
+    args = { 'form': AuthenticationForm() }
+    args.update(kwargs)
+    return direct_to_template(request, 'registration/login.html', args)
 
 def login(request):
     #if request.user.is_authenticated():
@@ -19,9 +20,9 @@ def login(request):
         password = request.POST['password']
         user = authenticate(username=username, password=password)
         if user is None:
-            return produce_error(request, [u'Неверный логин или пароль'])
-        _login(request, user)
+            return answer(errors=[u'Неверный логин или пароль'])
+        elif not user.is_active:
+            return answer(errors=[u'Ваша учётная запись заблокирована'])
+        django_login(request, user)
         return redirect(request.POST['next'])
-    return render_to_response('registration/login.html',
-            {'form': AuthenticationForm(),
-            'next': '/' if 'next' not in request.GET else request.GET['next'] }, context_instance=RequestContext(request))
+    return answer(next=request.GET.get('next', '/'))
