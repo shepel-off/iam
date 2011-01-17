@@ -12,6 +12,8 @@ overrides = {
 class NewsAdmin(admin.ModelAdmin):
     formfield_overrides = overrides
 
+    class Media:
+        js = ['/js/tiny_mce/tiny_mce.js', '/media/filebrowser/js/TinyMCEAdmin.js',]
 
 class MyFlatPageAdmin(FlatPageAdmin):
     formfield_overrides = overrides
