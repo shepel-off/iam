@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 # Django settings for iam project.
 
-DEBUG = True 
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-     (u'Дмитрий Кравцов', 'idkravitz@gmail.com'),
      (u'Роман Харитонов', 'refaim.vl@gmail.com'),
 )
 
@@ -107,7 +106,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 AUTH_PROFILE_MODULE = 'users.Profile'
 LOGIN_URL = '/login/'
 TINYMCE_DEFAULT_CONFIG = {
-    'mode': "textareas",    
+    'mode': "textareas",
     'plugins': "safari,table,style,layer,pagebreak,iespell,insertdatetime,media,spellchecker,contextmenu,fullscreen,paste,searchreplace",
     'theme': "advanced",
     'theme_advanced_toolbar_location': "top",
