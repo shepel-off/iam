@@ -3,7 +3,7 @@ from iam.news.models import News
 
 info_dict = {
     'queryset': News.objects.order_by('date').reverse(),
-    'paginate_by': 2,
+    'paginate_by': 5,
 }
 
 urlpatterns = patterns('',
