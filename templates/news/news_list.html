@@ -13,20 +13,20 @@
     <li class="entry">
         <h2>{{ news_entry.title }}</h2>
         <div class="meta-outer">
-		    <ul class="meta rounded-with-border">
+            <ul class="meta rounded-with-border">
                 <li class="date">{{ news_entry.date|naturalday:"d.m.Y" }}</li>
                 <li class="author"><a href="{% url iam-users %}{{ news_entry.author.id }}">{{ news_entry.author.short_name }}</a></li>
             </ul>
-		</div>
+        </div>
         {% if news_entry.author.user.id == user.id or user.is_staff %}
-		<span class="toolbox-outer">
-	        <ul class="toolbox rounded-with-border">
-	            <li>
-	                <a href="{% url news-edit news_entry.id %}"><img alt="{% trans 'Редактировать' %}" src="/img/icons/pencil.png" /></a>
-	                <a href="{% url news-delete news_entry.id %}"><img alt="{% trans 'Удалить' %}" src="/img/icons/cross.png" /></a>
-	            </li>
-	        </ul>
-		</span>
+        <span class="toolbox-outer">
+            <ul class="toolbox rounded-with-border">
+                <li>
+                    <a href="{% url news-edit news_entry.id %}"><img alt="{% trans 'Редактировать' %}" src="/img/icons/pencil.png" /></a>
+                    <a href="{% url news-delete news_entry.id %}"><img alt="{% trans 'Удалить' %}" src="/img/icons/cross.png" /></a>
+                </li>
+            </ul>
+        </span>
         {% endif %}
 
         <div class="entry-body">{{ news_entry.body|safe }}</div>

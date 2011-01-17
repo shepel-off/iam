@@ -57,13 +57,13 @@
             {% else %}
             <a id="login-link" class="in-login" href="{% url iam-login %}">{% trans 'Войти на сайт' %}</a>
             <p id='login-caller' class="hyperlink in-login">{% trans 'Войти на сайт' %}</p>
-			<div class="form-wrapper">
+            <div class="form-wrapper">
                 <form id="login-form" method="post" action="{% url iam-login %}">{% csrf_token %}
                     <table>
                         <tr>
                             <td class="label">{% trans 'Логин' %}</td>
                             <td><input id="id_username" type="text" name="username" maxlength="30" /></td>
-                        </tr>                    
+                        </tr>
                         <tr>
                             <td class="label">{% trans 'Пароль' %}</td>
                             <td><input id="id_password" type="password" name="password" /></td>
@@ -74,17 +74,17 @@
                     </table>
                     <input type="hidden" value="{{ request.path }}" name="next" />
                 </form>
-			</div>
-			{% endif %}
+            </div>
+            {% endif %}
             <a id="mail-link" class="in-login" href="http://mail.iam.dvo.ru">{% trans 'Почта' %}</a>
-			<p id="mail-caller" class="hyperlink in-login">{% trans 'Почта' %}</p>
-			<div class="form-wrapper">
-	            <form id="mail-form" type="multipart/form-data" action="http://mail.iam.dvo.ru/" method="POST">{% csrf_token %}
+            <p id="mail-caller" class="hyperlink in-login">{% trans 'Почта' %}</p>
+            <div class="form-wrapper">
+                <form id="mail-form" type="multipart/form-data" action="http://mail.iam.dvo.ru/" method="POST">{% csrf_token %}
                     <table>
                         <tr>
                             <td class="label">{% trans 'Логин' %}</td>
                             <td><input name="Username" type=text></td>
-                        </tr>                    
+                        </tr>
                         <tr>
                             <td class="label">{% trans 'Пароль' %}</td>
                             <td><input name="Password" type=password></td>
@@ -94,18 +94,18 @@
                         </tr>
                     </table>
                 </form>
-			</div>
-		</div>
-		<div id="menu-h"></div>
+            </div>
+        </div>
+        <div id="menu-h"></div>
         <div id="menu-v-wrapper" class="offset-left">
             <ul id="menu-v">
                 <li><a href="{% url iam-news %}">{% trans 'Новости' %}</a>
                     {% if user.is_authenticated and request.path == '/news/' %}
                     <ul>
-                    	<li>
-                    		<a id="addnews" class="popup" href="{% url news-add %}">{% trans 'Добавить' %}</a>
-					    </li>
-				    </ul>
+                        <li>
+                            <a id="addnews" class="popup" href="{% url news-add %}">{% trans 'Добавить' %}</a>
+                        </li>
+                    </ul>
                     {% endif %}
                 </li>
                 <li><a href="/about/">{% trans 'Об институте' %}</a></li>

@@ -14,19 +14,19 @@
 .entry .meta .author a:hover { text-decoration: underline; }
 */
 
-.entry .toolbox-outer { 
+.entry .toolbox-outer {
     width: 50;
-	height: 26px;
-	margin: 0 0 5px .75em;
-	float: right;
-	clear: both;
-	background: #CACACA;
+    height: 26px;
+    margin: 0 0 5px .75em;
+    float: right;
+    clear: both;
+    background: #CACACA;
 } /* absolute sizes are required for IE6, because he stretchs over full line */
-.entry .toolbox { 
+.entry .toolbox {
     width: 36px;
-	height: 26px;
-    padding: 0 .5em; 
-	background-color: #def1c9; 
+    height: 26px;
+    padding: 0 .5em;
+    background-color: #def1c9;
 }
 .entry .toolbox li a img { height: 16px; width: 16px; margin-top: 4px; }
 .entry .toolbox a { /*
@@ -39,7 +39,7 @@ display:inline-block;
 .entry .meta .author a { color: #777; }
 .entry .meta .author a:hover { text-decoration: underline; }
 
-#paginator { 
+#paginator {
     bottom: 237px;
     position: absolute;
     width: 100%;

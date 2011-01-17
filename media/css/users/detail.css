@@ -1,24 +1,24 @@
 #head th { vertical-align: middle; padding: 5px; }
-#head, #head #near-photo { width: 100%; } 
+#head, #head #near-photo { width: 100%; }
 
 #clear-rest { clear: both; }
 
-#edit-profile { 
-    clear: both; 
-    float: right; 
-    margin: 0 0 1.5em 1.5em; 
-    padding: .5em 1em; 
-    background-color: #dcebf7; 
+#edit-profile {
+    clear: both;
+    float: right;
+    margin: 0 0 1.5em 1.5em;
+    padding: .5em 1em;
+    background-color: #dcebf7;
 }
 
 #edit-profile li { text-align: right; }
 #edit-profile li a { color: blue; }
 
-#publications { 
-    clear: both; 
-    margin: 2em 0 2em 2em; 
-    list-style-type: decimal; 
-    font-size: 120%; 
+#publications {
+    clear: both;
+    margin: 2em 0 2em 2em;
+    list-style-type: decimal;
+    font-size: 120%;
     line-height: normal;
 }
 

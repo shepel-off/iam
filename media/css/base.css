@@ -2,32 +2,32 @@
     background-color: #708090;
 }
 
-#header-image { 
+#header-image {
     background-color: #e6e8ea;
 }
 
-#menu-h { 
+#menu-h {
     background-color: #e6e8ea; }
 
 #phone span, #address {
     color: #6f798a;
 }
 
-#footer, #login-block form { 
+#footer, #login-block form {
     color: #B3C0AB;
 }
 
 /* main content */
 
 .hyperlink:hover {
-	cursor: pointer;
+    cursor: pointer;
     cursor: hand;
     text-decoration: underline;
 }
 
-html { 
+html {
     font: 0.75em/1.5 Arial, Helvetica, sans-serif;
-	height: 99%; 
+    height: 99%;
 }
 
 body {
@@ -37,21 +37,21 @@ body {
     background: url("/img/grad.gif") repeat-x scroll left top #e6e8ea;
 }
 
-a { 
-    color: blue; 
-    text-decoration: none; 
+a {
+    color: blue;
+    text-decoration: none;
 }
 a:hover { text-decoration: underline; }
 
 /* layout */
-#main { 
+#main {
     min-height: 99%;
-    width: 800px; 
+    width: 800px;
     color: #5a6370;
-	margin: 5px 0 5px 200px; 
+    margin: 5px 0 5px 200px;
     background-color: white;
     border: 2px solid #606060;
-	position: relative;
+    position: relative;
 }
 
 #main .offset-left {
@@ -93,7 +93,7 @@ a:hover { text-decoration: underline; }
 }
 
 #menu-h {
-	float: left;
+    float: left;
     display: inline;
     width: 796px;
     _width: 798px;
@@ -104,7 +104,7 @@ a:hover { text-decoration: underline; }
 #menu-v {
     margin: 0;
     font-size: 120%;
-	width: 170px;
+    width: 170px;
     padding: 5px;
     border: 2px solid white;
     background-color: #e6e8ea;
@@ -112,16 +112,16 @@ a:hover { text-decoration: underline; }
 
 #content {
     float: left;
-	width: 780px; /* due to stupid ie7 */
+    width: 780px; /* due to stupid ie7 */
     padding: 10px 10px 257px;
     line-height: 1.5;
 }
 
-#menu-v-wrapper {    
+#menu-v-wrapper {
     width: 175px;
     left: -200px;
     float: left;
-	clear: both;
+    clear: both;
 }
 
 #menu-v li a, #menu-v .category span {
@@ -136,7 +136,7 @@ a:hover { text-decoration: underline; }
     text-decoration: underline;
 }
 
-#menu-v li ul li a { 
+#menu-v li ul li a {
     padding-left: 10px;
     font-size: 90%;
 }
@@ -144,10 +144,10 @@ a:hover { text-decoration: underline; }
 #clearfooter { clear: both; }
 #footer {
     height: 237px;
-	position: absolute;
-	bottom: 1px;
+    position: absolute;
+    bottom: 1px;
     left: 2px;
-	width: 796px;
+    width: 796px;
     background: url("/img/footer-bg.png") repeat-x scroll left top;
     font-size: 0.9em;
     text-align: center;
@@ -162,7 +162,7 @@ a:hover { text-decoration: underline; }
     width: 190px;
     margin-right: 10px;
     left: -200px;
-	z-index: 100;
+    z-index: 100;
 }
 
 #login-block a, p.hyperlink {
@@ -170,7 +170,7 @@ a:hover { text-decoration: underline; }
     color: #fff;
 }
 .current-location {
-	background: white;
+    background: white;
 }
 
 #login-block a.in-login, p.hyperlink {
@@ -182,7 +182,7 @@ a:hover { text-decoration: underline; }
 }
 
 #login-block * {
-	z-index: 100;
+    z-index: 100;
 }
 
 #login-block .in-login
@@ -191,7 +191,7 @@ a:hover { text-decoration: underline; }
     color: #fff;
     width: 95px;
     float: left;
-	margin-top: 10px;
+    margin-top: 10px;
 }
 
 #login-block #welcome
@@ -201,11 +201,11 @@ a:hover { text-decoration: underline; }
 }
 
 #login-block .form-wrapper {
-	height: 50px;
-	position: absolute;
-	z-index: 100;
-	top: 50px;
-	left: 0;
+    height: 50px;
+    position: absolute;
+    z-index: 100;
+    top: 50px;
+    left: 0;
 }
 
 #login-block form {
