@@ -13,8 +13,6 @@ def answer(request, **kwargs):
     return direct_to_template(request, 'registration/login.html', args)
 
 def login(request):
-    #if request.user.is_authenticated():
-    #    return produce_error(request, [u'Вы уже авторизованы'])
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
